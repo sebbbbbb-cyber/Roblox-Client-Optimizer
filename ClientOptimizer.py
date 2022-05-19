@@ -1,3 +1,6 @@
+# Credits to the original script: https://github.com/KEA12/RobloxFullScreenOptimizer
+# Edited by nul#3174 to actually be more useful
+
 # Import Libraries
 import os
 import time
@@ -55,7 +58,7 @@ else:
 if found:
     try:
         with open(found, 'w') as ClientAppSettings:
-            data = {"FFlagEnableQuickGameLaunch": "true", "FFlagEnableLoadingScreenPlaceIconTween": "true", "DFFlagTweenServiceOnStepped": "true", "FFlagLoadTheLoadingScreenFaster": "true", "FFlagLoadTheLoadingScreenEvenFaster": "true", "FFlagCoreScriptFasterCreate": "true", "FFlagCoreScriptSyncMultiInstance2": "true", "DFFlagEnableFlushAfterPurge": "true", "FFlagCharacterTaskQueueReschedule": "true", "FFlagAsyncFontLoading2": "true", "FFlagPreloadAllFonts": "true", "FFlagPreloadTextureItemsOption4": "true", "FFlagPreloadMinimalFonts": "true", "FFlagJoinTime_AllowFullTexturePrioUpdate": "true", "DFFlagUseConstantBufferViews": "true", "FFlagBatchAssetApi": "true", "DFFlagHttpClientOptimizeReqQueuing": "true", "FFlagRigidBodyLazyUpdating": "true", "FFlagHumanoidDeferredSyncFunction5": "true", "FFlagHumanoidParallelUseManager4": "true", "FFlagHumanoidParallelFasterSetCollision": "true", "FFlagHumanoidParallelFasterWakeUp": "true", "FFlagHumanoidParallelSafeCofmUpdate": "true", "FFlagHumanoidParallelSafeUnseat": "true"}
+            data = {"FFlagHandleAltEnterFullscreenManually": "false", "FFlagEnableQuickGameLaunch": "true", "FFlagEnableLoadingScreenPlaceIconTween": "true", "DFFlagTweenServiceOnStepped": "true", "FFlagLoadTheLoadingScreenFaster": "true", "FFlagLoadTheLoadingScreenEvenFaster": "true", "FFlagCoreScriptFasterCreate": "true", "FFlagCoreScriptSyncMultiInstance2": "true", "DFFlagEnableFlushAfterPurge": "true", "FFlagCharacterTaskQueueReschedule": "true", "FFlagAsyncFontLoading2": "true", "FFlagPreloadAllFonts": "true", "FFlagPreloadTextureItemsOption4": "true", "FFlagPreloadMinimalFonts": "true", "FFlagJoinTime_AllowFullTexturePrioUpdate": "true", "DFFlagUseConstantBufferViews": "true", "FFlagBatchAssetApi": "true", "DFFlagHttpClientOptimizeReqQueuing": "true", "FFlagRigidBodyLazyUpdating": "true", "FFlagHumanoidDeferredSyncFunction5": "true", "FFlagHumanoidParallelUseManager4": "true", "FFlagHumanoidParallelFasterSetCollision": "true", "FFlagHumanoidParallelFasterWakeUp": "true", "FFlagHumanoidParallelSafeCofmUpdate": "true", "FFlagHumanoidParallelSafeUnseat": "true"}
             json.dump(data, ClientAppSettings)
             print("Optimization flags applied successfully")
     except FileNotFoundError:
