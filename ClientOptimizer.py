@@ -32,7 +32,7 @@ if found:
 else:
     print(f"Roblox Game directory not found.")
     print(f"\n\nFinished in {round(time.time() - start) + 1}ms.")
-    input("Press any key to exit...")
+    input("Press the Enter key to exit...")
     exit()
 
 
@@ -46,7 +46,7 @@ if found:
         print("ClientAppSettings.json already exists")
         print(f"Client optimization is already enabled.")
         print(f"\n\nFinished in {round(time.time() - start) + 1}ms.")
-        input("Press any key to exit...")
+        input("Press the Enter key to exit...")
         exit()
 else:
     print(f"ClientSettings directory not found.")
@@ -64,13 +64,13 @@ if found:
     except FileNotFoundError:
         print("ClientAppSettings.json not found. Please retry.")
         print(f"\n\nFinished in {round(time.time() - start) + 1}ms.")
-        input("Press any key to exit...")
+        input("Press the Enter key to exit...")
         exit()
     print(f"\n\nFinished in {round(time.time() - start) + 1}ms.")
-    input("Press any key to exit...")
+    input("Press the Enter key to exit...")
     exit()
 else:
     print(f"ClientSettings directory not found.")
     print(f"\n\nFinished in {round(time.time() - start) + 1}ms.")
-    input("Press any key to exit...")
+    input("Press the Enter key to exit...")
     exit()
