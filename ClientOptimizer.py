@@ -51,7 +51,7 @@ if found:
 else:
     print(f"ClientSettings directory not found.")
     print(f"\n\nFinished in {round(time.time() - start) + 1}ms.")
-    input("Press any key to exit...")
+    input("Press the Enter key to exit...")
     exit()
 
 # Write to ClientAppSettings.json
