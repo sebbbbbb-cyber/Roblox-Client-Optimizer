@@ -35,7 +35,7 @@ if not exist "%robloxfolder%\ClientSettings" echo ClientSettings folder not foun
 if exist "%robloxfolder%\ClientSettings\ClientAppSettings.json" cls & color 06 & echo WARNING ^| Found existing ClientAppSettings.json file. & echo. & echo Would you like to continue anyways^? & echo (IT WILL BE OVERWRITTEN) & echo. & echo (if you do NOT wish to continue, CLOSE this window!) & pause & color 07 & cls & del "%robloxfolder%\ClientSettings\ClientAppSettings.json" & echo Deleted ClientAppSettings.json & echo.
 
 echo Writing fflags to ClientAppSettings.json
-echo %fflagList% > "%robloxfolder%\ClientSettings\ClientAppSettings.json"
+echo %fflagList%> "%robloxfolder%\ClientSettings\ClientAppSettings.json"
 echo Successfully wrote fflags to ClientAppSettings.json
 echo.
 echo Kaid ^& Nul's client optimizer has completed ^<3 ^| (NOTE: YOU WILL NEED TO RE-RUN THIS EVERY TIME YOU UPDATE ROBLOX!)
