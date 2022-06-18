@@ -6,4 +6,4 @@ After that, play Roblox as you normally would, and loading games should be a bit
 
 NOTE: Run this every time Roblox updates.
 
-Fork of https://github.com/KEA12/RobloxFullScreenOptimizer
+~~Fork of https://github.com/KEA12/RobloxFullScreenOptimizer~~
