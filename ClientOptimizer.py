@@ -1,7 +1,7 @@
 # Credits to the original script: https://github.com/KEA12/RobloxFullScreenOptimizer
 # Edited by nul#3174 to actually be more useful
 
-print("THIS .py VERSION OF THE CLIENT OPTIMIZER IS OLD, USE THE .cmd VERSION ON THE GITHUB!!! | https://github.com/L8X/roblox-client-optimizer")
+# print("THIS .py VERSION OF THE CLIENT OPTIMIZER IS OLD, USE THE .cmd VERSION ON THE GITHUB!!! | https://github.com/L8X/roblox-client-optimizer")
 
 # Import Libraries
 import os
