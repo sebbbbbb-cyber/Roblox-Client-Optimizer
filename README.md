@@ -9,6 +9,7 @@
 
 Notes:
 May take one minute from install to actually update the fflag list due to fflag list being updated automatically every minute
+
 Wont overwrite current fflag list if one is present, updates when no fflag file is found...
 Offline list is entirely unmaintained
   
