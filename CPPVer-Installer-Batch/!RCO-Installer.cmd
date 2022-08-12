@@ -81,5 +81,6 @@ echo If you didn't have any version VCRedist installed beforehand you should res
 echo Press any key to run RCO...
 echo.
 pause
+title RCO
 cls
 "C:\Program Files\RCO\RCO.exe"
