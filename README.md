@@ -3,13 +3,14 @@
 -- C++ Ver! --
 
 1. Find installer zip in the github releases page
-2. Run the .cmd/.bat file!
-3. Should be all good to go!
-​
-​
-​
-​
-​
+2. Unzip the 7z arhive (7-zip.org | or use winrar if ur a closed source cunt)
+3. Run the .cmd/.bat file!
+4. Should be all good to go!
+  
+  
+  
+  
+  
 --Old versions--
 
 ~~To use, run the .cmd script and watch it do the magic for you.~~
