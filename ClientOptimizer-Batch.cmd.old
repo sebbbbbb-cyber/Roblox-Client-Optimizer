@@ -1,4 +1,6 @@
 @echo off & cls
+rem USE THE C++ VERSION, OKAY THX
+
 rem Roblox Client Optimizer recoded in Batch by Kaid#0001
 
 rem Original idea of automatic fflag adding from this git https://github.com/KEA12/RobloxFullScreenOptimizer
