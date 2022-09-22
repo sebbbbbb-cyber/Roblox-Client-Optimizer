@@ -237,7 +237,7 @@
 "FFlagWrapDispatcherTickLimit": true,
 "FFlagFrontendProcessingUsesLaunchIntent": true,
 "FFlagBackendProcessingUsesLaunchIntent": true,
-"FFlagAuthTokenManagerHasASimpleTimer": true,
+"FFlagAuthTokenManagerHasASimpleTimer2": true,
 "FFlagLuaAppExitModal": false,
 "DFFlagSendAllPhysicsPackets": true
 }
