@@ -239,6 +239,7 @@
 "FFlagBackendProcessingUsesLaunchIntent": true,
 "FFlagAuthTokenManagerHasASimpleTimer2": true,
 "FFlagLuaAppExitModal": false,
+"FFlagHandleAltEnterFullscreenManually": false,
 "DFFlagSendAllPhysicsPackets": true
 }
 
