@@ -71,7 +71,7 @@
 "FFlagSimCSG3AsyncWarmv2": true,
 "DFFlagSimCSG3UseQuadBallInExperience": true,
 "FFlagSimCSG3MegaAssetFetcherSkipCached": true,
-"FFlagAnimationClipMemCacheEnabled": true
+"FFlagAnimationClipMemCacheEnabled": true,
 "FFlagAnimationTrackStepFix": true,
 "DFFlagAnimInstanceAllocs": true,
 "DFFlagSpatialHashAllocs": true,
