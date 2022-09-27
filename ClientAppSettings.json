@@ -244,6 +244,8 @@
 "FFlagAuthTokenManagerHasASimpleTimer2": true,
 "FFlagLuaAppExitModal": false,
 "FFlagHandleAltEnterFullscreenManually": false,
+"DFFlagRecvFromLoopMemoryReleaseFix": true,
+"DFFlagReportHttpBatchApiRejectedUrl": true,
 "DFFlagSendAllPhysicsPackets": true
 }
 
