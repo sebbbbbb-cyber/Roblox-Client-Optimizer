@@ -259,10 +259,8 @@
 "DFFlagReportNoWorkspaceStreamingErrors": true,
 "FIntEnableCullableScene2HundredthPercent": 10000,
 "DFFlagSimHumanoidPhysics": true,
-"FFlagFixVehicleSeat": true,
 "FIntMessageListVirtualizedRollout3": 100,
 "FIntMessageListVirtualizedRollout4": 100,
-"DFFlagEnableCloseFmodLogs": true,
 "DFFlagTreeDiffModCheckShadow": true,
 "DFFlagSendAllPhysicsPackets": true
 }
