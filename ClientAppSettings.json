@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 14,
+"FIntFlagUpdateVersion": 15,
 "FFlagExecuteDynInitTests": false,
 "FFlagAppealToBootstrapperOnStartup": false,
 "FFlagEnableQuickGameLaunch": true,
@@ -243,9 +243,23 @@
 "FFlagBackendProcessingUsesLaunchIntent": true,
 "FFlagAuthTokenManagerHasASimpleTimer2": true,
 "FFlagLuaAppExitModal": false,
+"FFlagLuaAppGridTopBarLimitHeight": true,
+"FFlagLuaAppSystemBar": true,
+"FFlagLuaAppUseNewNavBar": true,
+"FFlagLuaAppLegacyInputSettingRefactor": true,
+"FFlagLuaAppAutocompleteIXPConfig4": true,
 "FFlagHandleAltEnterFullscreenManually": false,
 "DFFlagRecvFromLoopMemoryReleaseFix": true,
 "DFFlagReportHttpBatchApiRejectedUrl": true,
+"DFIntHttpBatchApiRejectedUrlHundredthsPercentage": 10000,
+"DFFlagReportStreamJobStopReasons2": true,
+"DFFlagFixJoinBitSettingInStream": true,
+"DFFlagEnableFlushAfterPurge": true,
+"DFIntReportNoWorkspaceStreamingErrorsHundredths": 10000,
+"DFFlagReportNoWorkspaceStreamingErrors": true,
+"FIntEnableCullableScene2HundredthPercent": 10000,
+"DFFlagSimHumanoidPhysics": true,
+"FFlagFixVehicleSeat": true,
 "DFFlagSendAllPhysicsPackets": true
 }
 
