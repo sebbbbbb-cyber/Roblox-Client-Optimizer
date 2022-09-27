@@ -257,7 +257,7 @@
 "DFFlagEnableFlushAfterPurge": true,
 "DFIntReportNoWorkspaceStreamingErrorsHundredths": 10000,
 "DFFlagReportNoWorkspaceStreamingErrors": true,
-"FIntEnableCullableScene2HundredthPercent": 10000,
+"FIntEnableCullableScene2HundredthPercent": 0,
 "DFFlagSimHumanoidPhysics": true,
 "FIntMessageListVirtualizedRollout3": 100,
 "FIntMessageListVirtualizedRollout4": 100,
