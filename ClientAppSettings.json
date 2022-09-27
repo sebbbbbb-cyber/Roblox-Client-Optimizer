@@ -251,7 +251,7 @@
 "FFlagHandleAltEnterFullscreenManually": false,
 "DFFlagRecvFromLoopMemoryReleaseFix": true,
 "DFFlagReportHttpBatchApiRejectedUrl": true,
-"DFIntHttpBatchApiRejectedUrlHundredthsPercentage": 10000,
+"DFIntHttpBatchApiRejectedUrlHundredthsPercentage": 100,
 "DFFlagReportStreamJobStopReasons2": true,
 "DFFlagFixJoinBitSettingInStream": true,
 "DFFlagEnableFlushAfterPurge": true,
