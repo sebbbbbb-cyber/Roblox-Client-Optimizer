@@ -261,7 +261,12 @@
 "DFFlagSimHumanoidPhysics": true,
 "FIntMessageListVirtualizedRollout3": 100,
 "FIntMessageListVirtualizedRollout4": 100,
-"DFFlagTreeDiffModCheckShadow": true,
+"DFFlagAsyncStreamingNoBlockGC": true,
+"FFlagAllowHingedToAnchoredLocalSimulation": true,
+"DFFlagAudioEnableVolumetricPanningForMeshes": true,
+"DFFlagAudioEnableVolumetricPanningForPolys": true,
+"DFFlagAudioUseVolumetricPanning": true,
+"DFFlagAudioVolumetricUtilsRefactor": true,
+"FFlagEnableLodStreamRadius": true,
 "DFFlagSendAllPhysicsPackets": true
 }
-
