@@ -209,5 +209,15 @@
 "DFFlagAudioEnableVolumetricPanningForMeshes": true,
 "DFFlagAudioEnableVolumetricPanningForPolys": true,
 "FFlagEnableLodStreamRadius": true,
+"FFlagGraphicsVulkanCheckShaderFloat16": true,
+"FFlagRenderDepthPrepassAdaptive": true,
+"FFlagRenderEnhancedPassSplitting": true,
+"FFlagRenderFixTerrainAO": true,
+"FFlagRenderUpdateImguiInPrepare": true,
+"FFlagControlledLRUCacheStatsAndBetterEvictionApi": true,
+"FFlagCSGRemoveUvstudsCall": true,
+"FFlagSimCSG3TreeEnableColorSerialization": true,
+"FFlagSimCSGV3ReallocateVertexMap": true,
+"FFlagSimCSGV3SubtractionOverlappingEdges": true,
 "DFFlagSendAllPhysicsPackets": true
 }
