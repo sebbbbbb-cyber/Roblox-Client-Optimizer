@@ -150,7 +150,7 @@
 "FFlagIXPSystemShutoff": true,
 "FFlagLCQualityCheck": true,
 "FFlagLCQualityCheckUVMismatch": true,
-"FFlagLCQualityValidation": true,
+"FFlagLCQualityValidation": falde,
 "FFlagLCQualityTelemetry": false,
 "FFlagLeaveStartingCoreScriptsToPlaceLauncher": true,
 "FFlagLightCullNoPreRotation": false,
