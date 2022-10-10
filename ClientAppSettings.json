@@ -27,7 +27,7 @@
 "FFlagRenderStoreLODMetadata": true,
 "FFlagRenderTC2_Disable": false,
 "DFFlagRenderTC2_6": true,
-"DFFlagRenderTC2_DiscardGeometryData2": false,
+"DFFlagRenderTC2_DiscardGeometryData2": true,
 "DFFlagRenderTC2_LayeredClothingEnable": true,
 "DFIntRenderingThrottleDelayInMS": 75,
 "DFFlagRenderTC2Async": true,
