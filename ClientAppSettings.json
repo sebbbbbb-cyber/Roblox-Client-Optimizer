@@ -67,6 +67,7 @@
 "FFlagGraphicsGLWindowsShutdownFix": true,
 "FFlagGraphicsVulkanVideoMemory": true,
 "FFlagUseConstantBufferViewsVulkan": true,
+"DFFlagUseConstantBufferViews": true,
 "FFlagUseCopyTextureVulkan": true,
 "FFlagFutureIsBrightPhase2GL3": true,
 "FFlagFutureIsBrightPhase2GLES3": true,
