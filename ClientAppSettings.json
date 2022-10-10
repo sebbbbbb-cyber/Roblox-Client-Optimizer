@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 18,
+"FIntFlagUpdateVersion": 19,
 "FFlagExecuteDynInitTests": false,
 "FFlagAppealToBootstrapperOnStartup": false,
 "FFlagEnableQuickGameLaunch": true,
@@ -257,7 +257,7 @@
 "DFFlagMPServiceGamepassUrlV3": true,
 "DFIntMPServiceGamepassUrlRolloutV3": 10000,
 "DFFlagPreventRewriteApiToAssetDelivery": true,
-"DFFlagDebugForceBasePartCacheAlways": true,
+"DFFlagDebugForceBasePartCacheAlways": false,
 "FIntDefaultMeshCacheSizeMB": 1000,
 "FIntEmotesAnimationsPerPlayerCacheSize": 10000000,
 "DFFlagFileSystemGetCacheDirectoryLikeAndroid": true,
