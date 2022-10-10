@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 17,
+"FIntFlagUpdateVersion": 18,
 "FFlagExecuteDynInitTests": false,
 "FFlagAppealToBootstrapperOnStartup": false,
 "FFlagEnableQuickGameLaunch": true,
@@ -327,5 +327,12 @@
 "DFFlagVoiceChatMultistreamSubscriptionsV0": true,
 "DFFlagVoiceChatUseCustomAudioDevice": true,
 "DFFlagVoiceChatUseCustomAudioDeviceProd": true,
+"DFFlagEarlyPrefetchRequestChecks": true,
+"FFlagDisableGoogleAnalytics": true,
+"DFFlagFmodRefactorSystemReferences": true,
+"FIntV1MenuLanguageSelectionFeaturePerMillageRollout": 10000,
+"FFlagEnableBacktraceResponseHandler": false,
+"FFlagEnableBacktraceServerFailHandler": false,
+"FFlagEnableCrashreporterRefactor": false,
 "DFFlagSendAllPhysicsPackets": true
 }
