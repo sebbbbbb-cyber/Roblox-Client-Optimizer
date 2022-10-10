@@ -43,7 +43,7 @@
 "DFIntRenderTextureOrphanBudgetMB": 64,
 "FFlagRenderHalfresShadowsGlsles": true,
 "FFlagRenderLightGridEfficientTextureAtlasUpdate": false,
-"FFlagRenderShadowMapDisabler2": true,
+"FFlagRenderShadowMapDisabler2": false,
 "FIntRenderShadowMapDisablerThreshold": 75,
 "FFlagRenderUseHalfsVulkan": true,
 "FFlagRenderEnableHalfsAdreno": true,
