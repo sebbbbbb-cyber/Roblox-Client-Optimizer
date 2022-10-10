@@ -315,7 +315,7 @@
 "DFFlagSupportEncryptedAssets": true,
 "DFFlagEnableLuaApiToRegisterEncryptedAssets": true,
 "DFFlagDebugVoiceChatCustomLogFile": true,
-"DFFlagEarlyPrefetchRequestChecks": true,
+"DFFlagEarlyPrefetchRequestChecks": false,
 "FFlagDisableGoogleAnalytics": true,
 "DFFlagFmodRefactorSystemReferences": true,
 "FIntV1MenuLanguageSelectionFeaturePerMillageRollout": 0,
