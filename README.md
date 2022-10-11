@@ -6,8 +6,8 @@ Some things RCO does:
 
 - Disables Crashpad / Backtrace Crash Reporting
 - Disables Abuse Report Screenshot
-- Disables GamePerfMonitor and it's telemetry
-- Enables "Quick Game Launch"
+- Disables GamePerfMonitor and the telemetry it sends
+- Enables Quick Game Launch
 - Enables preloading of Fonts
 - Enables preloading of Texture Item Options
 - Enables Memory Prioritization for Textures
