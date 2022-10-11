@@ -290,5 +290,6 @@
 "DFIntHttpParallelLimit_RequestScriptContext": 3,
 "DFIntHttpParallelLimit_RequestPresence": 3,
 "DFIntHttpParallelLimit_RequestPointsService": 3,
+"DFFlagEarlyPrefetchRequestChecks": true,
 "DFFlagSendAllPhysicsPackets": true
 }
