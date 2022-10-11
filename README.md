@@ -2,7 +2,7 @@
 
 RCO automatically installs FFlags to optimize your Roblox client.
 
-Some things RCO does:
+Some things RCO currently does:
 
 - Disables Crashpad / Backtrace Crash Reporting
 - Disables Abuse Report Screenshot
