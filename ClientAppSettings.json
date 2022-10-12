@@ -316,5 +316,14 @@
 "DFFlagUseStrafingAnimateScript": true,
 "DFFlagUseStrafingAnimateScript2": true,
 "FFlagStrafingBetaFeature": true,
+"FFlagUniversalAppCsat": false,
+"FFlagUniversalAppDisableLaunchParam": false,
+"FFlagUniversalAppOnUWPAlways": false,
+"FFlagUniversalAppOnWindowsLaunchEnabled": false,
+"FFlagUniversalAppOnWindows": false,
+"FFlagUniversalAppOnUWP": false,
+"FFlagUniversalAppOnMac": false,
+"FFlagUniversalAppWebLoginEngineFeatureOnly": false,
+"FFlagUniversalAppRestarts: false,
 "DFFlagSendAllPhysicsPackets": true
 }
