@@ -315,5 +315,6 @@
 "FFlagEnableBacktraceServerFailHandler": false,
 "DFFlagUseStrafingAnimateScript": true,
 "DFFlagUseStrafingAnimateScript2": true,
+"FFlagStrafingBetaFeature": true,
 "DFFlagSendAllPhysicsPackets": true
 }
