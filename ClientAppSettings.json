@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 19,
+"FIntFlagUpdateVersion": 20,
 "FFlagExecuteDynInitTests": false,
 "FFlagAppealToBootstrapperOnStartup": false,
 "FFlagEnableQuickGameLaunch": true,
@@ -313,5 +313,7 @@
 "FIntLuaAppInfiniteHomePageRollout": 10000,
 "FFlagEnableBacktraceResponseHandler": false,
 "FFlagEnableBacktraceServerFailHandler": false,
+"DFFlagUseStrafingAnimateScript": true,
+"DFFlagUseStrafingAnimateScript2": true,
 "DFFlagSendAllPhysicsPackets": true
 }
