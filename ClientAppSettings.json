@@ -324,6 +324,6 @@
 "FFlagUniversalAppOnUWP": false,
 "FFlagUniversalAppOnMac": false,
 "FFlagUniversalAppWebLoginEngineFeatureOnly": false,
-"FFlagUniversalAppRestarts: false,
+"FFlagUniversalAppRestarts": false,
 "DFFlagSendAllPhysicsPackets": true
 }
