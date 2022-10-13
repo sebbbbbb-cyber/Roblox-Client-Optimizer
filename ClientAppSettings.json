@@ -275,7 +275,7 @@
 "DFIntHttpParallelLimit_RequestFriendService": 3,
 "DFIntHttpParallelLimit_RequestDefault": 3,
 "DFIntHttpParallelLimit_RequestDataStore": 3,
-"DFIntHttpParallelLimit_RequestContentProvider": 6,
+"DFIntHttpParallelLimit_RequestContentProvider": 12,
 "DFIntHttpParallelLimit_RequestChatV2": 3,
 "DFIntHttpParallelLimit_RequestChat": 3,
 "DFIntHttpParallelLimit_RequestBadgeService": 3,
