@@ -5,6 +5,7 @@ RCO automatically installs FFlags to optimize your Roblox client.
 Some things RCO currently does:
 
 - Disables Crashpad / Backtrace Crash Reporting
+- Disables Windows Beta App (for now...)
 - Unlocks FPS (For most people)
 - Disables Abuse Report Screenshot
 - Disables GamePerfMonitor and the telemetry it sends
