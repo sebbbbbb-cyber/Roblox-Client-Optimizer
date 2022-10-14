@@ -6,6 +6,7 @@ Some things RCO currently does:
 
 - Disables Crashpad / Backtrace Crash Reporting
 - Disables Windows Beta App (for now...)
+- Disables Teleport with Menu Open Block & Prompt (Mostly)
 - Unlocks FPS (For most people)
 - Disables Abuse Report Screenshot
 - Disables GamePerfMonitor and the telemetry it sends
