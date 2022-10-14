@@ -332,6 +332,7 @@
 "FFlagUserShowVerifiedBadgeInLegacyChat": true,
 "FFlagBlockTeleportOnMenuOpen": false,
 "FFlagCoreScriptShowTeleportPrompt": false,
+"DFFlagPatchTeleportExploit": false,
 "DFFlagNewRunServiceSignals2": true,
 "FIntLinkBrowserTrackerToDeviceRollout": 0,
 "FFlagEnableV3MenuABTest": false,
