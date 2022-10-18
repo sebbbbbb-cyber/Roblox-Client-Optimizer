@@ -478,5 +478,6 @@
 "DFFlagLogVersionNumberUsage2": false,
 "DFIntLogVersionNumberUsagePercent": 0,
 "FFlagReportDesktopClientOsVersion": false,
+"FFlagContactImporterWithPhoneVerification_v1": true,
 "DFFlagSendAllPhysicsPackets": true
 }
