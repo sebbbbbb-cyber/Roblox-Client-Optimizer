@@ -479,5 +479,12 @@
 "DFIntLogVersionNumberUsagePercent": 0,
 "FFlagReportDesktopClientOsVersion": false,
 "FFlagContactImporterWithPhoneVerification_v1": true,
+"FIntAvatarExperienceCatalogRecommendationsV2Rollout": 10000,
+"DFFlagParseNewVersionFormat": true,
+"FFlagUWPUniversalAppRolloutEvenIf2SV": false,
+"FFlagUWPUniversalAppRollout352": false,
+"FIntFallBackRequestAutoLoginRolloutPercent": 10000,
+"DFIntStartupTracingInfluxRollout": 0,
+"FIntReportDeviceInfoRollout": 0,
 "DFFlagSendAllPhysicsPackets": true
 }
