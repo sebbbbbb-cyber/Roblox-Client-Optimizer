@@ -465,5 +465,18 @@
 "DFFlagReparentSQIMemScope": true,
 "FFlagShareInviteLinkContextMenuV1ABTestEnabled_v4": true,
 "FIntLuaAppInfiniteHomePageRollout": 10000,
+"FFlagEnableCheckingOnDisabledChannels": false,
+"FFlagUserInChannelFailureMsg": false,
+"FFlagDisableLegacyChannelSelection": false,
+"FFlagWinChannelCrashCounter": false,
+"FFlagSessionReporterSaveChannel": false,
+"FFlagAutoUpgradeEnableVersionCheckWithChannels": false,
+"FFlagEnableAutoUpgradeWin32": false,
+"FFlagDataModelCheckReleaseVersion": false,
+"DFFlagLogVersionNumberUsage": false,
+"DFFlagLogVersionNumberUsage2": false,
+"DFIntLogVersionNumberUsagePercent": 0,
+"FFlagReportDesktopClientOsVersion": false,
+"PreventDismissingForceUpgrade": false,
 "DFFlagSendAllPhysicsPackets": true
 }
