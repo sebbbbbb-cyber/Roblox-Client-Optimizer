@@ -316,6 +316,7 @@
 "FFlagUniversalAppOnMac": false,
 "FFlagUniversalAppWebLoginEngineFeatureOnly": false,
 "FFlagUniversalAppRestarts": false,
+"FStringUniversalAppOnUWPAutoOptInABTestPropName": "nil",
 "FFlagSimAlwaysUseAdaptiveWorldStep": true,
 "FFlagUserFixChatWindowHoverOver": true,
 "FFlagUserShowVerifiedBadgeInLegacyChat": true,
