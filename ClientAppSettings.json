@@ -458,6 +458,7 @@
 "DFIntReservedServersMigrationRolloutPercentage": 10000,
 "FIntFmodSoftwareChannels": 4095,
 "FIntFMODSoundChannels": 4095,
+"DFIntMinSoundStreamSizeBytes": 150000,
 "FFlagEnableBacktraceAttachments": false,
 "FFlagRenderGrassShadow": true,
 "FIntApolloClientRollout": 10000,
