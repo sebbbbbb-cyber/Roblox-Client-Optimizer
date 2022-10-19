@@ -487,5 +487,7 @@
 "FIntFallBackRequestAutoLoginRolloutPercent": 10000,
 "DFIntStartupTracingInfluxRollout": 0,
 "FIntReportDeviceInfoRollout": 0,
+"FFlagCheckAppVersionUse200": true,
+"DFFlagDecouplePerfdataFromSessionTracking": true,
 "DFFlagSendAllPhysicsPackets": true
 }
