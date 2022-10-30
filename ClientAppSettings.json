@@ -494,6 +494,7 @@
 "FFlagVoiceChatLockFreeMixing": true,
 "FFlagVoiceChatLockFreeMicIndicator2": true,
 "FFlagVoiceChatManagerWaitOnSignalR": true,
+"FFlagVoiceChatWatchForMissedSignalR": true,
 "DFFlagVoiceChatMultistreamSubscriptionsV1": false,
 "DFFlagVoiceChatStatsEmptyInitialBatch": true,
 "DFFlagVoiceChatUseCustomAudioDevice": true,
