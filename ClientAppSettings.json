@@ -539,5 +539,9 @@
 "FFlagSupportCommandService2": true,
 "FFlagUseActualSizeToCalculateListMinSize2": true,
 "FFlagSimAdaptiveCapMaxTimestepMultiplier2": true,
+"FFlagEnableRobloxInputScheduling": true,
+"DFFlagDebugEnableCloseFmodLogs": false,
+"DFFlagUIPerfTelemetry": false,
+"DFFlagTelemetryScopeOverhead": false,
 "DFFlagSendAllPhysicsPackets": true
 }
