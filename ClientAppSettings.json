@@ -543,5 +543,6 @@
 "DFFlagDebugEnableCloseFmodLogs": false,
 "DFFlagUIPerfTelemetry": false,
 "DFFlagTelemetryScopeOverhead": false,
+"DFFlagResetChildrenOnNIIProcess2": true,
 "DFFlagSendAllPhysicsPackets": true
 }
