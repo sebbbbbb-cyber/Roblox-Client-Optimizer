@@ -544,5 +544,10 @@
 "DFFlagUIPerfTelemetry": false,
 "DFFlagTelemetryScopeOverhead": false,
 "DFFlagResetChildrenOnNIIProcess2": true,
+"FFlagInGameMenuV1ExitModal": false,
+"FFlagInGameMenuHomeButton": false,
+"FFlagNewInGameMenuDisabledInVR": true,
+"FFlagNewInGameMenuController2": false,
+"FFlagEnableInGameMenuDurationLogger": false,
 "DFFlagSendAllPhysicsPackets": true
 }
