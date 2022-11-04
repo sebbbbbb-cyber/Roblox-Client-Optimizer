@@ -2,7 +2,7 @@
 
 RCO automatically installs FFlags to optimize your Roblox client.
 
-[Download](https://github.com/L8X/roblox-client-optimizer/releases)
+[Download RCO here](https://github.com/L8X/roblox-client-optimizer/releases)
 
 Some things RCO currently does:
 
