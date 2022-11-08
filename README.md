@@ -7,7 +7,7 @@ RCO automatically installs FFlags to optimize your Roblox client.
 Some things RCO currently does:
 
 - Disables Crashpad / Backtrace Crash Reporting
-- Disables Windows Beta App (for now...)
+- ~~Disables Windows Beta App (for now...)~~ (curse you ROBLOX)
 - Disables Teleport with Menu Open Block & Prompt (Mostly)
 - Unlocks FPS (For most people)
 - Disables Abuse Report Screenshot
@@ -24,7 +24,7 @@ Some things RCO currently does:
 - Enables Animation Clip Mem Cache
 - Enables optimizations for Dynamic Clouds
 - Enables Better Trackpad Scrolling
-- Enables Audio Volumetric Panning by Default
+- ~~Enables Audio Volumetric Panning by Default~~ (temporarily disabled)
 - Enables the LoadModule function
 - Enables the new RunService signals (PreSimulation, PostSimulation, PreRender, PreAnimation)
 - Enables the FindFirstDescendant function
