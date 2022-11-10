@@ -655,6 +655,6 @@
 "DFFlagSkipDisconnectCleanupWhenStreamingObserverCapacityMismatch": true,
 "DFFlagStreamingSolverReportMissingSet": true,
 "FFlagFilteredLocalSimulation5": true,
-"DFFlagCLI52064UseIxp": false,
+"DFFlagCLI52064UseIxp": true,
 "DFFlagSendAllPhysicsPackets": true
 }
