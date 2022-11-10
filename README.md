@@ -16,6 +16,7 @@ Some things RCO currently does:
 - Optimizes HSR
 - Optimizes TC2
 - Optimizes Graphics
+- Optimizes Textures
 - Optimizes CSGv2 and CSGv3
 - Disables Crashpad / Backtrace crash metrics
 - Disables AbuseReportScreenshot
