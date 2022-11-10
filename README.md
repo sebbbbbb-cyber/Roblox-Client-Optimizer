@@ -1,44 +1,33 @@
 # roblox-client-optimizer
 
 RCO automatically installs FFlags to optimize your Roblox client.
+The flags we edit are contained in our [GitHub Repository](https://github.com/L8X/roblox-client-optimizer/blob/main/ClientAppSettings.json).
 
-[Click here to download RCO](https://github.com/L8X/roblox-client-optimizer/releases/download/v1.0/RCO-Installer.zip)
+Why don't you give it a try?
+
+[Click here to download RCO!](https://github.com/L8X/roblox-client-optimizer/releases/download/v1.0/RCO-Installer.zip)
 
 Some things RCO currently does:
 
-- Disables Crashpad / Backtrace Crash Reporting
-- ~~Disables Windows Beta App (for now...)~~ (curse you ROBLOX)
-- Disables Teleport with Menu Open Block & Prompt (Mostly)
 - Unlocks FPS (For most people)
-- Disables Abuse Report Screenshot
-- Disables GamePerfMonitor and the telemetry it sends
-- Enables Quick Game Launch
-- Enables preloading of Fonts
-- Enables preloading of Texture Item Options
-- Enables Memory Prioritization for Textures
-- Enables LC Validation and Quality Checking
-- Enables various optimizations for CSGv2 and CSGv3
-- Enables FULL Graphics Quality Options (21 instead of 10)
-- Enables optimizations for Vulkan, OpenGL, and Shaders
-- Enables memory optimization for HttpCache and Sounds
-- Enables Animation Clip Mem Cache
-- Enables optimizations for Dynamic Clouds
-- Enables Better Trackpad Scrolling
-- ~~Enables Audio Volumetric Panning by Default~~ (temporarily disabled)
-- Enables the LoadModule function
+- Optimizes Dynamic Clouds
+- Optimizes Caching
+- Optimizes the Voxelizer
+- Optimizes HSR
+- Optimizes TC2
+- Optimizes Graphics
+- Optimizes CSGv2 and CSGv3
+- Disables Crashpad / Backtrace crash metrics
+- Disables AbuseReportScreenshot
+- Disables GamePerfMonitor and GamePerfMonitor metrics
+- Enables font and texture item preloading
+- Enables memory prioritization and performance control
+- Enables FULL graphics quality options (21 instead of 10!)
 - Enables the new RunService signals (PreSimulation, PostSimulation, PreRender, PreAnimation)
-- Enables the FindFirstDescendant function
-- Enables Adaptive Physics optimizations
-- Enables Cache optimizations
-- Enables Vertex Data optimizations
-- Enables HSR optimizations
-- Enhances Cluster Compression
-- Enhances Join Data Compression
-- Enables the Parallel Humanoid Manager
-- Enables LMS Client and Player Configurer
-- Enables Batch Asset Api
-- Enables Batch Gfx Gui
-- Enables Texture optimizations
-- Enables TC2 optimizations
-- Enables Graphics optimizations
-
+- Enables LoadModule
+- Enables QuickGameLaunch
+- Enables FindFirstDescendant
+- Enables ParallelHumanoidManager
+- Enables PlayerConfigurer
+- Enables BatchAssetApi
+- Enables BatchGfxGui
