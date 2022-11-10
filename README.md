@@ -18,6 +18,7 @@ Some things RCO currently does:
 - Optimizes Graphics
 - Optimizes Textures
 - Optimizes CSGv2 and CSGv3
+- (May change) Disables the V3 ingame menu
 - Disables Crashpad / Backtrace crash metrics
 - Disables AbuseReportScreenshot
 - Disables GamePerfMonitor and GamePerfMonitor metrics
