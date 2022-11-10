@@ -12,7 +12,7 @@ Some things RCO currently does:
 - Unlocks FPS (For most people)
 - Optimizes Dynamic Clouds
 - Optimizes Caching
-- Optimizes the Voxelizer
+- Optimizes Voxelizer
 - Optimizes HSR
 - Optimizes TC2
 - Optimizes Graphics
