@@ -498,8 +498,6 @@
 "DFIntStreamJobPriorityAmplifierRadius": 300,
 "DFFlagRemoveStreamedRegionSetCheck": true,
 "DFFlagReportStreamJobStopReasons2": true,
-"FFlagRomarkPhaseSupportNonStreaming": true,
-"DFFlagSkipDisconnectCleanupWhenStreamingObserverCapacityMismatch": true,
 "DFFlagStreamingSolverReportMissingSet": true,
 "FFlagFilteredLocalSimulation5": true,
 "DFFlagCLI52064UseIxp": true,
