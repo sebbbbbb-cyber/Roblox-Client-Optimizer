@@ -329,7 +329,6 @@
 "FFlagTurnOffNPPThrottling": true,
 "DFFlagTypesetterAllocs": true,
 "DFFlagUIQuadTreeAllocs": true,
-"DFFlagVisuallyMovingWakeOnAdd": true,
 "FFlagUpdateDisconnectReasonInit": true,
 "FFlagLuaAppTradesEnabled": true,
 "FFlagLuaAppDevSubsEnabled": true,
