@@ -1,4 +1,4 @@
-# Roblox Client Optimizer (RCO) #
+# What is RCO and what does it do? #
 
 RCO automatically tweaks FFlags to optimize your Roblox client.
 The flags we edit are contained in our [GitHub Repository](https://github.com/L8X/roblox-client-optimizer/blob/main/ClientAppSettings.json).
