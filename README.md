@@ -10,10 +10,7 @@ Why don't you give it a try?
 Some things RCO currently does:
 
 - Unlocks FPS (For most people)
-- Optimizes Dynamic Clouds
 - Optimizes Caching
-- Optimizes Voxelizer
-- Optimizes HSR
 - Optimizes Graphics
 - Optimizes Textures
 - (May change) Disables the V3 ingame menu
