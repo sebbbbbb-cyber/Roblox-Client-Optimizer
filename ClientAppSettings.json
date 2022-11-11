@@ -109,6 +109,5 @@
 "FFlagSaveTempCageMeshDataLocally": true,
 "FFlagLuaAppTradesEnabled": true,
 "DFFlagCLI52064UseIxp": true,
-
 "DFFlagSendAllPhysicsPackets": true
 }
