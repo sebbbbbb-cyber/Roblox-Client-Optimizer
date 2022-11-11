@@ -16,7 +16,6 @@ Some things RCO currently does:
 - (May change) Disables the V3 ingame menu
 - Disables Crashpad / Backtrace crash metrics
 - Disables AbuseReportScreenshot
-- Disables GamePerfMonitor and GamePerfMonitor metrics
 - Enables font and texture item preloading
 - Enables memory prioritization and performance control
 - Enables FULL graphics quality options (21 instead of 10!)
@@ -25,6 +24,4 @@ Some things RCO currently does:
 - Enables QuickGameLaunch
 - Enables FindFirstDescendant
 - Enables ParallelHumanoidManager
-- Enables PlayerConfigurer
 - Enables BatchAssetApi
-- Enables BatchGfxGui
