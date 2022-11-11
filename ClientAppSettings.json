@@ -95,8 +95,6 @@
 "FFlagNoJoinDiscoThrottleRakNet3": true,
 "DFIntPerfDataSummaryModeHundredthsPercent": 0,
 "DFFlagPredictedOOM": false,
-"FFlagMoveGameJoinFlow": true,
-"FFlagMoveGameJoinFlowRendering": true,
 "FFlagRenderEnableGlobalInstancing": true,
 "FIntRenderEnableGlobalInstancingD3D10Percent": 10,
 "FIntRenderEnableGlobalInstancingD3D11Percent": 10,
