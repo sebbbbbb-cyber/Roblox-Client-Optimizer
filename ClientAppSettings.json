@@ -1,5 +1,6 @@
 {
 "FIntFlagUpdateVersion": 27,
+"FStringClientChannelProbabilityString": "1000;ZFlag=0,ZLive2=100",
 "FFlagExecuteDynInitTests": false,
 "FFlagAppealToBootstrapperOnStartup": false,
 "FFlagEnableQuickGameLaunch": true,
@@ -110,5 +111,6 @@
 "FFlagSaveTempCageMeshDataLocally": true,
 "FFlagLuaAppTradesEnabled": true,
 "DFFlagCLI52064UseIxp": true,
+
 "DFFlagSendAllPhysicsPackets": true
 }
