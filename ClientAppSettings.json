@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 25,
+"FIntFlagUpdateVersion": 26,
 "FFlagExecuteDynInitTests": false,
 "FFlagAppealToBootstrapperOnStartup": false,
 "FFlagEnableQuickGameLaunch": true,
