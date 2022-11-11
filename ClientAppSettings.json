@@ -55,7 +55,7 @@
 "DFFlagTaskSchedulerAsyncTasksTimingEnabled": true,
 "DFFlagTaskSchedulerAvoidYieldInBackground": true,
 "DFFlagTaskSchedulerBlockingShutdownInClients": true,
-"DFIntTaskSchedulerTargetFps": 10000000,
+"DFIntTaskSchedulerTargetFps": 1000000,
 "FFlagTextureIgnoreAlpha": true,
 "FFlagTextureManagerMutex": true,
 "FFlagTextureLoadThrottleEnabled": true,
