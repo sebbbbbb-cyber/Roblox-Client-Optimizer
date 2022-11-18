@@ -176,5 +176,13 @@
 "FIntLuaAppFetchDataOnGameExitRollout": 100,
 "FFlagPerfControlFireCallbacks": true,
 "FFlagLuaAppTradesEnabled": true,
+"FFlagLuaAppDevSubsEnabled": true,
+"DFFlagDeveloperSubscriptionsEnabled": true,
+"FFlagLuaAppSystemBar": true,
+"FFlagLuaAppUseNewNavBar": true,
+"FFlagLuaAppLegacyInputSettingsRefactor": true,
+"FFlagLuaAppColorSystem1_1TestCache": true,
+"FFlagLuaAppColorSystem1_1TestEnabled": true,
+"FFlagLuaAppUseUIBloxColorPalettes": true,
 "DFFlagSendAllPhysicsPackets": true
 }
