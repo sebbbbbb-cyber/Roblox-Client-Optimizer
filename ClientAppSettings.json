@@ -150,7 +150,6 @@
 "FFlagEnablePrefetchProtocol": true,
 "FFlagEnablePrefetchTimeout": true,
 "DFIntAppLaunchFlowThrottlingRate": 1,
-"FIntAppBridgePlaceLaunchMaxTotalSleepTime": 1,
 "FIntPrefetchBodyMatchingStrategy": 1,
 "FIntPrefetchGuidLowerCaseStrategy": 1,
 "DFIntClusterCompressionLevel": 3,
