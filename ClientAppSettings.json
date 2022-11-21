@@ -1,6 +1,7 @@
 {
 "FIntFlagUpdateVersion": 27,
 "FStringClientChannelProbabilityString": "1000;ZFlag=0,ZLive2=100",
+"DFIntTaskSchedulerTargetFps": 1000000,
 "DFFlagEarlyExitIfHang": false,
 "DFFlagEarlyPrefetchRequestChecks": true,
 "FFlagExecuteDynInitTests": false,
@@ -98,7 +99,6 @@
 "DFFlagTaskSchedulerAsyncTasksTimingEnabled": true,
 "DFFlagTaskSchedulerAvoidYieldInBackground": true,
 "DFFlagTaskSchedulerBlockingShutdownInClients": true,
-"DFIntTaskSchedulerTargetFps": 1000000,
 "FFlagTextureIgnoreAlpha": true,
 "FFlagTextureManagerMutex": true,
 "FFlagTextureLoadThrottleEnabled": true,
