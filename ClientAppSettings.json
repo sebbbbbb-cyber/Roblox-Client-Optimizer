@@ -14,7 +14,7 @@
 "FFlagEnableQuickGameLaunch": true,
 "FFlagRemoveRedundantFontPreloading": true,
 "FFlagClientAssetFormatResolution4": true,
-"FFlagBatchGfxGui2": false,
+"FFlagBatchGfxGui2": true,
 "FFlagBatchAssetApi": true,
 "DFFlagBatchAssetApiNoFallbackOnFail": false,
 "DFFlagHttpClientOptimizeReqQueuing": true,
