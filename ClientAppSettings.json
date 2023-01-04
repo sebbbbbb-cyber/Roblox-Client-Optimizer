@@ -245,6 +245,7 @@
 "FFlagFakeMouseInputForVR": true,
 "FFlagSupportGenericHapticsOnVR": true,
 "FFlagVRToolInteractions": true,
+"DFIntReportVREnabledEventThrottleHundrethsPercent": 1000,
 "FIntDefaultMeshCacheSizeMB": 2048,
 "FIntEmotesAnimationsPerPlayerCacheSize": 200000000,
 "FIntMeshContentProviderForceCacheSize": 200000000,
