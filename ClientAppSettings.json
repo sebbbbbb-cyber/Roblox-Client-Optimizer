@@ -135,7 +135,6 @@
 "DFFlagTerrain_UnpackOnDemand_FastLoad": true,
 "FFlagSoundServiceClientFix": true,
 "FFlagSoundsRespectLongTailFx4": true,
-"FFlagStreamModelLod2": true,
 "FFlagEnableLodStreamRadius": true,
 "DFFlagEnableParallelFrustumQueries2": true,
 "FFlagAvoidUnnecessaryQuadtreeLock": true,
