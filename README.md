@@ -20,8 +20,6 @@ Some things RCO currently does:
 - Enables memory prioritization and performance control
 - Enables FULL graphics quality options (21 instead of 10!)
 - Enables the new RunService signals (PreSimulation, PostSimulation, PreRender, PreAnimation)
-- Enables LoadModule
 - Enables QuickGameLaunch
-- Enables FindFirstDescendant
 - Enables ParallelHumanoidManager
 - Enables BatchAssetApi
