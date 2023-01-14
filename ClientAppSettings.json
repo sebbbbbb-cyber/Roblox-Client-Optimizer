@@ -196,12 +196,7 @@
 "FFlagStreamTerrainLod": true,
 "FFlagPersistentPerPlayer": true,
 "FFlagPersistentModels": true,
-"FFlagSimAdaptiveTimesteppingDefault2": true,
-"DFFlagSimAdaptiveEnableEightDt": true,
-"DFFlagSimAdaptiveRestPastPvBugFix": true,
-"FFlagSimAdaptiveIslanderThrottlingFix2": true,
-"FFlagSimAdaptiveCapMaxTimestepMultiplier2": true,
-"DFFlagSimTimestepArbiterAccModel": true,
+"FFlagSimAdaptiveTimesteppingDefault2": false,
 "DFFlagLodQuotaFix": true,
 "DFFlagSendAllPhysicsPackets": true
 }
