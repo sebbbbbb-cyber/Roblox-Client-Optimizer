@@ -78,14 +78,7 @@ size_t sz = 0;
 std::string rootDir;
 std::string robloxRootDir;
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
-    if (!(_dupenv_s(&buf, &sz, "appdata") == 0 && buf != nullptr))
-    {
-        std::cout << "Error finding AppData folder (NOTE: THIS PROGRAM ONLY WORKS ON WINDOWS) | 0x1\n";
-        std::cin.get();
-        return 1;
-    }
-    rootDir = buf + std::string("\\RClientOptimizer");
-    free(buf);
+    rootDir = std::string("C:\\RClientOptimizer");
 
     std::ifstream file(rootDir + "\\settings.lgbt");
     std::string newStr = "";
@@ -232,12 +225,13 @@ void fflagUpdater() {
                     }
                     file.close();
                 }
+                //system((rootDir + "\\curl.exe -X GET -o \"" + rootDir + "\\flag-version.rco\" -k --silent https://raw.githubusercontent.com/l8x/roblox-client-optimizer/main/flag-version.rco").c_str());
                 if (!(fileExists((robloxRootDir + "\\" + verString + "\\ClientSettings" + "\\ClientAppSettings.json").c_str()))) {
                     std::ofstream cap((robloxRootDir + "\\" + verString + "\\ClientSettings" + "\\ClientAppSettings.json").c_str());
                     if (useInternet == 'n')
                         cap << offlineFflags;
                     else {
-                        system((rootDir + "\\curl.exe -X GET -o \"" + rootDir + "\\rbx.flags\" -k --silent https://raw.githubusercontent.com/L8X/roblox-client-optimizer/main/ClientAppSettings.json").c_str());
+                        system((rootDir + "\\curl.exe -X GET -o \"" + rootDir + "\\rbx.flags\" -k --silent https://raw.githubusercontent.com/l8x/roblox-client-optimizer/main/ClientAppSettings.json").c_str());
                         std::ifstream file(rootDir + "\\rbx.flags");
                         if (file.is_open()) {
                             file.seekg(0, std::ios::end);
@@ -263,16 +257,7 @@ HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 int main() {
     std::thread t1(traySystem);
 
-    if (!(_dupenv_s(&buf, &sz, "appdata") == 0 && buf != nullptr))
-    {
-        std::cout << "Error finding AppData folder (NOTE: THIS PROGRAM ONLY WORKS ON WINDOWS) | 0x1\n";
-        std::cin.get();
-        return 1;
-    }
-
-    rootDir = buf + std::string("\\RClientOptimizer");
-
-    free(buf);
+    rootDir = std::string("C:\\RClientOptimizer");
 
     if (!(_dupenv_s(&buf, &sz, "localappdata") == 0 && buf != nullptr))
     {
