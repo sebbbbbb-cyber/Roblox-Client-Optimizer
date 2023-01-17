@@ -72,10 +72,10 @@ pause
 echo.
 echo Installing VCRedist...
 deps\VC_redist.x64.exe /install /quiet /norestart
-mkdir %appdata%\RClientOptimizer
+mkdir "%appdata%\RClientOptimizer"
 echo Done! ^| Copying files to %appdata%\RClientOptimizer\
-copy deps\curl.exe %appdata%\RClientOptimizer\
-copy deps\animegirl.ico %appdata%\RClientOptimizer\
+copy deps\curl.exe "%appdata%\RClientOptimizer\"
+copy deps\animegirl.ico "%appdata%\RClientOptimizer\"
 mkdir "C:\Program Files\RCO"
 copy deps\RCO.exe "C:\Program Files\RCO\"
 echo.
@@ -85,6 +85,5 @@ echo If you didn't have any version VCRedist installed beforehand you should res
 echo Press any key to run RCO...
 echo.
 pause
-title RCO
 cls
 "C:\Program Files\RCO\RCO.exe"
