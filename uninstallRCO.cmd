@@ -1,4 +1,7 @@
 @echo off
+
+rem IF YOU WANT A .bat VERSION, FUCK YOU, JUST RENAME IT YOURSELF.
+
 ::::::::::::::::::::::::::::::::::::::::::::
 :: Elevate.cmd - Version 4
 :: Automatically check & get admin rights
@@ -57,29 +60,28 @@
  ::START
  ::::::::::::::::::::::::::::
 cls
-title Roblox Client Optimizer (RCO) Installer...
+title Roblox Client Optimizer (RCO) Un-Installer...
 
-echo Welcome to RCO Installer!!! ^| (By installing this you agree to all licenses in the licenses folder)
-echo Press any key to start the installation!
+echo We are so sorry to see you leave RCO.
+echo Press any key to start the uninstallation.
+echo (Note, VCRedist (What makes C++ work) will not be uninstalled, as lots of programs use it, if you'd like to do that, do so yourself, sorry)
+echo.
+echo ALSO, this will only uninstall RCO the PROGRAM, it will NOT remove your current active roblox fflags, even if they are the RCO fflags, remove them with RCO by disabling RCO first, and then uninstalling it, OR, manually deleting the file yourself in %localappdata%\roblox\versions\*current version here*\ClientSettings
 
 echo.
 pause
+echo.
+
+del /q "%appdata%\RClientOptimizer"
+rmdir "%appdata%\RClientOptimizer"
+del /q "C:\RClientOptimizer"
+rmdir "C:\RClientOptimizer"
+del /q "C:\Program Files\RCO"
+rmdir "C:\Program Files\RCO"
+reg delete "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "RCO" /f
 
 echo.
-echo Installing VCRedist...
-deps\VC_redist.x64.exe /install /quiet /norestart
-mkdir "C:\RClientOptimizer"
-echo Done! ^| Copying files to C:\RClientOptimizer\
-copy deps\curl.exe "C:\RClientOptimizer\"
-copy deps\animegirl.ico "C:\RClientOptimizer\"
-mkdir "C:\Program Files\RCO"
-copy deps\RCO.exe "C:\Program Files\RCO\"
-echo.
-echo.
-echo RCO has now been installed!!
-echo If you didn't have any version VCRedist installed beforehand you should restart your PC before running RCO...
-echo Press any key to run RCO...
+echo It is okay (and expected) if you see any errors above, RCO should still be uninstalled
+echo Done Unintalling.
 echo.
 pause
-cls
-"C:\Program Files\RCO\RCO.exe"
