@@ -5,7 +5,7 @@ The flags we edit are contained in our [GitHub Repository](https://github.com/L8
 
 Why don't you give it a try?
 
-[Click here to download RCO!](https://github.com/L8X/roblox-client-optimizer/releases/download/v1.0/RCO-Installer.zip)
+[Click here to download RCO!](https://github.com/L8X/roblox-client-optimizer/releases/download/v1.0/RCO-Installer.zip) (change this nul)
 
 Some things RCO currently does:
 
@@ -23,3 +23,7 @@ Some things RCO currently does:
 - Enables QuickGameLaunch
 - Enables ParallelHumanoidManager
 - Enables BatchAssetApi
+
+Do you have any issues installing RCO? Read here!
+1. RCO *ONLY* works on Windows, though it should also work on custom Windows mods. (Only tested on 10)
+2. If you have UAC disabled, or you are using a custom Windows ISO that disables UACs functionality, run rco-installer-NOUAC-DONT-USE-UNLESS-NEEDED.cmd to install RCO, instead of the regular installer.
