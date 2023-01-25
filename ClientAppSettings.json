@@ -361,6 +361,10 @@
 "DFInitialCacheClustersBandwidthKBpS": 24000,
 "DFIntInitialCacheClustersMaxBytesPerSend": 24000000, 
 "DFIntExternalHttpRequestSizeLimitKB": 4096,
-"DFFlagSendMatchmakingContext": true,
+"DFIntJoinDataCompressionLevel": 8,
+"DFIntClusterCompressionLevel": 8,
+"DFIntNetworkSchemaCompressionRatio": 18,
+"DFFlagHttpSendMatchmakingContext": true,
+"FIntClientCompressionFormatRequestPC": 3,
 "FFlagUserRobloxClientOptimizer": true
 }
