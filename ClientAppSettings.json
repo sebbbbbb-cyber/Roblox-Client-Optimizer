@@ -328,7 +328,7 @@
 "DFIntClusterCompressionLevel": 8,
 "DFIntMaxStreamPacketsPerStep": 32,
 "DFIntNetworkSchemaCompressionRatio": 18,
-"FFlagStreamJobClampToWorldExtents3": true,
+"DFFlagStreamJobClampToWorldExtents4": true,
 "DFFlagStreamingInstanceQuotaWhenNoTerrainFix": true,
 "DFFlagHttpSendMatchmakingContext": true,
 "FIntClientCompressionFormatRequestPC": 3,
