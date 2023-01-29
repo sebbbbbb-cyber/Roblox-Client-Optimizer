@@ -330,5 +330,5 @@
 "DFFlagStreamingInstanceQuotaWhenNoTerrainFix": true,
 "DFFlagHttpSendMatchmakingContext": true,
 "FIntClientCompressionFormatRequestPC": 3,
-"FFlagUserRobloxClientOptimizer": true
+"DFFlagSendAllPhysicsPackets": true
 }
