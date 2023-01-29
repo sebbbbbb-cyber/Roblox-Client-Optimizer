@@ -109,7 +109,7 @@
 "DFFlagPlayerConfigurer2886": true,
 "DFFlagPlayerConfigurerRunLMSTest": true,
 "FFlagEnableLinearCageDeformer2": true,
-"DFFlagEnableVisibilityService": true,
+"DFFlagEnableVisibilityService": false,
 "DFFlagEnablePerformanceControlSoundCache3": true,
 "DFFlagAvatarEditorServiceEnabled2": true,
 "FFlagAvatarEditorServiceV2EndpointSupported": true,
