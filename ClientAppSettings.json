@@ -112,7 +112,6 @@
 "DFFlagEnablePerformanceControlSoundCache3": true,
 "FIntLmsClientRollout2": 100,
 "FFlagGraphicsTextureCopy": true,
-"FFlagGraphicsNameDeviceAllocs2": true,
 "FFlagGraphicsD3D11DeviceRemovedString": true,
 "FFlagGraphicsEnableD3D10Compute": true,
 "FFlagGraphicsDeviceNameAllocs2": true,
@@ -318,5 +317,7 @@
 "DFFlagStreamingInstanceQuotaWhenNoTerrainFix": true,
 "DFFlagHttpSendMatchmakingContext": true,
 "FIntClientCompressionFormatRequestPC": 3,
+"DFFlagAlwaysPutSoundsOnDiskWhenLowOnMemory": true,
+"FFlagAudioAssetsInResizableCache": true,
 "DFFlagSendAllPhysicsPackets": true
 }
