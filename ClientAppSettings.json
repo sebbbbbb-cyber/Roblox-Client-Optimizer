@@ -247,7 +247,6 @@
 "DFFlagLodQuotaFix": true,
 "FFlagRenderTC2ViewportFrameDownresLODFix": true,
 "DFFlagRenderTC2PreferWidthPOT": true,
-"DFFlagRenderTC2_LayeredClothingEnable": true,
 "FFlagTextureManagerUsePerfControlDirectMapping": true,
 "FFlagPerformanceControlSimpleMPLogic": true,
 "FFlagPerformanceControlMimicMemoryPrioritization": true,
