@@ -306,5 +306,14 @@
 "FIntClientCompressionFormatRequestPC": 3,
 "DFFlagAlwaysPutSoundsOnDiskWhenLowOnMemory": true,
 "FFlagAudioAssetsInResizableCache": true,
+"FFlagSoundServiceListenerUseCircularBuffer": true,
+"FFlagUseAudioMemoryResource": true,
+"DFFlagAudioThrottleExpensiveDeletions": true,
+"DFFlagAudioGraphUpload": true,
+"DFFlagAudioGraphThrottling": true,
+"FFlagVoiceChatUpdateSourcesOnSeparateThread": true,
+"FFlagAssemblyAllowBroadphaseExclusion2": true,
+"FFlagRenderGpuTextureCompressor": true,
+"FFlagGraphicsSelectSupportedMSAA": true,
 "DFFlagSendAllPhysicsPackets": true
 }
