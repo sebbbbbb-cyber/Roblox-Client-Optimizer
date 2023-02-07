@@ -326,7 +326,6 @@
 "FIntUseOpenXr3": 100,
 "FIntMultiview2": 100,
 "FFlagUserFixCameraPanAfterShiftLock": true,
-"FFlagUserHandleChatHotKeyWithContextActionService": true,
 "FFlagUserHideControlsWhenMenuOpen": true,
 "FFlagUserMaquettesSupportEnabled": true,
 "FFlagUserPlayEmoteChatTextUpdates": true,
