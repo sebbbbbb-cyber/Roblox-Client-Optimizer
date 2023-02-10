@@ -343,5 +343,6 @@
 "DFFlagCheckForExpiringPrefetchRequests": true,
 "FFlagIxpUserAppLayersPrefetch3": true,
 "FIntEnableCullableScene2HundredthPercent": 10000,
+"FFlagGraphicsEnableInstancedStream": true,
 "DFFlagSendAllPhysicsPackets": true
 }
