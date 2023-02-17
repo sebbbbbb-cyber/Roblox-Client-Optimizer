@@ -371,7 +371,7 @@
 "DFStringRobloxAnalyticsSubDomain": "opt-out",
 "FFlagDisableGoogleAnalytics": true,
 "DFFlagAnalyticsNS1BeaconConfig": "https://opt-out.roblox.com/",
-"GoogleAnalyticsAccountPropertyIDPlayer": "opt-out": 
+"GoogleAnalyticsAccountPropertyIDPlayer": "opt-out",
 "GoogleAnalyticsAccountPropertyID": "opt-out",
 "DFFlagEphemeralCounterInfluxReportingEnabled": false,
 "DFIntEphemeralCounterInfluxReportingPriorityHundredthsPercent": 0,
