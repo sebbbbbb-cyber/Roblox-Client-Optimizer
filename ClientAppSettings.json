@@ -25,7 +25,7 @@
 "FFlagSmoothClusterAsyncUpload": true,
 "FFlagSmoothClusterChunkGenRefactor2": true,
 "FFlagSmoothClusterGrassTasks": true,
-"FFlagSmoothClusterTasks3": true,
+"FFlagSmoothClusterTasks4": true,
 "FIntSmoothClusterTaskQueueMaxParallelTasks": 4,
 "DFIntMegaReplicatorNumParallelTasks": 8,
 "DFIntInterpolationNumParallelTasks": 8,
