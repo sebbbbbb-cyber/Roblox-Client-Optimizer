@@ -411,6 +411,7 @@
 "FFlagOffNetworkAnalytics": false,
 "DFFlagReportHttpServiceUsagetoEventStream": false,
 "DFFlagIkControlTelemetryEnabled": false,
+"FFlagEnableAccessibilityCounters": false,
 "DFFlagTeleportAbuseDashboard": false,
 "FFlagPrerenderMove": true,
 "FFlagRefineMovePosition": true,
