@@ -413,7 +413,11 @@
 "DFFlagIkControlTelemetryEnabled": false,
 "FFlagEnableAccessibilityCounters": false,
 "DFFlagTeleportAbuseDashboard": false,
+"FFlagAdornRenderDrawPolygonsAsUi": true,
 "FFlagPrerenderMove": true,
 "FFlagRefineMovePosition": true,
+"FFlagSimSanitizeCFrameInBasePartSetPhysics": true,
+"FFlagFilteredLocalSimulation5": true,
+"FFlagAllowHingedToAnchoredLocalSimulation": true,
 "DFFlagSendAllPhysicsPackets": true
 }
