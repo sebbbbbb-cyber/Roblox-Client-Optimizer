@@ -408,5 +408,11 @@
 "FIntGoogleAnalyticsLoadLuaShellHundredth": 0,
 "FIntGamePerfMonitorPercentage": 0,
 "DFFlagGameNetDisableVelocityLodWhenSendingAll": false,
+"FFlagOffNetworkAnalytics": false,
+"DFFlagReportHttpServiceUsagetoEventStream": false,
+"DFFlagIkControlTelemetryEnabled": false,
+"DFFlagTeleportAbuseDashboard": false,
+"FFlagPrerenderMove": true,
+"FFlagRefineMovePosition": true,
 "DFFlagSendAllPhysicsPackets": true
 }
