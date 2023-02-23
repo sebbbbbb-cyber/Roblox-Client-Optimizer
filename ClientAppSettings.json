@@ -419,5 +419,11 @@
 "FFlagSimSanitizeCFrameInBasePartSetPhysics": true,
 "FFlagFilteredLocalSimulation5": true,
 "FFlagAllowHingedToAnchoredLocalSimulation": true,
+"FFlagLodEntityOccupancy": true,
+"FFlagReplicatorTracksPingFrame": true,
+"FFlagReplicatorAddPingBackSignal": true,
+"FFlagSHUseNewComputeLevel": true,
+"FFlagSHUseNewComputeLevelUsesOBB": true,
+"FFlagCSGMeshSerializationVer5": true,
 "DFFlagSendAllPhysicsPackets": true
 }
