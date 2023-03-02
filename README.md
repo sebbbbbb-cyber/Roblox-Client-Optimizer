@@ -1,11 +1,11 @@
 # About RCO
 
 RCO automatically tweaks FFlags to optimize your Roblox client.
-The flags we edit are contained in our [GitHub Repository](https://github.com/L8X/roblox-client-optimizer/blob/main/ClientAppSettings.json).
+The flags we edit are contained in our [GitHub Repository](https://github.com/L8X/Roblox-Client-Optimizer/blob/main/ClientAppSettings.json).
 
 Why don't you give it a try?
 
-[Click here to download RCO!](https://github.com/L8X/roblox-client-optimizer/releases/download/v1.2/RCO-Installer.zip)
+[Click here to download RCO!](https://github.com/L8X/Roblox-Client-Optimizer/releases/download/2.0.0/RCO2Installer.zip)
 
 Some things RCO currently does:
 
