@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 39,
+"FIntFlagUpdateVersion": 40,
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FFlagDynamicReloaderInCore": false,
 "DFFlagDynamicFastVariableReloaderTest1": false,
@@ -143,8 +143,8 @@
 "FIntRenderD3D11UncleanShutdownPercent": 100,
 "DFIntRenderingThrottleDelayInMS": 500,
 "FIntRenderShadowIntensity": 0,
-"DFIntRakNetMtuValue1InBytes": 1200,
-"DFIntRakNetMtuValue2InBytes": 1300,
+"DFIntRakNetMtuValue1InBytes": 1280,
+"DFIntRakNetMtuValue2InBytes": 1340,
 "DFIntRakNetMtuValue3InBytes": 1400,
 "DFIntConnectionMTUSize": 1400,
 "FFlagCSGMeshDisableReadHash": true,
@@ -393,7 +393,7 @@
 "FLogHSRLogChannel": 7,
 "FFlagFailsafeHumanoid_3": true,
 "FFlagFailsafeHumanoidLOD": true,
-"FIntMaxCachedPatches": 3,
+"FIntMaxCachedPatches": 10,
 "DFFlagLocServiceGetSourceLanguageFromWebAPI": true,
 "DFFlagCheckMaxCageDistance": true,
 "FFlagAddCageCorrespondence": true,
@@ -406,5 +406,9 @@
 "FFlagMotionBuffersSkipNullVertexLayout": true,
 "FFlagProcessEventQueueOnInput": true,
 "FFlagAddRtlTextSupportOption2": true,
+"DFFlagAlwaysApplyPrioritization": true,
+"FFlagFileSystemGetCacheDirectoryPointerCacheResult": true,
+"DFFlagFileSystemGetCacheDirectoryLikeAndroid": true,
+"FFlagFlagAPICaching": true,
 "DFFlagSendAllPhysicsPackets": true
 }
