@@ -43,21 +43,25 @@ namespace RCO2InstallerGui
             var resultStream = await httpResult.Content.ReadAsStreamAsync();
             var fileStream = File.Create(installPath + "\\RCO2.exe");
             resultStream.CopyTo(fileStream);
+            fileStream.Close();
 
             httpResult = await httpClient.GetAsync("https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/RCO2InstallerGui.exe");
             resultStream = await httpResult.Content.ReadAsStreamAsync();
             fileStream = File.Create(installPath + "\\RCO2InstallerGui.exe");
             resultStream.CopyTo(fileStream);
+            fileStream.Close();
 
             httpResult = await httpClient.GetAsync("https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/RCO2InstallerGui.dll");
             resultStream = await httpResult.Content.ReadAsStreamAsync();
             fileStream = File.Create(installPath + "\\RCO2InstallerGui.dll");
             resultStream.CopyTo(fileStream);
+            fileStream.Close();
 
             httpResult = await httpClient.GetAsync("https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/RCO2InstallerGui.runtimeconfig.json");
             resultStream = await httpResult.Content.ReadAsStreamAsync();
             fileStream = File.Create(installPath + "\\RCO2InstallerGui.runtimeconfig.json");
             resultStream.CopyTo(fileStream);
+            fileStream.Close();
 
             Microsoft.Win32.RegistryKey key;
             key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run", true);
