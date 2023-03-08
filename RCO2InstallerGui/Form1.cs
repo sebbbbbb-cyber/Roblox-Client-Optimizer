@@ -9,6 +9,8 @@ namespace RCO2InstallerGui
             InitializeComponent();
         }
 
+        public bool bDownloaded = false;
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -49,7 +51,8 @@ namespace RCO2InstallerGui
             resultStream.CopyTo(fileStream);
             fileStream.Close();
 
-            if (!File.Exists(installPath + "\\RCO2InstallerGui.exe")) {
+            if (!bDownloaded)
+            {
                 httpResult = await httpClient.GetAsync("https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/RCO2InstallerGui.exe");
                 resultStream = await httpResult.Content.ReadAsStreamAsync();
                 fileStream = File.Create(installPath + "\\RCO2InstallerGui.exe");
@@ -78,6 +81,7 @@ namespace RCO2InstallerGui
             }
 
             richTextBox1.Text = "Done installing the latest version of RCO2!\nFeel free to close this installer...";
+            Process.Start("C:\\RClientOptimizer\\RCO2.exe");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,7 +90,7 @@ namespace RCO2InstallerGui
             string installPath = "C:\\RClientOptimizer2";
             if (Directory.Exists(installPath))
             {
-                Directory.Delete(installPath,true);
+                Directory.Delete(installPath, true);
             }
 
             Microsoft.Win32.RegistryKey key;
@@ -106,6 +110,16 @@ namespace RCO2InstallerGui
         private void label2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string strWorkPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            if (strWorkPath == "C:\\RClientOptimizer2")
+            {
+                bDownloaded = true;
+                button2.Hide();
+            }
         }
     }
 }
