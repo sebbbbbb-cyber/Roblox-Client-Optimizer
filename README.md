@@ -5,7 +5,7 @@ The flags we edit are contained in our [GitHub Repository](https://github.com/L8
 
 Why don't you give it a try?
 
-[Click here to download RCO!](https://github.com/L8X/Roblox-Client-Optimizer/releases/download/2.0.0/RCO2Installer.zip)
+[Click here to download RCO!](https://github.com/L8X/Roblox-Client-Optimizer/releases/download/2.0.1/RCO2InstallerGui.zip)
 
 Some things RCO currently does:
 
@@ -26,4 +26,4 @@ Some things RCO currently does:
 - Enables BatchAssetApi
 
 Do you have any issues installing RCO? Read here!
-1. RCO *ONLY* works on Windows, though it should also work on custom Windows mods. (Only tested on 10)
+1. RCO *ONLY* works on Windows, though it should also work on custom Windows mods. (Only tested on 10) (Semi support for 11)
