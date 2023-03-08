@@ -17,6 +17,7 @@ char* buf = nullptr;
 size_t sz = 0;
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+HWND consoleWindow = GetConsoleWindow();
 
 //Tray icon code from stackoverflow and various other internet sources, I was unsure on how it worked.
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lParam);
@@ -50,8 +51,6 @@ int traySystem() {
 
     return static_cast<int>(msg.wParam);
 }
-
-HWND consoleWindow = GetConsoleWindow();
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
     static NOTIFYICONDATA nid;
