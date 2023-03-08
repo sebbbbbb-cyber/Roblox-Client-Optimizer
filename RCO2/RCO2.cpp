@@ -298,7 +298,7 @@ int main(int argc, char** argv) {
 
     std::ofstream rcoVerFile;
     rcoVerFile.open(rootDir + "\\programversion.rco");
-    rcoVerFile << "2.0.0\n";
+    rcoVerFile << "2.0.1\n";
     rcoVerFile.close();
 
     if (std::filesystem::exists("C:\\Program Files (x86)\\Roblox\\Versions") == true) {
