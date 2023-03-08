@@ -1,4 +1,4 @@
-﻿namespace RCO2InstallerGui
+namespace RCO2InstallerGui
 {
     partial class Form1
     {
@@ -136,6 +136,7 @@
             Name = "Form1";
             ShowIcon = false;
             Text = "RCO2 Installer Gui";
+            Load += Form1_Load;
             MouseDown += Form1_MouseDown;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
