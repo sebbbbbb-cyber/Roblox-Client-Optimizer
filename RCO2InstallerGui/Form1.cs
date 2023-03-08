@@ -83,7 +83,10 @@ namespace RCO2InstallerGui
             key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run", true);
             if (key != null)
             {
-                key.DeleteValue("RCO2");
+                if (key.GetValue("RCO2") != null)
+                {
+                    key.DeleteValue("RCO2");
+                }
                 key.Close();
             }
 
