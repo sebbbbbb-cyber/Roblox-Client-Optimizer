@@ -241,7 +241,7 @@ void mainThread() {
     }
 }
 
-int main() {
+int main(int argc, char** argv) {
     //Preinit
     SetConsoleTitle(L"Roblox Client Optimizer");
 
@@ -296,6 +296,11 @@ int main() {
         isEnabledFile.close();
     }
 
+    std::ofstream rcoVerFile;
+    rcoVerFile.open(rootDir + "\\programversion.rco");
+    rcoVerFile << "2.0.0\n";
+    rcoVerFile.close();
+
     if (std::filesystem::exists("C:\\Program Files (x86)\\Roblox\\Versions") == true) {
         std::cout << "Detected an Administrative Roblox install at C:\\Program Files (x86)\\Roblox\\Versions\nPlease reinstall Roblox without administrator, as RCO does not have Administrative permissions. | 0xA\nIf you've already reinstalled and still see this, please delete C:\\Program Files (x86)\\Roblox\n";
         std::cin.get();
@@ -317,14 +322,57 @@ int main() {
         return 3;
     }
 
+    //Check for program updates
+    string storedRcoVersion;
+
+    std::ifstream rcoVersionFile(rootDir + "\\programversion.rco");
+    rcoVersionFile.seekg(0, std::ios::end);
+    size_t size = rcoVersionFile.tellg();
+    string buffer(size, ' ');
+    rcoVersionFile.seekg(0);
+    rcoVersionFile.read(&buffer[0], size);
+    storedRcoVersion = buffer;
+    rcoVersionFile.close();
+
+    std::string rcoVersionStr;
+    CURL* reqUpd = curl_easy_init();
+    CURLcode resUpd;
+    curl_easy_setopt(reqUpd, CURLOPT_URL, "https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/programversion.rco");
+    curl_easy_setopt(reqUpd, CURLOPT_WRITEFUNCTION, WriteCallback);
+    curl_easy_setopt(reqUpd, CURLOPT_WRITEDATA, &rcoVersionStr);
+    resUpd = curl_easy_perform(reqUpd);
+    if (resUpd != CURLE_OK) {
+        curl_easy_cleanup(reqUpd);
+        std::cout << "\nNETWORK ERROR | FAILED TO CHECK FOR PROGRAM UPDATES | 0xC\n";
+        std::cin.get();
+        return 12;
+    }
+    curl_easy_cleanup(reqUpd);
+
+    if ((rcoVersionStr + ' ') != storedRcoVersion) {
+        //CreateProcess code from https://stackoverflow.com/a/15440094
+
+        STARTUPINFOA si;
+        PROCESS_INFORMATION pi;
+
+        ZeroMemory(&si, sizeof(si));
+        si.cb = sizeof(si);
+        ZeroMemory(&pi, sizeof(pi));
+
+        CreateProcessA("C:\\RClientOptimizer2\\RCO2InstallerGui.exe",argv[1],NULL,NULL,FALSE,0,NULL,NULL,&si,&pi);
+        CloseHandle(pi.hProcess);
+        CloseHandle(pi.hThread);
+        exit(0);
+    }
+
     //Initialize the tray icon system
     std::thread t1(traySystem);
 
     //Set Hidden and Enabled based on saved file
     std::ifstream hiddenFile(rootDir + "\\isHidden.rco");
     hiddenFile.seekg(0, std::ios::end);
-    size_t size = hiddenFile.tellg();
-    string buffer(size, ' ');
+    size = hiddenFile.tellg();
+    buffer = string(size, ' ');
     hiddenFile.seekg(0);
     hiddenFile.read(&buffer[0], size);
     if (buffer == "t") {
