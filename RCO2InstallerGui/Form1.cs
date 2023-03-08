@@ -81,12 +81,14 @@ namespace RCO2InstallerGui
             }
 
             richTextBox1.Text = "Done installing the latest version of RCO2!\nFeel free to close this installer...";
-            Process.Start("C:\\RClientOptimizer\\RCO2.exe");
+            Process.Start("C:\\RClientOptimizer2\\RCO2.exe");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = "Working...";
+            Process.Start("taskkill", "/f /im RCO2.exe");
+            Thread.Sleep(1000);
             string installPath = "C:\\RClientOptimizer2";
             if (Directory.Exists(installPath))
             {
