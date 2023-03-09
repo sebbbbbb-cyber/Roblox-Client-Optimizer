@@ -453,7 +453,7 @@
 "FFlagCookieProtocolEnabled": true,
 "FLogCookieProtocolCore": 6,
 "DFIntGetPlayerPlaceInstanceMigrationRollout": 100,
-"FFlagFilteredLocalSimulation5": true
+"FFlagFilteredLocalSimulation5": true,
 "FFlagAllowHingedToAnchoredLocalSimulation": true,
 "DFIntLocalSimZonePercent": 50, 
 "DFFlagSendAllPhysicsPackets": true
