@@ -76,12 +76,12 @@ namespace RCO2InstallerGui
             key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run", true);
             if (key != null)
             {
-                key.SetValue("RCO2", "C:\\RClientOptimizer2\\RCO2.exe", Microsoft.Win32.RegistryValueKind.String);
+                key.SetValue("RCO2", installPath+"\\RCO2.exe", Microsoft.Win32.RegistryValueKind.String);
                 key.Close();
             }
 
             richTextBox1.Text = "Done installing the latest version of RCO2!\nFeel free to close this installer...";
-            Process.Start("C:\\RClientOptimizer2\\RCO2.exe");
+            Process.Start(installPath+"\\RCO2.exe");
         }
 
         private void button2_Click(object sender, EventArgs e)
