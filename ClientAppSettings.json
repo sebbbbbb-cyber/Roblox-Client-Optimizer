@@ -1,6 +1,6 @@
 {
-"FIntFlagUpdateVersion": 53,
-"FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;25581028;4126963942;2627408279;4329723352",
+"FIntFlagUpdateVersion": 54,
+"FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "FStringV1MenuLanguageSelectionFeatureForcedUserIds": "2323539704;3822626535",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FFlagDynamicReloaderInCore": false,
