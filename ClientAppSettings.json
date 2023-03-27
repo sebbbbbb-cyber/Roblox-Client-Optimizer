@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 55,
+"FIntFlagUpdateVersion": 56,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "FStringV1MenuLanguageSelectionFeatureForcedUserIds": "2323539704;3822626535",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
@@ -528,5 +528,9 @@
 "FFlagTrackAllDeviceMemory5": true,
 "FFlagVoiceChatSubAfterPeerCreated": true,
 "DFFlagVoiceChatUseTaskManager": true,
+"DFFlagVoiceChatDisableOriginalMuteSignal": true,
+"FFlagUseCacheAutolist": true,
+"FFlagGraphicsEnableInstancedStream": true,
+"FFlagGraphicsEnableInstancedStream2": true,
 "DFFlagSendAllPhysicsPackets": true
 }
