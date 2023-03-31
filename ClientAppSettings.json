@@ -550,5 +550,12 @@
 "FFlagTerrainSmoothRegionOnSmoothVoxels": true,
 "DFFlagVoiceChatSessionRefactorMutexLock": true,
 "DFFlagVoiceChatRemoveDupesInQueuedSubs": true,
+"FFlagPerfControlFireCallbacks": true,
+"FFlagPerformanceControlChangeTunableEagerly": true,
+"FFlagPerformanceControlMimicMemoryPrioritization": true,
+"FFlagPerformanceControlSimpleMPLogic": true,
+"DFFlagEnableLogServiceCounter": false,
+"FIntRoact17Rollout11": 100,
+"DFFlagUsePredictedOOMAbsLimitForMemoryCurve": false,
 "DFFlagSendAllPhysicsPackets": true
 }
