@@ -56,7 +56,7 @@
 "DFFlagPredictedOOM": false,
 "DFFlagPredictedOOMMessageKeepPlayingExit": false,
 "FFlagPredictedOOMKeepPlayingLeave": false,
-DFFlagUsePredictedOOMAbsLimitForMemoryCurve": false,
+"DFFlagUsePredictedOOMAbsLimitForMemoryCurve": false,
 "FFlagRenderEnableGlobalInstancing3": true,
 "FIntRenderEnableGlobalInstancingD3D10Percent": 100,
 "FIntRenderEnableGlobalInstancingD3D11Percent": 100,
