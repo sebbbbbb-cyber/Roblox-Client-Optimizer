@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 61,
+"FIntFlagUpdateVersion": 62,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "FStringV1MenuLanguageSelectionFeatureForcedUserIds": "2323539704;3822626535",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
@@ -529,8 +529,6 @@
 "FStringPerformanceSendMeasurementAPISubdomain": "opt-out",
 "FFlagRuppTokenFallback": true,
 "DFFlagSafetyServiceScreenshot": false,
-"FFlagSignalSlotHolderPool": true,
-"FFlagSignalSlotPool": true,
 "FFlagSimCSG3NewAPIBreakApart": true,
 "FFlagTerrainSmoothRegionOnSmoothVoxels": true,
 "DFFlagVoiceChatSessionRefactorMutexLock": true,
