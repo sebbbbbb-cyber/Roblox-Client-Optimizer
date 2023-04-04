@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 62,
+"FIntFlagUpdateVersion": 63,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "FStringV1MenuLanguageSelectionFeatureForcedUserIds": "2323539704;3822626535",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
@@ -73,7 +73,6 @@
 "FFlagFileMeshToChunks2": true,
 "DFFlagDebugVoiceChatCustomLogFile": true,
 "DFFlagVariableDPIScale2": true,
-"DFFlagVolumeSettingsUsePower2": true,
 "FFlagHSRClusterImprovement": true,
 "FFlagHSRRemoveDuplicateindices": true,
 "FFlagPlayerConfigurer2759": true,
@@ -415,8 +414,6 @@
 "FFlagTextureManagerOnlySizeIfLoaded": true,
 "FFlagTextureManagerProperlyClearCache": true,
 "FFlagTextureManagerProperlyUpdateOrphans": true,
-"FFlagTerrainVirtualTexture": true,
-"FFlagTerrainMeshingUseVTPath": true,
 "FFlagDelayResizingTextureUntilProcessed": true,
 "FLogCSG3Stats": 6,
 "FLogCSG3Debug": 6,
