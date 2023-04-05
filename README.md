@@ -14,7 +14,6 @@ Some things RCO currently does:
 - Optimizes Graphics
 - Optimizes Textures
 - Increases user privacy
-- (May change) Disables the V3 ingame menu
 - Disables Crashpad / Backtrace crash metrics
 - Disables a large portion of client telemetry
 - Disables AbuseReportScreenshot
