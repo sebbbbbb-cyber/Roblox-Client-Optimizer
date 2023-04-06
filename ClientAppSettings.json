@@ -37,6 +37,7 @@
 "FFlagHandleAltEnterFullscreenManually": false,
 "DFFlagTaskSchedulerAvoidYieldInBackground": true,
 "DFFlagTaskSchedulerBlockingShutdownInClients": true,
+"FFlagTaskSchedulerUseRobloxRuntime": true,
 "FFlagEnableQuickGameLaunch": true,
 "FFlagNewEmotesInGame2": true,
 "FFlagFlagAPICaching": true,
@@ -216,5 +217,7 @@
 "FFlagDebugForceFSMCPULightCulling": true,
 "DFFlagSimIfNoInterp2": true,
 "DFFlagSimOptimizeInterpolationReturnPreviousIfSmallMovement2": true,
+"FFlagAddRuntimeSourceProperty": true,
+"FFlagEnableScriptRuntime": true,
 "DFFlagSendAllPhysicsPackets": true
 }
