@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 67,
+"FIntFlagUpdateVersion": 68,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -217,7 +217,5 @@
 "FFlagDebugForceFSMCPULightCulling": true,
 "DFFlagSimIfNoInterp2": true,
 "DFFlagSimOptimizeInterpolationReturnPreviousIfSmallMovement2": true,
-"FFlagAddRuntimeSourceProperty": true,
-"FFlagEnableScriptRuntime": true,
 "DFFlagSendAllPhysicsPackets": true
 }
