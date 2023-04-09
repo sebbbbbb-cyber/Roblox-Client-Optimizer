@@ -239,5 +239,6 @@
 "FFlagMakeHSRPublishAsync2": true,
 "FFlagWriteFlagRolloutInformationToAttributesFile": true,
 "DFFlagPlayerAvoidNetworkDependency": true,
+"FFlagUseMediumpSamplers": true,
 "DFFlagSendAllPhysicsPackets": true
 }
