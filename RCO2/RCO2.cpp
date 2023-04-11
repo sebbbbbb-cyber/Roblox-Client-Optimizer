@@ -157,7 +157,7 @@ void mainThread() {
         std::string robloxVersionStr;
         CURL* req = curl_easy_init();
         CURLcode res;
-        curl_easy_setopt(req, CURLOPT_URL, "https://rproxy.xyz.ax/version");
+        curl_easy_setopt(req, CURLOPT_URL, "https://rproxy.simulhost.com/version"); // an actually secure version endpoint... take a hint Roblox!
         curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(req, CURLOPT_WRITEDATA, &robloxVersionStr);
         res = curl_easy_perform(req);
@@ -421,7 +421,7 @@ int main(int argc, char** argv) {
             std::string robloxVersionStr;
             CURL* req = curl_easy_init();
             CURLcode res;
-            curl_easy_setopt(req, CURLOPT_URL, "https://rproxy.xyz.ax/version");
+            curl_easy_setopt(req, CURLOPT_URL, "https://rproxy.simulhost.com/version"); // an actually secure version endpoint... take a hint Roblox!
             curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, WriteCallback);
             curl_easy_setopt(req, CURLOPT_WRITEDATA, &robloxVersionStr);
             res = curl_easy_perform(req);
