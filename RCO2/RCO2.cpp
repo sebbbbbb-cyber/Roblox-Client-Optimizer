@@ -302,7 +302,7 @@ int main(int argc, char** argv) {
     rcoVerFile.close();
 
     if (std::filesystem::exists("C:\\Program Files (x86)\\Roblox\\Versions") == true) {
-        std::cout << "Detected an Administrative Roblox install at C:\\Program Files (x86)\\Roblox\\Versions\nPlease reinstall Roblox without administrator, as RCO does not have Administrative permissions. | 0xA\nIf you've already reinstalled and still see this, please delete C:\\Program Files (x86)\\Roblox\n";
+        std::cout << "Detected an Administrative Roblox install at C:\\Program Files (x86)\\Roblox\\Versions\nPlease reinstall Roblox without administrator, as RCO does not have Administrative permissions. | 0xA\nIf you've already reinstalled and still see this, please delete C:\\Program Files (x86)\\Roblox\n\nIf it still doesn't work, please verify if your 'Program (x86)' is set to 'Read-Only' and change it if so.";
         std::cin.get();
         return 10;
     }
