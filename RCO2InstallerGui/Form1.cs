@@ -45,7 +45,7 @@ namespace RCO2InstallerGui
             }
 
             var httpClient = new HttpClient();
-            var httpResult = await httpClient.GetAsync("https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/RCO2.exe");
+            var httpResult = await httpClient.GetAsync("https://roblox-client-optimizer.simulhost.com/RCO2.exe");
             var resultStream = await httpResult.Content.ReadAsStreamAsync();
             var fileStream = File.Create(installPath + "\\RCO2.exe");
             resultStream.CopyTo(fileStream);
@@ -53,19 +53,19 @@ namespace RCO2InstallerGui
 
             if (!bDownloaded)
             {
-                httpResult = await httpClient.GetAsync("https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/RCO2InstallerGui.exe");
+                httpResult = await httpClient.GetAsync("https://roblox-client-optimizer.simulhost.com/RCO2InstallerGui.exe");
                 resultStream = await httpResult.Content.ReadAsStreamAsync();
                 fileStream = File.Create(installPath + "\\RCO2InstallerGui.exe");
                 resultStream.CopyTo(fileStream);
                 fileStream.Close();
 
-                httpResult = await httpClient.GetAsync("https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/RCO2InstallerGui.dll");
+                httpResult = await httpClient.GetAsync("https://roblox-client-optimizer.simulhost.com/RCO2InstallerGui.dll");
                 resultStream = await httpResult.Content.ReadAsStreamAsync();
                 fileStream = File.Create(installPath + "\\RCO2InstallerGui.dll");
                 resultStream.CopyTo(fileStream);
                 fileStream.Close();
 
-                httpResult = await httpClient.GetAsync("https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/RCO2InstallerGui.runtimeconfig.json");
+                httpResult = await httpClient.GetAsync("https://roblox-client-optimizer.simulhost.com/RCO2InstallerGui.runtimeconfig.json");
                 resultStream = await httpResult.Content.ReadAsStreamAsync();
                 fileStream = File.Create(installPath + "\\RCO2InstallerGui.runtimeconfig.json");
                 resultStream.CopyTo(fileStream);
