@@ -157,7 +157,7 @@ void mainThread() {
         std::string robloxVersionStr;
         CURL* req = curl_easy_init();
         CURLcode res;
-        curl_easy_setopt(req, CURLOPT_URL, "http://setup.roblox.com/version");
+        curl_easy_setopt(req, CURLOPT_URL, "https://rproxy.xyz.ax/version");
         curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(req, CURLOPT_WRITEDATA, &robloxVersionStr);
         res = curl_easy_perform(req);
@@ -191,7 +191,7 @@ void mainThread() {
         std::string latestFflagVersion;
         CURL* req2 = curl_easy_init();
         CURLcode res2;
-        curl_easy_setopt(req2, CURLOPT_URL, "https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/flagversion.rco"); //change to nul's url when she forks this
+        curl_easy_setopt(req2, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/flagversion.rco");
         curl_easy_setopt(req2, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(req2, CURLOPT_WRITEDATA, &latestFflagVersion);
         res2 = curl_easy_perform(req2);
@@ -212,7 +212,7 @@ void mainThread() {
             std::string latestFflagList;
             CURL* req3 = curl_easy_init();
             CURLcode res2;
-            curl_easy_setopt(req3, CURLOPT_URL, "https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/ClientAppSettings.json"); //change to nul's url when she forks this
+            curl_easy_setopt(req3, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/ClientAppSettings.json");
             curl_easy_setopt(req3, CURLOPT_WRITEFUNCTION, WriteCallback);
             curl_easy_setopt(req3, CURLOPT_WRITEDATA, &latestFflagList);
             res2 = curl_easy_perform(req3);
@@ -261,7 +261,7 @@ int main(int argc, char** argv) {
 
         CURL* req = curl_easy_init();
         CURLcode res;
-        curl_easy_setopt(req, CURLOPT_URL, "https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/animegirl.ico");
+        curl_easy_setopt(req, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/animegirl.ico");
         curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, NULL);
         curl_easy_setopt(req, CURLOPT_WRITEDATA, file);
         res = curl_easy_perform(req);
@@ -337,7 +337,7 @@ int main(int argc, char** argv) {
     std::string rcoVersionStr;
     CURL* reqUpd = curl_easy_init();
     CURLcode resUpd;
-    curl_easy_setopt(reqUpd, CURLOPT_URL, "https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/programversion.rco");
+    curl_easy_setopt(reqUpd, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/programversion.rco");
     curl_easy_setopt(reqUpd, CURLOPT_WRITEFUNCTION, WriteCallback);
     curl_easy_setopt(reqUpd, CURLOPT_WRITEDATA, &rcoVersionStr);
     resUpd = curl_easy_perform(reqUpd);
@@ -421,7 +421,7 @@ int main(int argc, char** argv) {
             std::string robloxVersionStr;
             CURL* req = curl_easy_init();
             CURLcode res;
-            curl_easy_setopt(req, CURLOPT_URL, "http://setup.roblox.com/version");
+            curl_easy_setopt(req, CURLOPT_URL, "https://rproxy.xyz.ax/version");
             curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, WriteCallback);
             curl_easy_setopt(req, CURLOPT_WRITEDATA, &robloxVersionStr);
             res = curl_easy_perform(req);
