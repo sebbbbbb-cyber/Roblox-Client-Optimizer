@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 70,
+"FIntFlagUpdateVersion": 71,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -264,7 +264,7 @@
 "FFlagAllowPerformanceControlInitialization4": true,
 "FFlagAvoidUnnecessaryQuadtreeLock": true,
 "FFlagBatchThumbnailFetcherTimedOutSupport": true,
-"FFlagClientAvatarUsesColor3sForBodyParts2": true,
+"FFlagClientAvatarUsesColor3sForBodyParts2": false,
 "FFlagDebugHotloadShaderPack": true,
 "FFlagDebugHotloadShaders": true,
 "FFlagEnableCoarseShading": true,
