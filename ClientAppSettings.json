@@ -287,5 +287,8 @@
 "FFlagTouchEventSameSHCellBugFixEnabled": true,
 "FFlagUseAudioMemoryResource": true,
 "FFlagLaunchUAByDefault": false,
+"FFlagUniversalAppOnUWP": false,
+"FFlagUniversalAppOnWindows": false,
+"FFlagEnableUniversalAppUserAgentOnMacAndWin32": false,
 "DFFlagSendAllPhysicsPackets": true
 }
