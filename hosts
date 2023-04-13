@@ -29,3 +29,5 @@ ecs.roblox.com
 #Block Lightstep
 0.0.0.0 lightstep.com
 0.0.0.0 www.lightstep.com
+#Ensure Analytics Blackhole Stays Blackholed
+0.0.0.0 opt-out.roblox.com
