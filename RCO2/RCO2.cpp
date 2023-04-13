@@ -111,7 +111,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
 
 void printMainText() {
     system("cls");
-    std::cout << "Roblox Client Optimizer 2 coded in C++ by Kaid | fflag list by nul\n\nRCO is currently: ";
+    std::cout << "Roblox Client Optimizer 2 coded in C++ by Kaid | FFlag list maintained by L8X\n\nRCO is currently: ";
     if (isRcoEnabled) {
         SetConsoleTextAttribute(hConsole, 10);
         std::cout << "Enabled";
@@ -157,7 +157,7 @@ void mainThread() {
         std::string robloxVersionStr;
         CURL* req = curl_easy_init();
         CURLcode res;
-        curl_easy_setopt(req, CURLOPT_URL, "https://rproxy.simulhost.com/version"); // an actually secure version endpoint... take a hint Roblox!
+        curl_easy_setopt(req, CURLOPT_URL, "https://setup.rbxcdn.com/version"); // an actually secure version endpoint...
         curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(req, CURLOPT_WRITEDATA, &robloxVersionStr);
         res = curl_easy_perform(req);
@@ -421,7 +421,7 @@ int main(int argc, char** argv) {
             std::string robloxVersionStr;
             CURL* req = curl_easy_init();
             CURLcode res;
-            curl_easy_setopt(req, CURLOPT_URL, "https://rproxy.simulhost.com/version"); // an actually secure version endpoint... take a hint Roblox!
+            curl_easy_setopt(req, CURLOPT_URL, "https://setup.rbxcdn.com/version"); // an actually secure version endpoint...
             curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, WriteCallback);
             curl_easy_setopt(req, CURLOPT_WRITEDATA, &robloxVersionStr);
             res = curl_easy_perform(req);
