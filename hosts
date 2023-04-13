@@ -1,0 +1,31 @@
+#Block Ephemeral Counters Service Test Endpoint
+test.public.ecs.roblox.com
+public.ecs.roblox.com 
+ecs.roblox.com
+#Block Backtrace Crash Telemetry Endpoint
+0.0.0.0 upload.crashes.rbx.com
+0.0.0.0 crashes.rbx.com
+#Block Ephemeral Counters Service Endpoints
+0.0.0.0 ephemeralcounters.api.roblox.com
+0.0.0.0 studio-ecsv2.roblox.com
+0.0.0.0 ecsv2.roblox.com
+#Block Client Telemetry Endpoint
+0.0.0.0 client-telemetry.roblox.com
+#Block Client & Web Telemetry Endpoint
+0.0.0.0 metrics.roblox.com
+#Block Latency Measurement Service Endpoint
+0.0.0.0 lms.roblox.com
+#Block A/B Testing Endpoint
+0.0.0.0 abtesting.roblox.com
+#Block Tracing Endpoint
+0.0.0.0 tracing.roblox.com
+#Block Network Error Logs Endpoint
+0.0.0.0 ncs.roblox.com
+#Block Ads Endpoint
+0.0.0.0 ads.roblox.com
+#Block Google Analytics
+0.0.0.0 google-analytics.com
+0.0.0.0 www.google-analytics.com
+#Block Lightstep
+0.0.0.0 lightstep.com
+0.0.0.0 www.lightstep.com
