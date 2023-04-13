@@ -1,7 +1,7 @@
 #Block Ephemeral Counters Service Test Endpoint
-test.public.ecs.roblox.com
-public.ecs.roblox.com 
-ecs.roblox.com
+0.0.0.0 test.public.ecs.roblox.com
+0.0.0.0 public.ecs.roblox.com 
+0.0.0.0 ecs.roblox.com
 #Block Backtrace Crash Telemetry Endpoint
 0.0.0.0 upload.crashes.rbx.com
 0.0.0.0 crashes.rbx.com
