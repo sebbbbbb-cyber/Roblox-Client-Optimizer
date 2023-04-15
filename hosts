@@ -3,8 +3,18 @@
 0.0.0.0 public.ecs.roblox.com 
 0.0.0.0 ecs.roblox.com
 #Block Backtrace Crash Telemetry Endpoint
+0.0.0.0 upload.crashes.roblox.com
+0.0.0.0 crashes.roblox.com
 0.0.0.0 upload.crashes.rbx.com
 0.0.0.0 crashes.rbx.com
+0.0.0.0 upload.crashes.rbx.com
+0.0.0.0 crashes.rbx.com
+0.0.0.0 crashes-prod.rbx.com
+0.0.0.0 uploads-stage.backtrace.rbx.com
+0.0.0.0 crashes-stage.backtrace.rbx.com
+0.0.0.0 crashes.backtrace.rbx.com
+0.0.0.0 uploads.backtrace.rbx.com
+0.0.0.0 backtrace.rbx.com
 #Block Ephemeral Counters Service Endpoints
 0.0.0.0 ephemeralcounters.api.roblox.com
 0.0.0.0 studio-ecsv2.roblox.com
@@ -13,6 +23,7 @@
 0.0.0.0 client-telemetry.roblox.com
 0.0.0.0 metrics.roblox.com
 0.0.0.0 cs.ns1p.net
+0.0.0.0 analytics.roblox.com
 #Block Latency Measurement Service Endpoints
 0.0.0.0 lms.roblox.com
 0.0.0.0 sea1-128-116-115-3.roblox.com
@@ -35,6 +46,7 @@
 0.0.0.0 aws-ap-northeast-1c-lms.rbx.com
 0.0.0.0 c0ak.rbxcdn.com
 0.0.0.0 mia3-128-116-127-3.roblox.com
+0.0.0.0 chi1-128-116-112-44.roblox.com
 0.0.0.0 dfw2-128-116-95-3.roblox.com
 0.0.0.0 ord1-128-116-101-3.roblox.com
 0.0.0.0 aws-eu-central-1a-lms.rbx.com
@@ -69,7 +81,9 @@
 0.0.0.0 nrt1-128-116-120-3.roblox.com
 0.0.0.0 aws-eu-west-2a-lms.rbx.com 
 0.0.0.0 aws-ap-east-1a-lms.rbx.com
+0.0.0.0 nrt2-128-116-120-3.roblox.com
 0.0.0.0 c0hw.rbxcdn.com
+0.0.0.0 chi1-origin.roblox.com
 0.0.0.0 aws-ap-northeast-1d-lms.rbx.com
 0.0.0.0 aws-eu-west-2c-lms.rbx.com
 0.0.0.0 aws-us-west-2c-lms.rbx.com
