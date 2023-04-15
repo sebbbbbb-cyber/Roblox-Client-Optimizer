@@ -24,6 +24,7 @@
 0.0.0.0 metrics.roblox.com
 0.0.0.0 cs.ns1p.net
 0.0.0.0 analytics.roblox.com
+0.0.0.0 corp-metrics.rbx.com
 #Block Latency Measurement Service Endpoints
 0.0.0.0 lms.roblox.com
 0.0.0.0 sea1-128-116-115-3.roblox.com
