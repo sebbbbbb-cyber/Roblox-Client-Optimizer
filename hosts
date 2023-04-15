@@ -9,10 +9,10 @@
 0.0.0.0 ephemeralcounters.api.roblox.com
 0.0.0.0 studio-ecsv2.roblox.com
 0.0.0.0 ecsv2.roblox.com
-#Block Client Telemetry Endpoint
+#Block Client and Web Telemetry Endpoints
 0.0.0.0 client-telemetry.roblox.com
-#Block Client & Web Telemetry Endpoint
 0.0.0.0 metrics.roblox.com
+0.0.0.0 cs.ns1p.net
 #Block Latency Measurement Service Endpoints
 0.0.0.0 lms.roblox.com
 0.0.0.0 ams1-128-116-121-3.roblox.com
@@ -24,6 +24,9 @@
 0.0.0.0 aws-us-east-2a-lms.rbx.com
 0.0.0.0 aws-us-east-2b-lms.rbx.com
 0.0.0.0 cdg1-128-116-122-3.roblox.com
+0.0.0.0 c0ak.rbxcdn.com
+0.0.0.0 c0cfly.rbxcdn.com
+0.0.0.0 c0hw.rbxcdn.com
 0.0.0.0 fra2-128-116-123-3.roblox.com
 0.0.0.0 hkg1-128-116-118-3.roblox.com
 0.0.0.0 iad4-128-116-102-3.roblox.com
