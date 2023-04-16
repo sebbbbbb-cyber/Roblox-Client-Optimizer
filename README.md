@@ -25,7 +25,7 @@ Some things RCO currently does:
 - Enables BatchAssetApi
 
 Do you have any issues installing RCO? Read here!
-1. RCO *ONLY* works on Windows, though it should also work on custom Windows mods. (Only tested on 10) (Semi support for 11)
+1. RCO itself *ONLY* works on Windows, though it should also work on custom Windows mods. (Only tested on 10) (Semi support for 11) (See 2 and 3 for Mac and Linux support)
 2. For Linux support, use https://github.com/vinegarhq/vinegar
 3. For Mac support, use https://github.com/L8X/Roblox-Client-Optimizer-Mac
 4. If your antivirus detected any of our files as malware, read: https://github.com/L8X/Roblox-Client-Optimizer/issues/40
