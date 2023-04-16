@@ -254,6 +254,8 @@
 "FFlagFileMeshToChunks2": true,
 "FFlagKickClientOnCoreGuiRenderOverflow": false,
 "FFlagLuaAppSystemBar": true,
+"FFlagLuaAppExitModal2": false,
+"FFlagGraphicsGLTextureReduction": true,
 "DFLogHttpTrace": 0,
 "DFLogHttpTraceError": 0,
 "DFLogHttpTraceLight": 0,
