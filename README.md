@@ -27,4 +27,5 @@ Some things RCO currently does:
 Do you have any issues installing RCO? Read here!
 1. RCO *ONLY* works on Windows, though it should also work on custom Windows mods. (Only tested on 10) (Semi support for 11)
 2. For Linux support, use https://github.com/vinegarhq/vinegar
-3. If your antivirus detected any of our files as malware, read: https://github.com/L8X/Roblox-Client-Optimizer/issues/40
+3. For Mac support, use https://github.com/L8X/Roblox-Client-Optimizer-Mac
+4. If your antivirus detected any of our files as malware, read: https://github.com/L8X/Roblox-Client-Optimizer/issues/40
