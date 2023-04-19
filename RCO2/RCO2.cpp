@@ -57,54 +57,56 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
     std::ofstream isHiddenFile;
 
     switch (iMsg) {
-        case WM_CREATE:
-            std::memset(&nid, 0, sizeof(nid));
-            nid.cbSize = sizeof(nid);
-            nid.hWnd = hWnd;
-            nid.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP | NIF_INFO;
-            nid.uCallbackMessage = WM_APP + 1;
-            nid.hIcon = (HICON)LoadImageA(NULL, (rootDir + "\\animegirl.ico").c_str(), IMAGE_ICON, 0, 0, LR_LOADFROMFILE | LR_SHARED);
-            memcpy_s(nid.szTip, sizeof(nid.szTip), L"RCO <3\nClick to toggle console", sizeof(wchar_t[31]));
-            Shell_NotifyIcon(NIM_ADD, &nid);
-            return 0;
-        case WM_APP + 1:
-            switch (lParam) {
-            case WM_LBUTTONDBLCLK:
-                if (isConsoleHidden) {
-                    ShowWindow(consoleWindow, SW_SHOW);
-                    isConsoleHidden = false;
-                    isHiddenFile.open(rootDir + "\\isHidden.rco");
-                    isHiddenFile << "f";
-                    isHiddenFile.close();
-                } else {
-                    ShowWindow(consoleWindow, SW_HIDE);
-                    isConsoleHidden = true;
-                    isHiddenFile.open(rootDir + "\\isHidden.rco");
-                    isHiddenFile << "t";
-                    isHiddenFile.close();
-                }
-                break;
-            case WM_LBUTTONDOWN:
-                if (isConsoleHidden) {
-                    ShowWindow(consoleWindow, SW_SHOW);
-                    isConsoleHidden = false;
-                    isHiddenFile.open(rootDir + "\\isHidden.rco");
-                    isHiddenFile << "f";
-                    isHiddenFile.close();
-                } else {
-                    ShowWindow(consoleWindow, SW_HIDE);
-                    isConsoleHidden = true;
-                    isHiddenFile.open(rootDir + "\\isHidden.rco");
-                    isHiddenFile << "t";
-                    isHiddenFile.close();
-                }
-                break;
+    case WM_CREATE:
+        std::memset(&nid, 0, sizeof(nid));
+        nid.cbSize = sizeof(nid);
+        nid.hWnd = hWnd;
+        nid.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP | NIF_INFO;
+        nid.uCallbackMessage = WM_APP + 1;
+        nid.hIcon = (HICON)LoadImageA(NULL, (rootDir + "\\animegirl.ico").c_str(), IMAGE_ICON, 0, 0, LR_LOADFROMFILE | LR_SHARED);
+        memcpy_s(nid.szTip, sizeof(nid.szTip), L"RCO <3\nClick to toggle console", sizeof(wchar_t[31]));
+        Shell_NotifyIcon(NIM_ADD, &nid);
+        return 0;
+    case WM_APP + 1:
+        switch (lParam) {
+        case WM_LBUTTONDBLCLK:
+            if (isConsoleHidden) {
+                ShowWindow(consoleWindow, SW_SHOW);
+                isConsoleHidden = false;
+                isHiddenFile.open(rootDir + "\\isHidden.rco");
+                isHiddenFile << "f";
+                isHiddenFile.close();
+            }
+            else {
+                ShowWindow(consoleWindow, SW_HIDE);
+                isConsoleHidden = true;
+                isHiddenFile.open(rootDir + "\\isHidden.rco");
+                isHiddenFile << "t";
+                isHiddenFile.close();
             }
             break;
-        case WM_DESTROY:
-            Shell_NotifyIcon(NIM_DELETE, &nid);
-            PostQuitMessage(0);
-            return 0;
+        case WM_LBUTTONDOWN:
+            if (isConsoleHidden) {
+                ShowWindow(consoleWindow, SW_SHOW);
+                isConsoleHidden = false;
+                isHiddenFile.open(rootDir + "\\isHidden.rco");
+                isHiddenFile << "f";
+                isHiddenFile.close();
+            }
+            else {
+                ShowWindow(consoleWindow, SW_HIDE);
+                isConsoleHidden = true;
+                isHiddenFile.open(rootDir + "\\isHidden.rco");
+                isHiddenFile << "t";
+                isHiddenFile.close();
+            }
+            break;
+        }
+        break;
+    case WM_DESTROY:
+        Shell_NotifyIcon(NIM_DELETE, &nid);
+        PostQuitMessage(0);
+        return 0;
     }
     return DefWindowProc(hWnd, iMsg, wParam, lParam);
 }
@@ -203,7 +205,7 @@ void mainThread() {
             continue;
         }
         curl_easy_cleanup(req2);
-        
+
         if (storedFflagVersion != (latestFflagVersion + ' ') || std::filesystem::exists(robloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings\\ClientAppSettings.json") == false) { //We need to do an update!!!!
             if (std::filesystem::exists(robloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings") == false) {
                 std::filesystem::create_directory(robloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings");
@@ -298,11 +300,11 @@ int main(int argc, char** argv) {
 
     std::ofstream rcoVerFile;
     rcoVerFile.open(rootDir + "\\programversion.rco");
-    rcoVerFile << "2.0.1\n";
+    rcoVerFile << "2.0.2\n";
     rcoVerFile.close();
 
     if (std::filesystem::exists("C:\\Program Files (x86)\\Roblox\\Versions") == true) {
-        std::cout << "Detected an Administrative Roblox install at C:\\Program Files (x86)\\Roblox\\Versions\nPlease reinstall Roblox without administrator, as RCO does not have Administrative permissions. | 0xA\nIf you've already reinstalled and still see this, please delete C:\\Program Files (x86)\\Roblox\n\nIf it still doesn't work, please verify if your 'Program Files (x86)' is set to 'Read-Only' and change it if so.";
+        std::cout << "Detected an Administrative Roblox install at C:\\Program Files (x86)\\Roblox\\Versions\nPlease reinstall Roblox without administrator, as RCO does not have Administrative permissions. | 0xA\nIf you've already reinstalled and still see this, please delete C:\\Program Files (x86)\\Roblox\n\nIf it still doesn't work, please verify if your 'Program Files (x86)' is set to 'Read-Only' and change it to be if not.";
         std::cin.get();
         return 10;
     }
@@ -359,7 +361,7 @@ int main(int argc, char** argv) {
         si.cb = sizeof(si);
         ZeroMemory(&pi, sizeof(pi));
 
-        CreateProcessA("C:\\RClientOptimizer2\\RCO2InstallerGui.exe",argv[1],NULL,NULL,FALSE,0,NULL,NULL,&si,&pi);
+        CreateProcessA("C:\\RClientOptimizer2\\RCO2InstallerGui.exe", argv[1], NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
         CloseHandle(pi.hProcess);
         CloseHandle(pi.hThread);
         exit(0);
@@ -394,7 +396,8 @@ int main(int argc, char** argv) {
     //Handle Hidden Value
     if (isConsoleHidden) {
         ShowWindow(consoleWindow, SW_HIDE);
-    } else {
+    }
+    else {
         ShowWindow(consoleWindow, SW_SHOW);
     }
 
@@ -416,7 +419,8 @@ int main(int argc, char** argv) {
         isEnabledFile.open(rootDir + "\\isEnabled.rco");
         if (isRcoEnabled) {
             isEnabledFile << "t";
-        } else {
+        }
+        else {
             isEnabledFile << "f";
             std::string robloxVersionStr;
             CURL* req = curl_easy_init();
