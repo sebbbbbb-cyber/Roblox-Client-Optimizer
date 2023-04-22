@@ -24,7 +24,7 @@ Why don't you give it a try?
 - Enables ParallelHumanoidManager
 - Enables BatchAssetApi
 
-Do you have any issues installing RCO? Read here!
+# Issues? 
 1. RCO itself *ONLY* works on Windows, though it should also work on custom Windows mods. (Only tested on 10) (Semi support for 11)
 2. For Linux support, use https://github.com/vinegarhq/vinegar
 3. For Mac support, use https://github.com/L8X/Roblox-Client-Optimizer-Mac
