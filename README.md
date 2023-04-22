@@ -24,6 +24,12 @@ Why don't you give it a try?
 - Enables ParallelHumanoidManager
 - Enables BatchAssetApi
 
+# What about Byfron?
+RCO remains operational regardless of Roblox's new anticheat measures (known as Hyperion / Byfron) as we do not inject a DLL nor do we modify live client memory.
+
+# Will I get banned for using this?
+No, RCO's operations are fully compliant with the Roblox Terms of Service, as we use a method that Roblox themselves intentionally added to the client to modify flags.
+
 # Issues? 
 1. RCO itself *ONLY* works on Windows, though it should also work on custom Windows mods. (Only tested on 10) (Semi support for 11)
 2. For Linux support, use https://github.com/vinegarhq/vinegar
