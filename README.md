@@ -50,6 +50,6 @@ No, RCO's operations are fully compliant with the Roblox Terms of Service, as we
 3. For Mac support, use https://github.com/L8X/Roblox-Client-Optimizer-Mac
 4. If your antivirus detected any of our files as malware, read: https://github.com/L8X/Roblox-Client-Optimizer/issues/40
 
-# Disclaimer
+# Contribution Disclaimer
 Posting time wasting issues and pull requests may result in your account being blocked from the repository. 
 Please ensure all contributions are meaningful and correct.
