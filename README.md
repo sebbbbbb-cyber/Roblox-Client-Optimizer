@@ -7,7 +7,7 @@ Why don't you give it a try?
 
 [Click here to download RCO!](https://roblox-client-optimizer.simulhost.com/download)
 
-# About RCO:
+# RCO's most popular features:
 
 - Unlocks FPS (For most people)
 - Optimizes Caching
@@ -23,6 +23,20 @@ Why don't you give it a try?
 - Enables QuickGameLaunch
 - Enables ParallelHumanoidManager
 - Enables BatchAssetApi
+
+# Why use RCO and not manually install flags?
+1. Manually installing our flag file is time consuming, as when Roblox updates, you must remember to reinstall the flag file manually all over again, RCO will handle the installation automatically.
+2. If a major bug is found within the flag file, we have no way of notifying you to update it, therefore we implemented an automatic update process to fix this issue.
+
+# Will RCO slow down my PC?
+No, RCO is very light-weight and only checks for updates to our flag file and for updates to itself, additionally, we use a CDN powered by Cloudflare and Fastly to optimize the bandwidth usage and file size of any flag file or RCO related downloads the program makes.
+
+# Does RCO collect/store user data?
+1. No, RCO itself does not collect ANY data, telemetry or analytics from our users, the only possible data transferred due to your use of RCO is the IP address of your device which is obviously required to connect to the internet and therefore update RCO and it's flag file, however our CDN providers have an agreement with us called a Data Processing Addendum, which restricts them from using your data (which is just your IP address) outside of delivering the files to you that RCO requests.
+2. RCO does not collect any personally identifiable information whatsoever, nor do our CDN providers.
+
+# GDPR / CCPA / COPPA Disclosure
+We are NOT a data handler or processor, for any queries relating to data transmitted via the network traffic of RCO (keep in mind your IP address is disclosed to every website you visit), please contact Cloudflare, Fastly and Microsoft directly.
 
 # What about Byfron?
 RCO remains operational regardless of Roblox's new anticheat measures (known as Hyperion / Byfron) as we do not inject a DLL nor do we modify live client memory.
