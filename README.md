@@ -1,5 +1,12 @@
 # Roblox-Client-Optimizer
 
+***Hello new users!***
+Recently RCO has gotten a lot of exposure from various youtubers such as SharkBlox! This means that there are a lot more testers to find issues. Please be sure there is no solution anywhere else on this github before making an issue!
+
+Also, please check out the development roadmap pinned issue to see progress on RCO 2.1.0 as well as what will be resolved and added and improved in the update!
+
+**------------------------------------**
+
 RCO automatically tweaks FFlags to optimize your Roblox client.
 The flags we edit are contained in our [GitHub Repository](https://github.com/L8X/Roblox-Client-Optimizer/blob/main/ClientAppSettings.json).
 
