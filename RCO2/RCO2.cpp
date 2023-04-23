@@ -172,12 +172,18 @@ void mainThread() {
         }
         curl_easy_cleanup(req);
         if (std::filesystem::exists(robloxVersionFolder + "\\" + robloxVersionStr) == false) {
-            std::cout << "\nYour Roblox install is outdated. Please update Roblox. | TRYING AGAIN IN 10 SECONDS. | 0x6\n";
-            std::this_thread::sleep_for(std::chrono::milliseconds(10000));
-            printMainText();
-            continue;
+            for (const auto& e : std::filesystem::directory_iterator(robloxVersionFolder)) {
+                if (e.is_directory()) {
+                    for (const auto& e2 : std::filesystem::directory_iterator(e)) {
+                        if (e2.path().string().ends_with("COPYRIGHT.txt")) {
+                            robloxVersionStr = e.path().string().erase(0,robloxVersionFolder.length()+1);
+                            goto exitNest;
+                        }
+                    }
+                }
+            }
         }
-
+        exitNest:
         //Okay! Lets see if the flag list needs to be updated...
         string storedFflagVersion;
 
@@ -253,6 +259,13 @@ int main(int argc, char** argv) {
         return 1;
     }
 
+    const string rcoVersionConstant = "2.0.2";
+
+    std::ofstream rcoVerFile;
+    rcoVerFile.open(rootDir + "\\programversion.rco");
+    rcoVerFile << rcoVersionConstant+"\n";
+    rcoVerFile.close();
+
     if (std::filesystem::exists(rootDir + "\\animegirl.ico") == false) {
         FILE* file;
         if (fopen_s(&file, (rootDir + "\\animegirl.ico").c_str(), "wb") != 0) {
@@ -298,13 +311,8 @@ int main(int argc, char** argv) {
         isEnabledFile.close();
     }
 
-    std::ofstream rcoVerFile;
-    rcoVerFile.open(rootDir + "\\programversion.rco");
-    rcoVerFile << "2.0.2\n";
-    rcoVerFile.close();
-
     if (std::filesystem::exists("C:\\Program Files (x86)\\Roblox\\Versions") == true) {
-        std::cout << "Detected an Administrative Roblox install at C:\\Program Files (x86)\\Roblox\\Versions\nPlease reinstall Roblox without administrator, as RCO does not have Administrative permissions. | 0xA\nIf you've already reinstalled and still see this, please delete C:\\Program Files (x86)\\Roblox\n\nIf it still doesn't work, please verify if your 'Program Files (x86)' is set to 'Read-Only' and change it to be if not.";
+        std::cout << "(This will be fully compatible in 2.1.0) Detected an Administrative Roblox install at C:\\Program Files (x86)\\Roblox\\Versions\nPlease reinstall Roblox without administrator, as RCO does not have Administrative permissions. | 0xA\nIf you've already reinstalled and still see this, please delete C:\\Program Files (x86)\\Roblox\n\nIf it still doesn't work, please verify if your 'Program Files (x86)' is set to 'Read-Only' and change it to be if not.";
         std::cin.get();
         return 10;
     }
@@ -345,9 +353,9 @@ int main(int argc, char** argv) {
     resUpd = curl_easy_perform(reqUpd);
     if (resUpd != CURLE_OK) {
         curl_easy_cleanup(reqUpd);
-        std::cout << "\nNETWORK ERROR | FAILED TO CHECK FOR PROGRAM UPDATES | 0xC\n";
+        std::cout << "\nNETWORK ERROR | FAILED TO CHECK FOR PROGRAM UPDATES | 0xC | RCO can still continue, but you may encounter issues, press enter to continue anyways...\n";
         std::cin.get();
-        return 12;
+        goto skipUpdate;
     }
     curl_easy_cleanup(reqUpd);
 
@@ -366,6 +374,8 @@ int main(int argc, char** argv) {
         CloseHandle(pi.hThread);
         exit(0);
     }
+
+    skipUpdate:
 
     //Initialize the tray icon system
     std::thread t1(traySystem);
