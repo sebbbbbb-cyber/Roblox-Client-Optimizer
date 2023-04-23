@@ -26,13 +26,13 @@ Roblox Client Optimizer tweaks flags to optimize your Roblox client. Click [here
 
 ## Features
 
-- Unlocks frames per second
+- Unlocks FPS (rames per second)
 - Optimizes caching, graphics, and textures
 - Increases privacy
 - Disables crashpad & backtrace crash metrics
-- Disables portions of client telemetry
+- Disables large portions of client telemetry
 - Disables `AbuseReportScreenshot`
-- Enables preloading for fonts and textures <!-- repeat of #2? -->
+- Enables preloading of fonts and texture items
 - Enables memory prioritization and performance control
 - Enables more graphics quality options
   - 21 instead of 10
