@@ -9,6 +9,7 @@
 "DFFlagRenderTC2_6": true,
 "FFlagRenderTC2_Disable": false,
 "FIntRenderTC2_PercentageRollout": 100,
+"FFlagRenderFixTC2MemoryLeak": true,
 "FFlagLoadCoreScriptsFromPatchOnly": true,
 "FIntMaxCachedPatches": 3,
 "DFIntAppLaunchFlowThrottlingRate": 0,
