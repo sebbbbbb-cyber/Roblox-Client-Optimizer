@@ -28,17 +28,17 @@ Roblox Client Optimizer tweaks flags to optimize your Roblox client. Click [here
 
 - Unlocks FPS (rames per second)
 - Optimizes caching, graphics, and textures
-- Increases privacy
-- Disables crashpad & backtrace crash metrics
+- Increases user privacy
+- Disables Crashpad & Backtrace crash metrics
 - Disables large portions of client telemetry
-- Disables `AbuseReportScreenshot`
-- Enables preloading of fonts and texture items
-- Enables memory prioritization and performance control
+- Disables Abuse Report Screenshot
+- Enables Font preloading and Texture Item preloading
+- Enables Memory Prioritization and Performance Control
 - Enables more graphics quality options
   - 21 instead of 10
-- Enables `QuickGameLaunch`
-- Enables `ParallelHumanoidManager`
-- Enables `BatchAssetApi`
+- Enables Quick Game Launch
+- Enables the ParallelHumanoidManager
+- Enables the Batch Asset Api
 
 ## Question & Answer
 
