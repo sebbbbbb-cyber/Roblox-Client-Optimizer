@@ -46,11 +46,11 @@ Roblox Client Optimizer tweaks flags to optimize your Roblox client. Click [here
   - Manually installing flags is time consuming. When Roblox updates, you must remember to install the flag file manually again, while Roblox Client Optimizer will handle this operation automatically.
   - If a major bug is found within the flag file, there is no way for us to notify you to update it, therefore we've implemented measures to automatically update our flag list if such a problem arose.
 - Will the software slow down my computer?
-  - **No**, the software is very lightweight and only checks for updates to our flag list and updates to itself. Additionally, we use a content delivery network powered by [Cloudware](https://www.cloudflare.com) and [Fastly](https://www.fastly.com) to optimize the bandwidth usage and file size of any flag file or downloads that the software makes.
+  - **No**, the software is very lightweight and only checks for updates to our flag list and updates to itself. Additionally, we use a content delivery network powered by [Cloudflare](https://www.cloudflare.com) and [Fastly](https://www.fastly.com) to optimize the bandwidth usage and file size of any flag file or downloads that the software makes.
 - Will I get banned for using this?
   - **No**, our operations are fully compliant with the [Roblox Terms of Use](https://help.roblox.com/hc/articles/115004647846-Roblox-Terms-of-Use), and we use a method that [Roblox](https://www.roblox.com) themselves intentionally added to the client to modify flags. Roblox Client Optimizer remains operational regardless of anti-cheat measures, as we do not inject a DLL nor modify live client memory - our software is not an exploit, or a tool used to aid in exploiting.
 - What are flags?
-  - The engine uses a system called fast flags as part of the deployment process. When code is shipped, not all of it is active by default. Rather, the changes are enabled and disabled dynamically via `FFlags`, even after the code is live in production. We welcome you to read more about flags [here](https://devforum.roblox.com/t/254517) and [here](https://github.com/MaximumADHD/Roblox-FFlag-Tracker).
+  - The Roblox engine uses a system called fast flags as part of the deployment process. When code is shipped, not all of it is active by default. Rather, the changes are enabled and disabled dynamically via `FFlags`, even after the code is live in production. We welcome you to read more about flags [here](https://devforum.roblox.com/t/254517) and [here](https://github.com/MaximumADHD/Roblox-FFlag-Tracker).
 
 ## Disclaimers
 
