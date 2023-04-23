@@ -1,8 +1,3 @@
-<!--
-TODO:
-	* upload images to assets/ instead of relying on github cdn
--->
-
 <div align="center">
 	<a href="https://github.com/L8X/Roblox-Client-Optimizer">
 		<img height=200 src="https://user-images.githubusercontent.com/100449899/233845084-569622a4-e8d3-4ab4-9ebc-7e03d0f01d0c.png"/>
@@ -37,25 +32,13 @@ Roblox Client Optimizer tweaks flags to optimize your Roblox client. Click [here
 - Disables crashpad & backtrace crash metrics
 - Disables portions of client telemetry
 - Disables `AbuseReportScreenshot`
-<!--
-* Explain what this is and explain what the others are
--->
 - Enables preloading for fonts and textures <!-- repeat of #2? -->
 - Enables memory prioritization and performance control
 - Enables more graphics quality options
   - 21 instead of 10
 - Enables `QuickGameLaunch`
-<!--
-* Explain what this is and explain what the others are
--->
 - Enables `ParallelHumanoidManager`
-<!--
-* Explain what this is and explain what the others are
--->
 - Enables `BatchAssetApi`
-<!--
-* Explain what this is and explain what the others are
--->
 
 ## Question & Answer
 
