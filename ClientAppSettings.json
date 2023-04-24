@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 88,
+"FIntFlagUpdateVersion": 89,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -168,8 +168,8 @@
 "FIntClientCompressionFormatRequestPC": 3,
 "FFlagCloudsMvpForceNoHistory": true,
 "DFFlagThrottleDeveloperConsoleEvents": true,
-"FFlagFastGPULightCulling3": true,
-"FFlagDebugForceFSMCPULightCulling": true,
+"FFlagFastGPULightCulling3": false,
+"FFlagDebugForceFSMCPULightCulling": false,
 "DFFlagSimIfNoInterp2": true,
 "DFFlagSimOptimizeInterpolationReturnPreviousIfSmallMovement2": true,
 "FFlagUseMediumpSamplers": true,
