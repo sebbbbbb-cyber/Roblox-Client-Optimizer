@@ -43,7 +43,7 @@ We now have an official RCO community Discord server! Join [here!](https://roblo
 - Enables the `Parallel Humanoid Manager`
 - Enables `Batch Asset Api`
 
-## Official Websites Notice
+## Official Websites List
 The only official websites of RCO are:
 1. https://github.com/L8X/Roblox-Client-Optimizer (Official GitHub)
 2. https://roblox-client-optimizer.simulhost.com (Official Website)
