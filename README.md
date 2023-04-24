@@ -66,7 +66,7 @@ We now have an official RCO community Discord server! Join [here!](https://roblo
 
 We are **NOT** a data handler or processor, for any queries relating to data transmitted via the network traffic of Roblox Client Optimizer (keep in mind your IP address is disclosed to every website you visit), please contact [Cloudfare](https://www.cloudfare.com), [Fastly](https://www.fastly.com), and [Microsoft](https://www.microsoft.com) directly.
 
-#### Official Websites
+### Official Websites
 The only official websites of RCO are:
 1. https://github.com/L8X/Roblox-Client-Optimizer (Official GitHub)
 2. https://roblox-client-optimizer.simulhost.com (Official Website)
