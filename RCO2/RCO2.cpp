@@ -160,8 +160,8 @@ void mainThread() {
         CURL* req = curl_easy_init();
         CURLcode res;
         curl_easy_setopt(req, CURLOPT_URL, "https://setup.rbxcdn.com/version"); // an actually secure version endpoint...
-        curl_easy_setopt(req, CURLOPT_HTTP_VERSION, (long)CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
-        curl_easy_setopt(req, CURLOPT_SSLVERSION, (long)CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
+        curl_easy_setopt(req, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
+        curl_easy_setopt(req, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
         curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(req, CURLOPT_WRITEDATA, &robloxVersionStr);
         res = curl_easy_perform(req);
@@ -319,27 +319,6 @@ int main(int argc, char** argv) {
         isEnabledFile.close();
     }
 
-    if (std::filesystem::exists("C:\\Program Files (x86)\\Roblox\\Versions") == true) {
-        std::cout << "(This will be fully compatible in 2.1.0) Detected an Administrative Roblox install at C:\\Program Files (x86)\\Roblox\\Versions\nPlease reinstall Roblox without administrator, as RCO does not have Administrative permissions. | 0xA\nIf you've already reinstalled and still see this, please delete C:\\Program Files (x86)\\Roblox\n\nIf it still doesn't work, please verify if your 'Program Files (x86)' is set to 'Read-Only' and change it to be if not.";
-        std::cin.get();
-        return 10;
-    }
-
-    if (!(_dupenv_s(&buf, &sz, "localappdata") == 0 && buf != nullptr)) {
-        std::cout << "Error finding LocalAppData folder | 0xB\n";
-        std::cin.get();
-        return 11;
-    }
-
-    robloxVersionFolder = buf + string("\\Roblox\\Versions");
-    free(buf);
-
-    if (std::filesystem::exists(robloxVersionFolder) == false) {
-        std::cout << "Roblox not found. Please reinstall Roblox | 0x3\n";
-        std::cin.get();
-        return 3;
-    }
-
     //Check for program updates
     string storedRcoVersion;
 
@@ -386,6 +365,27 @@ int main(int argc, char** argv) {
     }
 
     skipUpdate:
+
+    if (std::filesystem::exists("C:\\Program Files (x86)\\Roblox\\Versions") == true) {
+        std::cout << "(This will be fully compatible in 2.1.0) Detected an Administrative Roblox install at C:\\Program Files (x86)\\Roblox\\Versions\nPlease reinstall Roblox without administrator, as RCO does not have Administrative permissions. | 0xA\nIf you've already reinstalled and still see this, please delete C:\\Program Files (x86)\\Roblox\n\nIf it still doesn't work, please verify if your 'Program Files (x86)' is set to 'Read-Only' and change it to be if not.";
+        std::cin.get();
+        return 10;
+    }
+
+    if (!(_dupenv_s(&buf, &sz, "localappdata") == 0 && buf != nullptr)) {
+        std::cout << "Error finding LocalAppData folder | 0xB\n";
+        std::cin.get();
+        return 11;
+    }
+
+    robloxVersionFolder = buf + string("\\Roblox\\Versions");
+    free(buf);
+
+    if (std::filesystem::exists(robloxVersionFolder) == false) {
+        std::cout << "Roblox not found. Please reinstall Roblox | 0x3\n";
+        std::cin.get();
+        return 3;
+    }
 
     //Initialize the tray icon system
     std::thread t1(traySystem);
