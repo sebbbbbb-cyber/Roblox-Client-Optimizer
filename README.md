@@ -24,6 +24,10 @@
 
 Roblox Client Optimizer tweaks flags to optimize your Roblox client. Click [here](https://github.com/L8X/Roblox-Client-Optimizer/releases) to download our latest version.
 
+## Community
+
+We now have an official RCO community Discord server! Join [here!](https://discord.gg/vUwGUpYw3q)
+
 ## Features
 
 - Unlocks FPS (frames per second)
