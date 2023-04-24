@@ -202,8 +202,8 @@ void mainThread() {
         CURL* req2 = curl_easy_init();
         CURLcode res2;
         curl_easy_setopt(req2, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/flagversion.rco");
-        curl_easy_setopt(req2, CURLOPT_HTTP_VERSION, (long)CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
-        curl_easy_setopt(req2, CURLOPT_SSLVERSION, (long)CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
+        curl_easy_setopt(req2, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
+        curl_easy_setopt(req2, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
         curl_easy_setopt(req2, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(req2, CURLOPT_WRITEDATA, &latestFflagVersion);
         res2 = curl_easy_perform(req2);
@@ -225,8 +225,8 @@ void mainThread() {
             CURL* req3 = curl_easy_init();
             CURLcode res2;
             curl_easy_setopt(req3, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/ClientAppSettings.json");
-            curl_easy_setopt(req3, CURLOPT_HTTP_VERSION, (long)CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
-            curl_easy_setopt(req3, CURLOPT_SSLVERSION, (long)CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
+            curl_easy_setopt(req3, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
+            curl_easy_setopt(req3, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
             curl_easy_setopt(req3, CURLOPT_WRITEFUNCTION, WriteCallback);
             curl_easy_setopt(req3, CURLOPT_WRITEDATA, &latestFflagList);
             res2 = curl_easy_perform(req3);
@@ -283,8 +283,8 @@ int main(int argc, char** argv) {
         CURL* req = curl_easy_init();
         CURLcode res;
         curl_easy_setopt(req, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/animegirl.ico");
-        curl_easy_setopt(req, CURLOPT_HTTP_VERSION, (long)CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
-        curl_easy_setopt(req, CURLOPT_SSLVERSION, (long)CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
+        curl_easy_setopt(req, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
+        curl_easy_setopt(req, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
         curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, NULL);
         curl_easy_setopt(req, CURLOPT_WRITEDATA, file);
         res = curl_easy_perform(req);
@@ -356,8 +356,8 @@ int main(int argc, char** argv) {
     CURL* reqUpd = curl_easy_init();
     CURLcode resUpd;
     curl_easy_setopt(reqUpd, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/programversion.rco");
-    curl_easy_setopt(reqUpd, CURLOPT_HTTP_VERSION, (long)CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
-    curl_easy_setopt(reqUpd, CURLOPT_SSLVERSION, (long)CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
+    curl_easy_setopt(reqUpd, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
+    curl_easy_setopt(reqUpd, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
     curl_easy_setopt(reqUpd, CURLOPT_WRITEFUNCTION, WriteCallback);
     curl_easy_setopt(reqUpd, CURLOPT_WRITEDATA, &rcoVersionStr);
     resUpd = curl_easy_perform(reqUpd);
@@ -446,8 +446,8 @@ int main(int argc, char** argv) {
             CURL* req = curl_easy_init();
             CURLcode res;
             curl_easy_setopt(req, CURLOPT_URL, "https://setup.rbxcdn.com/version"); // an actually secure version endpoint...
-            curl_easy_setopt(req, CURLOPT_HTTP_VERSION, (long)CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
-            curl_easy_setopt(req, CURLOPT_SSLVERSION, (long)CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
+            curl_easy_setopt(req, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2TLS); // add HTTP/2 support for speed gains
+            curl_easy_setopt(req, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2); // force TLSv1.2 support as HTTP/2 requires it
             curl_easy_setopt(req, CURLOPT_WRITEFUNCTION, WriteCallback);
             curl_easy_setopt(req, CURLOPT_WRITEDATA, &robloxVersionStr);
             res = curl_easy_perform(req);
