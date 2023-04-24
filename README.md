@@ -26,7 +26,7 @@ Roblox Client Optimizer tweaks flags to optimize your Roblox client. Click [here
 
 ## Community
 
-We now have an official RCO community Discord server! Join [here!](https://discord.gg/vUwGUpYw3q)
+We now have an official RCO community Discord server! Join [here!](https://discord.gg/CThxh2kyEC)
 
 ## Features
 
