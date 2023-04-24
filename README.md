@@ -48,8 +48,8 @@ The only official websites of RCO are:
 1. https://github.com/L8X/Roblox-Client-Optimizer (Official GitHub)
 2. https://roblox-client-optimizer.simulhost.com (Official Website)
 3. https://rco.ddns.net (Official Website - Deprecated)
-Anything outside of these three pages (and any links listed on them) claiming to be RCO are NOT RCO and are attempting to defraud you.
 
+Anything outside of these three pages (and any links listed on them) claiming to be RCO are NOT RCO and are attempting to defraud you.
 ## Question & Answer
 
 - Why not manually install flags?
