@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 89,
+"FIntFlagUpdateVersion": 90,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -146,6 +146,7 @@
 "DFFlagEnablePerfDataSummaryMode": false,
 "DFFlagEnablePerfRenderStatsCollection2": false,
 "DFFlagEnablePerfStatsCollection3": false,
+"DFIntPerfDataGlobalThrottleHundredthsPercent": 10000,
 "FFlagRenderGpuTextureCompressor": true,
 "FFlagRenderLightGridEfficientTextureAtlasUpdate": true,
 "FFlagSkipRenderIfDataModelBusy": true,
@@ -189,12 +190,9 @@
 "FFlagGraphicsGLTextureReduction": true,
 "FFlagWriteFileMeshToChunks": true,
 "FFlagIxpPrefetchOnEveryPlatform": true,
-"DFFlagVoiceChatAutoTest": true,
-"DFFlagVoiceChatFixJoinRetry": true,
-"DFFlagVoiceChatInputAudioSinkFix": true,
-"DFFlagVoiceChatRemoveDupesInQueuedSubs": true,
 "FFlagEnableInGameMenuV3": false,
 "FFlagDisableNewIGMinDUA": true,
+"DFFlagDisconnectPlayerOnRemove2": false,
 "DFLogHttpTrace": 0,
 "DFLogHttpTraceError": 0,
 "DFLogHttpTraceLight": 0,
@@ -248,10 +246,14 @@
 "DFStringLightstepToken": "opt-out",
 "DFStringHttpPointsReporterUrl": "https://opt-out.roblox.com",
 "DFStringCrashUploadToBacktraceBaseUrl": "https://opt-out.roblox.com",
+"FFlagBacktraceMainSourcePathEnabled": false,
 "FStringErrorUploadToBacktraceBaseUrl": "https://opt-out.roblox.com",
+"DFFlagReportGlobalAnalyticsUniverseAndPlaceIds": false,
 "DFStringRobloxAnalyticsSubDomain": "opt-out",
 "DFStringRobloxAnalyticsURL": "https://opt-out.roblox.com",
 "DFStringAnalyticsNS1ApplicationId": "opt-out",
 "DFStringAnalyticsNS1BeaconConfig": "https://opt-out.roblox.com",
+"DFFlagAnimatorAnalyticsEnabled": false,
+
 "DFFlagSendAllPhysicsPackets": true
 }
