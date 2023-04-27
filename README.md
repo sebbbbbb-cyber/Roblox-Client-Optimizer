@@ -47,6 +47,7 @@ We now have an official RCO community Discord server! Join [here!](https://roblo
 The only official websites of RCO are:
 1. https://github.com/L8X/Roblox-Client-Optimizer (Official GitHub)
 2. https://roblox-client-optimizer.simulhost.com (Official Website)
+3. https://roblox-client-optimizer.simulhost.com/discord (Official Discord)
 3. https://rco.ddns.net (Official Website - Deprecated)
 
 Anything outside of these three pages (and any links listed on them) claiming to be RCO are NOT RCO and are attempting to defraud you.
