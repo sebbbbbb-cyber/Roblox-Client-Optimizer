@@ -10,8 +10,9 @@ using std::string;
 bool isConsoleHidden = false;
 bool isRcoEnabled = false;
 
-std::string rootDir("C:\\RClientOptimizer2");
+std::string rootDir("C:\\Program Files (x86)\\RCO2");
 string robloxVersionFolder;
+string localRobloxVersionFolder;
 
 char* buf = nullptr;
 size_t sz = 0;
@@ -113,7 +114,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMsg, WPARAM wParam, LPARAM lParam) {
 
 void printMainText() {
     system("cls");
-    std::cout << "Roblox Client Optimizer 2 coded in C++ by Kaid | FFlag list maintained by L8X\n\nRCO is currently: ";
+    std::cout << "Roblox Client Optimizer coded by Kaede | FFlag list maintained by L8X\n\nRCO is currently: ";
     if (isRcoEnabled) {
         SetConsoleTextAttribute(hConsole, 10);
         std::cout << "Enabled";
@@ -259,13 +260,27 @@ int main(int argc, char** argv) {
     //Preinit
     SetConsoleTitle(L"Roblox Client Optimizer");
 
+    if (std::filesystem::exists("C:\\RClientOptimizer2") == true) {
+        std::filesystem::remove_all("C:\\RClientOptimizer2");
+    }
+
+    if (!(_dupenv_s(&buf, &sz, "localappdata") == 0 && buf != nullptr)) {
+        std::cout << "Error finding LocalAppData folder | 0xB\n";
+        std::cin.get();
+        return 11;
+    }
+
+    localRobloxVersionFolder = buf + string("\\Roblox\\Versions");
+    robloxVersionFolder = string("C:\\Program Files (x86)\\Roblox\\Versions");
+    free(buf);
+
     if (std::filesystem::exists(rootDir) == false) {
         std::cout << "Could not find proper RCO files, please reinstall RCO | 0x1\n";
         std::cin.get();
         return 1;
     }
 
-    const string rcoVersionConstant = "2.0.4";
+    const string rcoVersionConstant = "2.0.5";
 
     std::ofstream rcoVerFile;
     rcoVerFile.open(rootDir + "\\programversion.rco");
@@ -358,7 +373,7 @@ int main(int argc, char** argv) {
         si.cb = sizeof(si);
         ZeroMemory(&pi, sizeof(pi));
 
-        CreateProcessA("C:\\RClientOptimizer2\\RCO2InstallerGui.exe", argv[1], NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+        CreateProcessA((rootDir + "\\RCO2Installer.exe").c_str(), argv[1], NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
         CloseHandle(pi.hProcess);
         CloseHandle(pi.hThread);
         exit(0);
@@ -366,22 +381,13 @@ int main(int argc, char** argv) {
 
     skipUpdate:
 
-    if (std::filesystem::exists("C:\\Program Files (x86)\\Roblox\\Versions") == true) {
-        std::cout << "(This will be fully compatible in 2.1.0) Detected an Administrative Roblox install at C:\\Program Files (x86)\\Roblox\\Versions\nPlease reinstall Roblox without administrator, as RCO does not have Administrative permissions. | 0xA\nIf you've already reinstalled and still see this, please delete C:\\Program Files (x86)\\Roblox\n\nIf it still doesn't work, please verify if your 'Program Files (x86)' is set to 'Read-Only' and change it to be if not.";
+    if (std::filesystem::exists(robloxVersionFolder) == true && std::filesystem::exists(localRobloxVersionFolder) == true) {
+        std::cout << "Detected two Roblox installs at once, please delete either " + robloxVersionFolder + " or " + localRobloxVersionFolder;
         std::cin.get();
         return 10;
     }
 
-    if (!(_dupenv_s(&buf, &sz, "localappdata") == 0 && buf != nullptr)) {
-        std::cout << "Error finding LocalAppData folder | 0xB\n";
-        std::cin.get();
-        return 11;
-    }
-
-    robloxVersionFolder = buf + string("\\Roblox\\Versions");
-    free(buf);
-
-    if (std::filesystem::exists(robloxVersionFolder) == false) {
+    if (std::filesystem::exists(robloxVersionFolder) == false && std::filesystem::exists(localRobloxVersionFolder) == false) {
         std::cout << "Roblox not found. Please reinstall Roblox | 0x3\n";
         std::cin.get();
         return 3;
@@ -452,11 +458,17 @@ int main(int argc, char** argv) {
             curl_easy_setopt(req, CURLOPT_WRITEDATA, &robloxVersionStr);
             res = curl_easy_perform(req);
             if (res != CURLE_OK) {
-                std::cout << "\nNETWORK ERROR | FAILED TO REMOVE FFLAG LIST, DELETE MANUALLY AT " + robloxVersionFolder + "\\current-roblox-version\\ClientSettings\\ClientAppSettings.json | 0x9\n";
+                if (std::filesystem::exists(robloxVersionFolder) == true)
+                    std::cout << "\nNETWORK ERROR | FAILED TO REMOVE FFLAG LIST, DELETE MANUALLY AT " + robloxVersionFolder + "\\current-roblox-version\\ClientSettings\\ClientAppSettings.json | 0x9\n";
+                if (std::filesystem::exists(localRobloxVersionFolder) == true)
+                    std::cout << "\nNETWORK ERROR | FAILED TO REMOVE FFLAG LIST, DELETE MANUALLY AT " + localRobloxVersionFolder + "\\current-roblox-version\\ClientSettings\\ClientAppSettings.json | 0x9\n";
             }
             curl_easy_cleanup(req);
             if (std::filesystem::exists(robloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings\\ClientAppSettings.json") == true) {
                 remove((robloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings\\ClientAppSettings.json").c_str());
+            }
+            if (std::filesystem::exists(localRobloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings\\ClientAppSettings.json") == true) {
+                remove((localRobloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings\\ClientAppSettings.json").c_str());
             }
         }
         isEnabledFile.close();
