@@ -45,23 +45,24 @@ int main(int argc, char* argv[]) {
             std::cin.get();
             return 3;
         }
+        if (std::filesystem::exists(rootDir + "\\RCO2Installer.exe") == false) {
+            CURL* req2 = curl_easy_init();
+            CURLcode res2;
+            curl_easy_setopt(req2, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/RCO2Installer.exe");
+            curl_easy_setopt(req2, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2TLS);
+            curl_easy_setopt(req2, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
+            curl_easy_setopt(req2, CURLOPT_WRITEFUNCTION, NULL);
+            curl_easy_setopt(req2, CURLOPT_WRITEDATA, file2);
+            res2 = curl_easy_perform(req2);
+            if (res2 != CURLE_OK) {
+                std::cout << "NETWORK ERROR | PLEASE CHECK YOUR INTERNET CONNECTION | 0x4\n";
+                std::cin.get();
+                return 4;
+            }
+            curl_easy_cleanup(req2);
 
-        CURL* req2 = curl_easy_init();
-        CURLcode res2;
-        curl_easy_setopt(req2, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/RCO2Installer.exe");
-        curl_easy_setopt(req2, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_2TLS);
-        curl_easy_setopt(req2, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1_2);
-        curl_easy_setopt(req2, CURLOPT_WRITEFUNCTION, NULL);
-        curl_easy_setopt(req2, CURLOPT_WRITEDATA, file2);
-        res2 = curl_easy_perform(req2);
-        if (res2 != CURLE_OK) {
-            std::cout << "NETWORK ERROR | PLEASE CHECK YOUR INTERNET CONNECTION | 0x4\n";
-            std::cin.get();
-            return 4;
+            fclose(file2);
         }
-        curl_easy_cleanup(req2);
-
-        fclose(file2);
 
         HKEY hKey;
         if (RegOpenKeyExA(HKEY_CURRENT_USER, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 0, KEY_ALL_ACCESS, &hKey) == ERROR_SUCCESS) {
