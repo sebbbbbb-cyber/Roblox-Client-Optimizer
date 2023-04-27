@@ -7,7 +7,6 @@ int main(int argc, char* argv[]) {
 	std::string userIn;
 	std::cout << "Welcome to the RCO Installer/Updater!\nRCO is made, owned, and developed by Kaede and L8X\n\nType \"install\" and press enter to continue!\nType \"uninstall\" and press enter to uninstall :(\n\n";
 	std::cin >> userIn;
-    std::cin.clear();
 
     std::string rootDir("C:\\Program Files (x86)\\RCO2");
 
@@ -90,8 +89,8 @@ int main(int argc, char* argv[]) {
 	}
     else if (userIn == std::string("uninstall")) { // Uninstall
         if (argv[0] == (rootDir+"\\RCO2Installer.exe").c_str() || argv[0] == "C:\\RClientOptimizer2\\RCO2.exe") {
-            std::cout << "To uninstall, please run the installer outside of this updater, you can redownload this installer on the github.\n";
-            std::cin.get();
+            std::cout << "To uninstall, please run the installer outside of this updater, you can redownload this installer on the github.\nClosing in 5 seconds.\n";
+            std::this_thread::sleep_for(std::chrono::milliseconds(5000));
             return 0;
         }
 
