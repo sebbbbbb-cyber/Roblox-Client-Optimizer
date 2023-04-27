@@ -50,7 +50,7 @@ The only official websites of RCO are:
 3. https://roblox-client-optimizer.simulhost.com/discord (Official Discord)
 3. https://rco.ddns.net (Official Website - Deprecated)
 
-Anything outside of these three pages (and any links listed on them) claiming to be RCO are NOT RCO and are attempting to defraud you.
+Anything outside of these four pages (and any links listed on them) claiming to be RCO are NOT RCO and are attempting to defraud you.
 ## Question & Answer
 
 - Why not manually install flags?
