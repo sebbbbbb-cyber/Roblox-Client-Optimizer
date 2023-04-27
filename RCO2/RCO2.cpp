@@ -280,7 +280,7 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    const string rcoVersionConstant = "2.0.5";
+    const string rcoVersionConstant = "2.0.6";
 
     std::ofstream rcoVerFile;
     rcoVerFile.open(rootDir + "\\programversion.rco");
@@ -364,6 +364,8 @@ int main(int argc, char** argv) {
     curl_easy_cleanup(reqUpd);
 
     if ((rcoVersionStr + ' ') != storedRcoVersion) {
+        std::cout << rcoVersionStr << "\n";
+        std::cout << storedRcoVersion << "\n";
         //CreateProcess code from https://stackoverflow.com/a/15440094
 
         STARTUPINFOA si;
