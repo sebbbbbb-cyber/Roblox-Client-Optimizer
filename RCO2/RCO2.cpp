@@ -384,7 +384,7 @@ int main(int argc, char** argv) {
     if (std::filesystem::exists(robloxVersionFolder) == true && std::filesystem::exists(localRobloxVersionFolder) == true) {
         std::cout << "Detected two Roblox installs at once, please delete either " + robloxVersionFolder + " or " + localRobloxVersionFolder;
         std::cin.get();
-        return 10;
+        return 30;
     }
 
     if (std::filesystem::exists(robloxVersionFolder) == false && std::filesystem::exists(localRobloxVersionFolder) == false) {
@@ -392,6 +392,11 @@ int main(int argc, char** argv) {
         std::cin.get();
         return 3;
     }
+
+    if (std::filesystem::exists(robloxVersionFolder) == false) {
+        robloxVersionFolder = localRobloxVersionFolder;
+    }
+
 
     //Initialize the tray icon system
     std::thread t1(traySystem);
@@ -460,15 +465,10 @@ int main(int argc, char** argv) {
             if (res != CURLE_OK) {
                 if (std::filesystem::exists(robloxVersionFolder) == true)
                     std::cout << "\nNETWORK ERROR | FAILED TO REMOVE FFLAG LIST, DELETE MANUALLY AT " + robloxVersionFolder + "\\current-roblox-version\\ClientSettings\\ClientAppSettings.json | 0x9\n";
-                if (std::filesystem::exists(localRobloxVersionFolder) == true)
-                    std::cout << "\nNETWORK ERROR | FAILED TO REMOVE FFLAG LIST, DELETE MANUALLY AT " + localRobloxVersionFolder + "\\current-roblox-version\\ClientSettings\\ClientAppSettings.json | 0x9\n";
             }
             curl_easy_cleanup(req);
             if (std::filesystem::exists(robloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings\\ClientAppSettings.json") == true) {
                 remove((robloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings\\ClientAppSettings.json").c_str());
-            }
-            if (std::filesystem::exists(localRobloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings\\ClientAppSettings.json") == true) {
-                remove((localRobloxVersionFolder + "\\" + robloxVersionStr + "\\ClientSettings\\ClientAppSettings.json").c_str());
             }
         }
         isEnabledFile.close();
