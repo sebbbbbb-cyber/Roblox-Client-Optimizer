@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 96,
+"FIntFlagUpdateVersion": 97,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -177,8 +177,8 @@
 "FFlagRenderGpuTextureCompressor": true,
 "FFlagRenderLightGridEfficientTextureAtlasUpdate": true,
 "DFIntRenderingThrottleDelayInMS": 100,
-"FFlagReadHSRAlwaysVisibleData": true,
-"FFlagApplyHSRAlwaysVisibleData": true,
+"FFlagReadHSRAlwaysVisibleData": false,
+"FFlagApplyHSRAlwaysVisibleData": false,
 "FFlagEnableLinearCageDeformer2": true,
 "FFlagUseFallbackTextureStatusLoaded2": true,
 "FFlagHumanoidDeferredSyncFunction5": true,
