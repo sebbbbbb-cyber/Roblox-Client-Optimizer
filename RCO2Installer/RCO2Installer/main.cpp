@@ -39,13 +39,13 @@ int main(int argc, char* argv[]) {
 
         fclose(file);
 
+        if (std::filesystem::exists(rootDir + "\\RCO2Installer.exe") == false) {
         FILE* file2;
         if (fopen_s(&file2, (rootDir + "\\RCO2Installer.exe").c_str(), "wb") != 0) {
             std::cout << "Could not open filepoint... | 0x3\n";
             std::cin.get();
             return 3;
         }
-        if (std::filesystem::exists(rootDir + "\\RCO2Installer.exe") == false) {
             CURL* req2 = curl_easy_init();
             CURLcode res2;
             curl_easy_setopt(req2, CURLOPT_URL, "https://roblox-client-optimizer.simulhost.com/RCO2Installer.exe");
