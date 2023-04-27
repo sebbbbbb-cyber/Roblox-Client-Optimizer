@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 97,
+"FIntFlagUpdateVersion": 98,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -117,6 +117,7 @@
 "FFlagSmoothClusterShaderRefactor": true,
 "FFlagHSRClusterImprovement": true,
 "FFlagUniformClusterSize": true,
+"FIntMotionBuffers2": 100,
 "FIntRenderShaderLoadAnalyticsHundredthPercent": 0,
 "FIntRenderD3D11UncleanShutdownPercent": 100,
 "FIntEnableCullableScene2HundredthPercent": 500,
