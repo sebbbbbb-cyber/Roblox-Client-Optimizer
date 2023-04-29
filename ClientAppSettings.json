@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 101,
+"FIntFlagUpdateVersion": 102,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -264,6 +264,7 @@
 "DFFlagAdGuiImpressionDisabled": true,
 "DFFlagEnableGCapsHardwareTelemetry": false,
 "DFFlagAudioDeviceTelemetry": false,
+"FFlagEnableSoundTelemetry": false,
 "DFFlagEnableHardwareTelemetry": false,
 "DFIntHardwareTelemetryHundredthsPercent": 0,
 "DFFlagEphemeralCounterInfluxReportingEnabled": false,
