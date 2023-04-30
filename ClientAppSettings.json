@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 103,
+"FIntFlagUpdateVersion": 104,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -38,7 +38,7 @@
 "FFlagRemoveRedundantFontPreloading": true,
 "FFlagPreloadTextureItemsOption4": true,
 "DFFlagContentProviderSupportsSymlinks": true,
-"DFFlagHttpClientOptimizeReqQueuing": true,
+"DFFlagHttpClientOptimizeReqQueuing": false,
 "FFlagClientAssetFormatResolution5": true,
 "FFlagBatchAssetApi": true,
 "FFlagBatchAssetApiRollout": true,
