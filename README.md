@@ -30,7 +30,7 @@ We now have an official RCO community Discord server! Join [here!](https://roblo
 
 ## Issue reporting / Support
 
-Due to an influx of users on our github, we have moved issues to our Discord server! please join at the above #Community section!
+Due to an influx of users on our github, we have moved issues to our Discord server! please join at the above Community section!
 
 ## Features
 
