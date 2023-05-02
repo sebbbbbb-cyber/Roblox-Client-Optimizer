@@ -28,6 +28,10 @@ Roblox Client Optimizer tweaks flags to optimize your Roblox client. Click [here
 
 We now have an official RCO community Discord server! Join [here!](https://roblox-client-optimizer.simulhost.com/discord)
 
+## Issue reporting / Support
+
+Due to an influx of users on our github, we have moved issues to our Discord server! please join at the above #Community section!
+
 ## Features
 
 - Unlocks FPS (frames per second)
