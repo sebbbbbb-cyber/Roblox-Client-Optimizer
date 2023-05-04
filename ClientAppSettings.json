@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 106,
+"FIntFlagUpdateVersion": 107,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -45,7 +45,7 @@
 "FIntBatchAssetApiRolloutHundredthPercent": 100,
 "DFFlagReportHttpBatchApiRejectedUrl": true,
 "DFLogBatchAssetApiLog": 6,
-"DFIntBatchThumbnailLimit": 400,
+"DFIntBatchThumbnailLimit": 100,
 "DFIntBatchThumbnailMaxReqests": 4,
 "DFIntBatchThumbnailResultsSizeCap": 400,
 "DFIntHttpBatchApi_maxReqs": 32,
