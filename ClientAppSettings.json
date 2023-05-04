@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 107,
+"FIntFlagUpdateVersion": 108,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -24,7 +24,7 @@
 "DFIntUserIdPlayerNameCacheSize": 200000000,
 "DFIntUserIdPlayerNameLifetimeSeconds": 604800,
 "FIntTaskSchedulerAutoThreadLimit": 16,
-"DFIntTaskSchedulerTargetFps": 200000000,
+"DFIntTaskSchedulerTargetFps": 330,
 "FIntSSAOMipLevels": 0,
 "DFIntJoinDataCompressionLevel": 8,
 "DFIntClusterCompressionLevel": 8,
