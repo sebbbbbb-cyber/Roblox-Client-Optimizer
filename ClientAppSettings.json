@@ -45,7 +45,7 @@
 "FIntBatchAssetApiRolloutHundredthPercent": 100,
 "DFFlagReportHttpBatchApiRejectedUrl": true,
 "DFLogBatchAssetApiLog": 6,
-"DFIntBatchThumbnailLimit": 200,
+"DFIntBatchThumbnailLimit": 400,
 "DFIntBatchThumbnailMaxReqests": 4,
 "DFIntBatchThumbnailResultsSizeCap": 400,
 "DFIntHttpBatchApi_maxReqs": 32,
