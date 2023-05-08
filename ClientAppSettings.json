@@ -1,5 +1,5 @@
 {
-"FIntFlagUpdateVersion": 112,
+"FIntFlagUpdateVersion": 113,
 "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
 "DFIntSecondsBetweenDynamicVariableReloading": 31557600,
 "FIntRolloutEnrollmentExpirationMinutes": 31557600,
@@ -62,7 +62,7 @@
 "FFlagPreloadTextureItemsOption4": true,
 "DFFlagContentProviderSupportsSymlinks": true,
 "DFFlagHttpClientOptimizeReqQueuing": false,
-"FFlagClientAssetFormatResolution5": true,
+"FFlagClientAssetFormatResolution5": false,
 "FFlagBatchAssetApi": true,
 "FFlagBatchAssetApiRollout": true,
 "FIntBatchAssetApiRolloutHundredthPercent": 100,
@@ -275,7 +275,6 @@
 "DFIntBrowserTrackerIdTelemetryThrottleHundredthsPercent": 100000,
 "DFFlagSessionTelemetryLayeredClothing": false,
 "DFFlagSessionTelemetrySnapshotEnabled2": false,
-"DFFlagSessionTelemetryUnify": false,
 "DFFlagSessionTrackingRecordHasLocation": false,
 "DFFlagSessionTrackingRecordUserClickMinRadiusTime": false,
 "FFlagAddGameInstanceIdToSessionTracking": false,
