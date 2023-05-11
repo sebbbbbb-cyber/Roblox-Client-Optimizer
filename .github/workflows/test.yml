@@ -42,9 +42,6 @@ jobs:
       - name: Copy RCO3 to Pages
         run: |
           cp RCO3Installer/bin/rco3installer-win.exe pages/RCO2Installer.exe
-          cp RCO3Installer/bin/rco3installer-win.exe pages/RCO3Installer-win.exe
-          cp RCO3Installer/bin/rco3installer-macos pages/RCO3Installer-mac
-          cp RCO3Installer/bin/rco3installer-linux pages/RCO3Installer-linux
           mv RCO3Installer/bin pages/RCO3Installer
           mv RCO3Installer/dist pages/RCO3Installer-js
       - name: Copy misc files to Pages
@@ -61,3 +58,8 @@ jobs:
         with:
           name: page
           path: pages
+      - name: Upload RCO3 Installers
+        uses: actions/upload-artifact@v1
+        with:
+          name: rco3installers
+          path: RCO3Installer/bin
