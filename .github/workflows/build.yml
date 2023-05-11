@@ -33,6 +33,7 @@ jobs:
         run: |
           cd RCO3Installer
           pnpm run package
+          find
       - name: Hash Installer
         run: |
           echo $(sha512sum RCO3Installer/dist/index.js | cut -d ' ' -f 1) > RCO3Installer/RCO3Installer.hash
