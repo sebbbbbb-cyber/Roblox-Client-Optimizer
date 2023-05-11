@@ -47,6 +47,15 @@ jobs:
           cp RCO3Installer/bin/rco3installer-linux pages/RCO3Installer-linux
           mv RCO3Installer/bin pages/RCO3Installer
           mv RCO3Installer/dist pages/RCO3Installer-js
+      - name: Copy misc files to Pages
+        run: |
+          cp ClientAppSettings.json pages/
+          cp hosts pages/
+          cp programversion.rco pages/ # TODO: Replace this with a file from the build
+          cp flagversion.rco pages/ # DEPRECATED: Hash will be used in future
+      - name: Write hash of ClientAppSettings to pages
+        run: |
+          echo $(sha512sum ClientAppSettings.json | cut -d ' ' -f 1) > pages/ClientAppSettings.hash
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
