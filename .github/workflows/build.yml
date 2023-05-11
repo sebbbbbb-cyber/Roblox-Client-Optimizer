@@ -131,21 +131,10 @@ jobs:
         with:
           name: assets
           path: .
-      - name: Debug Output
+      - name: List Artifact
         run: find
-      # - name: Copy RCO3 to Pages
-      #   run: |
-      #     cp RCO3Installer/bin/rco3installer-win.exe pages/RCO2Installer.exe
-      #     # in future: cp RCO3Installer/bin/rco3installer-win.exe pages/RCO.exe
-      #     mv RCO3Installer/dist pages/RCO3Installer-js
-      # - name: Copy misc files to Pages
-      #   run: |
-      #     cp ClientAppSettings.json pages/
-      #     cp hosts pages/
-      #     cp programversion.rco pages/ # TODO: Replace this with a file from the build
-      #     cp flagversion.rco pages/ # DEPRECATED: Hash will be used in future
-      # - name: Upload artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: page
-      #     path: pages
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: page
+          path: .
