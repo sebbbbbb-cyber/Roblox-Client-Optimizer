@@ -71,10 +71,24 @@ Please either remove your system's NodeJS installation, or upgrade it to at leas
       break;
     }
     case InstallAction.Uninstall: {
+      if (process.execPath.startsWith(installer.RootDir)) {
+        const out = path.join((process.platform === 'win32' ? process.env.USERPROFILE : process.env.HOME) ?? process.cwd(), 'RCO3-Installer.exe')
+        fs.copyFileSync(process.execPath, out)
+        installer.printInstallationStep(`RCO3 is currently running from the installation directory!
+RCO Installer will exit in 10 seconds, and you can run the uninstaller again from ${out}.`)
+        await new Promise(r => setTimeout(r, 10000))
+        proc.exit(0)
+      }
       installer.printInstallationStep('Removing RCO3 Directory', false);
       installer.ensureDirRemoved()
-      installer.printInstallationStep('Removing RCO3 from Registry', false);
-      await installer.removeFromStartupRegistry()
+      if (proc.platform === 'win32') {
+        installer.printInstallationStep('Removing RCO3 from Registry', false);
+        try {
+          await installer.removeFromStartupRegistry()
+        } catch (error) {
+          console.warn('Failed to remove RCO3 Startup Item from registry', error);
+        }
+      }
       installer.printInstallationStep('Done!', false);
       break;
     }

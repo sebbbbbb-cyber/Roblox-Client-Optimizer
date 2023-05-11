@@ -36,6 +36,7 @@ jobs:
       - name: Make Artifact Dir
         run: |
           mkdir artifact
+          mv RCO.exe artifact/RCO.exe
           mv RCO2Installer.exe artifact/RCO-Legacy-Installer.exe
           mv RCO3Installer/dist/ artifact/installer-js
           mv RCO3Installer/bin/ artifact/installer-bin
@@ -131,8 +132,10 @@ jobs:
         with:
           name: assets
           path: .
-      - name: List Artifact
-        run: find
+      - name: Temp - Rename RCO-Legacy-Installer.exe to RCO2Installer.exe
+        run: |
+          mv RCO2Installer.exe RCONextgen-Installer.exe
+          mv RCO-Legacy-Installer.exe RCO2Installer.exe
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
