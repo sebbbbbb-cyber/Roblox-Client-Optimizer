@@ -33,27 +33,19 @@ jobs:
         run: |
           cd RCO3Installer
           pnpm run package
-      - name: Hash Installer
+      - name: Make Output Dir
         run: |
-          echo $(sha512sum RCO3Installer/dist/index.js | cut -d ' ' -f 1) > RCO3Installer/RCO3Installer.hash
-      - name: Rename RCO2 Legacy Installer
-        run: mv ./RCO2Installer.exe RCO3Installer/RCO-Legacy-Installer.exe
-      - name: what the fuck
-        run: |
-          ls /home/runner/work/Roblox-Client-Optimizer/Roblox-Client-Optimizer/
-          echo ---
-          ls /home/runner/work/Roblox-Client-Optimizer/Roblox-Client-Optimizer/RCO3Installer/
-          echo ---
-          ls /home/runner/work/Roblox-Client-Optimizer/Roblox-Client-Optimizer/RCO3Installer/bin
+          mkdir artifact
+          mv ./RCO2Installer.exe artifact/RCO-Legacy-Installer.exe
+          mv RCO3Installer/RCO3Installer.hash artifact/installer-js/index.hash
+          mv RCO3Installer/dist/ artifact/installer-js
+          mv RCO3Installer/bin/ artifact/installer-bin
+          echo $(sha512sum artifact/installer-js/index.js | cut -d ' ' -f 1) > artifact/installer-js/index.js.hash
       - name: Upload RCO3 Installers
         uses: actions/upload-artifact@v1
         with:
-          name: rco3installer
-          path: |
-            RCO3Installer/bin
-            RCO3Installer/dist
-            RCO3Installer/RCO3Installer.hash
-            RCO3Installer/RCO-Legacy-Installer.exe
+          name: rco3installer2
+          path: bin
   build-rco3-site:
     runs-on: ubuntu-latest
     steps:
