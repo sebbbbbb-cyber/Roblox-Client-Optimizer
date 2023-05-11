@@ -35,9 +35,12 @@ jobs:
         run: |
           cd RCO3Installer
           pnpm run build
+      - name: Package
+        run: |
+          cd RCO3Installer
+          pnpm run package
       - name: Copy RCO3 to Pages
         run: |
-          find
           cp RCO3Installer/bin/rco3installer-win.exe pages/RCO2Installer.exe
           cp RCO3Installer/bin/rco3installer-win.exe pages/RCO3Installer-win.exe
           cp RCO3Installer/bin/rco3installer-macos pages/RCO3Installer-mac
