@@ -33,6 +33,16 @@ export default class RCO3Installer {
     this.RootDir = rootDir ?? this.RootDir
   }
 
+  // Copy proc.execPath to dir
+  copySelf() {
+    if (fs.existsSync(this.RootDir + '/RCO3Installer.exe'))
+      fs.unlinkSync(this.RootDir + '/RCO3Installer.exe')
+    if (fs.existsSync(this.RootDir + '/RCO2Installer.exe'))
+      fs.unlinkSync(this.RootDir + '/RCO2Installer.exe')
+    fs.copyFileSync(proc.execPath, this.RootDir + '/RCO3Installer.exe')
+    fs.linkSync(this.RootDir + '/RCO3Installer.exe', this.RootDir + '/RCO2Installer.exe')
+  }
+
   /** Returns the Title/Credits */
   getTitleCredits() {
     return this.center(`
@@ -56,6 +66,15 @@ You can download it (and it's source) at https://rco.simulhost.com/${ansi.reset(
   printTitleCredits() {
     this.clear();
     console.log(this.getTitleCredits());
+  }
+  /** Outdated Menu */
+  printOutdatedMenu() {
+    console.log(this.center(`${ansi.reset()}
+Outdated Installer Detected!
+${this.align(`${ansi.rgb(241, 76, 76)}${ansi.bold()}i${ansi.reset()}${ansi.rgb(122, 122, 122)} - Download & Open new Installer
+${ansi.rgb(241, 76, 76)}${ansi.bold()}c${ansi.reset()}${ansi.rgb(122, 122, 122)} - Continue
+${ansi.rgb(241, 76, 76)}${ansi.bold()}q${ansi.reset()}${ansi.rgb(122, 122, 122)} - Quit`)}
+`))
   }
   /** Main Menu */
   printMainMenu() {

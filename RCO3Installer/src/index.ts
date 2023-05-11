@@ -3,13 +3,15 @@ import { VersionCheck, NodeInstaller, PathHelper } from "@rco3/nodeinstallutil";
 import fs from 'fs-extra';
 import path from 'path';
 import proc from 'process';
+import { createHash } from 'crypto';
+import { execSync, spawn, spawnSync } from "child_process";
 
 if (!fs.existsSync(path.join(__dirname, '../package.json'))) throw new Error('Cannot find package.json!')
-const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf-8'))
 
 export const installer = new RCO3Installer();
 
 if (proc.argv.includes('-v') || proc.argv.includes('--version')) {
+  const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf-8'))
   console.log(`RCO3Installer v${pkg.version ?? 'unknown'}
 Dependencies:
 ${Object.keys(pkg.dependencies).map(v => ` ${v}: ${pkg.dependencies[v]}`).join('\n')}
@@ -19,7 +21,51 @@ ${Object.keys(proc.versions).map(v => ` ${v}: ${proc.versions[v]}`).join('\n')}`
 }
 
 (async () => {
-  installer.ensureDir()
+  // get sha512 hash of process.execPath
+  console.log('Checking for updates...');
+  const hash = createHash('sha512').update(fs.readFileSync(proc.execPath)).digest('hex')
+  const remoteHash = (await (await fetch('https://roblox-client-optimizer.simulhost.com/RCO2Installer.hash')).text()).split(' ')[0]
+  if (hash !== remoteHash) {
+    installer.printTitleCredits()
+    installer.printOutdatedMenu()
+    installer.printFossNotice()
+    const loop = async () => {
+      const key = await installer.TTYText.readkey();
+      switch (key) {
+        case 'i':
+          const tempDir = process.env.TEMP ?? process.env.TMP ?? process.env.TMPDIR ?? '/tmp'
+          const out = path.join(tempDir, 'RCO3-Installer.exe')
+          const res = await fetch('https://roblox-client-optimizer.simulhost.com/RCO2Installer.exe')
+          if (!res.ok) {
+            installer.printInstallationStep(`Failed to download installer: ${res.statusText}`, 'Error')
+            await new Promise(r => setTimeout(r, 1000))
+            proc.exit(1)
+          }
+          fs.writeFileSync(out, Buffer.from(await res.arrayBuffer()))
+          installer.printInstallationStep(`Successfully downloaded installer to ${out} - Spawning`)
+          try {
+            fs.chmodSync(out, 0o755)
+          } catch (error) {
+            if (proc.platform !== 'win32')
+              console.warn('Failed to chmod installer!', error);
+          }
+          // spawn(`${proc.platform==='win32'?'':proc.platform==='linux'?'':''}${out}`, { stdio: 'inherit' })
+          // await new Promise(r => setTimeout(r, 1000))
+          execSync(proc.platform === 'win32' ? `start cmd /c "${out}"` : out, {
+            stdio: 'inherit'
+          })
+          proc.exit(0)
+        case 'c':
+          break;
+        case 'q':
+          proc.exit(0)
+        default:
+          await loop()
+          break;
+      }
+    }
+    await loop();
+  }
   installer.printTitleCredits()
   installer.printMainMenu()
   installer.printFossNotice()
@@ -51,6 +97,8 @@ Please either remove your system's NodeJS installation, or upgrade it to at leas
         installer.printInstallationStep('Adding RCO3 to Registry');
         await installer.addToStartupRegistry()
       }
+      installer.printInstallationStep('Copying Self to Directory');
+      installer.copySelf()
       installer.printTitleCredits()
       installer.printLaunchMenu()
       installer.printFossNotice()
@@ -65,6 +113,10 @@ Please either remove your system's NodeJS installation, or upgrade it to at leas
             break;
           case 'q':
             shouldQuit = true;
+            break;
+          case '.':
+            console.log(`Install Location: ${installer.RootDir}`);
+            await new Promise(r => setTimeout(r, 1000))
             break;
         }
       }
