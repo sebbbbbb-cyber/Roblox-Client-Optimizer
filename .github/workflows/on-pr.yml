@@ -7,3 +7,6 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/build.yml
+  list-deployment-files:
+    needs: build
+    uses: ./.github/workflows/list-deployment-files.yml
