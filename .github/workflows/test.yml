@@ -1,0 +1,42 @@
+name: Build & Test Everything, make artifact
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 'latest'
+      - name: Install dependencies
+        run: |
+          cd RCO3Installer
+          pnpm install
+      - name: Build
+        run: |
+          cd RCO3Installer
+          pnpm run build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: |
+            RCO.exe
+            RCO2Installer.exe
+            RCO3Installer/bin
