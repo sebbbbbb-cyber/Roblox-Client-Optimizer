@@ -135,8 +135,8 @@ jobs:
       - name: Temp - Rename RCO-Legacy-Installer.exe to RCO2Installer.exe
         run: |
           find
-          mv rco2installer.exe rconextgen-installer.exe
-          mv rco-legacy-installer.exe RCO2Installer.exe
+          mv RCO2Installer.exe RCONextGen-Installer.exe
+          mv RCO-Legacy-Installer.exe RCO2Installer.exe
       - name: Create Important Hashes
         run: |
           sha512sum rco.exe > rco-version.sha512
