@@ -1,4 +1,4 @@
-name: Build & Test Everything, make artifact
+name: Build Everything, make artifact
 
 on:
   push:
