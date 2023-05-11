@@ -125,7 +125,7 @@ jobs:
           path: .
       - name: Unzip
         run: |
-          unzip RCO.zip
+          unzip -u RCO.zip
           rm RCO.zip
       - name: Download Assets
         uses: actions/download-artifact@v3
