@@ -11,16 +11,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 'latest'
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: 'pnpm'
           cache-dependency-path: 'RCO3Installer/pnpm-lock.yaml'
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 'latest'
       - name: Install dependencies
         run: |
           cd RCO3Installer
@@ -52,16 +52,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 'latest'
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: 'pnpm'
           cache-dependency-path: 'rco-site/pnpm-lock.yaml'
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 'latest'
       - name: Install dependencies
         run: |
           cd rco-site
@@ -86,7 +86,7 @@ jobs:
           path: RCO.zip
   merge-builds:
     runs-on: ubuntu-latest
-    needs: [build-rco3-installer, build-rco3-site]
+    needs: [build-rco3-installer, build-rco3-site, build-rco3]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
