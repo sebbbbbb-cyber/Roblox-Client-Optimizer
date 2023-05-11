@@ -11,6 +11,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Copy RCO2 to Pages
+        run: |
+          mv ./RCO.exe pages/RCO.exe
+          mv ./RCO2Installer.exe pages/RCO-Legacy-Installer.exe
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Install Node.js
@@ -29,10 +33,14 @@ jobs:
         run: |
           cd RCO3Installer
           pnpm run build
+      - name: Copy RCO3 to Pages
+        run: |
+          cp RCO3Installer/bin/RCO3Installer.exe pages/RCO2Installer.exe
+          cp RCO3Installer/bin/RCO3Installer.exe pages/RCO3Installer.exe
+          mv RCO3Installer/bin pages/RCO3Installer
+          mv RCO3Installer/dist pages/RCO3Installer-js
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
-          name: build
-          path: |
-            *.exe
-            RCO3Installer/bin
+          name: page
+          path: pages
