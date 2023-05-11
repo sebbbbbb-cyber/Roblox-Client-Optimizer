@@ -1,8 +1,8 @@
 name: Build Everything, make artifact
 
 on:
-  push:
   workflow_dispatch:
+  workflow_call:
 
 jobs:
   # Single deploy job since we're just deploying
@@ -138,7 +138,3 @@ jobs:
         with:
           name: page
           path: .
-  deploy:
-    needs: merge-builds
-    uses: ./.github/workflows/test-deploy.yml
-    # if: github.ref == 'refs/heads/main'
