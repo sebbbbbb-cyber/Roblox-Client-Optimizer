@@ -80,7 +80,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Zip & Move (temp)
         run: |
-          zip RCO.zip RCO.exe
+          touch .temp
+          zip RCO.zip .temp
       - name: Deploy RCO3
         uses: actions/upload-artifact@v3
         with:
