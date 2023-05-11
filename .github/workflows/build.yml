@@ -33,11 +33,10 @@ jobs:
         run: |
           cd RCO3Installer
           pnpm run package
-      - name: Make Output Dir
+      - name: Make Artifact Dir
         run: |
           mkdir artifact
-          mv ./RCO2Installer.exe artifact/RCO-Legacy-Installer.exe
-          mv RCO3Installer/RCO3Installer.hash artifact/installer-js/index.hash
+          mv RCO2Installer.exe artifact/RCO-Legacy-Installer.exe
           mv RCO3Installer/dist/ artifact/installer-js
           mv RCO3Installer/bin/ artifact/installer-bin
           echo $(sha512sum artifact/installer-js/index.js | cut -d ' ' -f 1) > artifact/installer-js/index.js.hash
