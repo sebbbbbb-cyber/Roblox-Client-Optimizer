@@ -139,9 +139,9 @@ jobs:
           mv RCO-Legacy-Installer.exe RCO2Installer.exe
       - name: Create Important Hashes
         run: |
-          sha512sum rco.exe > rco-version.sha512
-          sha512sum RCO2Installer.exe > RCO2Installer.exe.sha512
-          find . -type f -print0 | xargs -0 sha512sum | sha512sum > deployment.sha512
+          sha512sum RCO.exe > RCOVersion
+          sha512sum RCO2Installer.exe > RCO2Installer.hash
+          find . -type f -print0 | xargs -0 sha512sum | sha512sum > deployment.hash
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
