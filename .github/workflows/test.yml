@@ -66,6 +66,10 @@ jobs:
         run: |
           cd rco-site
           pnpm install
+      - name: Build Site
+        run: |
+          cd rco-site
+          pnpm build
       - name: Upload RCO3 Site
         uses: actions/upload-artifact@v1
         with:
