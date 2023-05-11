@@ -1,0 +1,67 @@
+{
+  "name": "rco3installer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pnpm build:parcel",
+    "build:tsc": "tsc",
+    "build:parcel": "parcel build src/index.ts --no-source-maps",
+    "package": "pkg --compress GZip .",
+    "package-from-node-src:win": "pkg --compress GZip -b . --targets node18-win-x64",
+    "package-from-node-src:mac": "pkg --compress GZip -b . --targets node18-macos-x64",
+    "package-from-node-src:linux": "pkg --compress GZip -b . --targets node18-linux-x64",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "Expo",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@parcel/packager-ts": "^2.8.3",
+    "@parcel/transformer-typescript-types": "^2.8.3",
+    "@types/7zip-min": "^1.3.1",
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^20.1.2",
+    "@types/semver": "^7.5.0",
+    "parcel": "^2.8.3",
+    "pkg": "^5.8.1",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "7zip-min": "^1.4.4",
+    "@rco3/nodeinstallutil": "^1.0.1",
+    "@rco3/ttyutil": "^1.0.2",
+    "fs-extra": "^11.1.1",
+    "semver": "^7.5.0",
+    "typescript": "^5.0.4"
+  },
+  "targets": {
+    "main": {
+      "includeNodeModules": [
+        "@rco3/ttyutil",
+        "fs-extra",
+        "graceful-fs",
+        "jsonfile",
+        "universalify",
+        "semver",
+        "lru-cache",
+        "yallist"
+      ]
+    }
+  },
+  "@parcel/transformer-js": {
+    "inlineFS": false,
+    "inlineEnvironment": false
+  },
+  "pkg": {
+    "scripts": "dist/**/*.js",
+    "targets": [
+      "node18-win-x64",
+      "node18-linux-x64",
+      "node18-macos-x64"
+    ],
+    "outputPath": "bin"
+  },
+  "bin": "dist/index.js"
+}
