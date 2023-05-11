@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: rco3installer2
-          path: bin
+          path: artifact
   build-rco3-site:
     runs-on: ubuntu-latest
     steps:
