@@ -91,6 +91,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Create RCO ClientAppSettings Hash
+        run: |
+          echo $(sha512sum assets/ClientAppSettings.json | cut -d ' ' -f 1) > assets/ClientAppSettings.json.sha512
+          echo $(sha256sum assets/ClientAppSettings.json | cut -d ' ' -f 1) > assets/ClientAppSettings.json.sha256
+          echo $(md5sum assets/ClientAppSettings.json | cut -d ' ' -f 1) > assets/ClientAppSettings.json.md5
       - name: Deploy Static
         uses: actions/upload-artifact@v3
         with:
