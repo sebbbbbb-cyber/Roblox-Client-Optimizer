@@ -34,6 +34,5 @@ jobs:
         with:
           name: build
           path: |
-            RCO.exe
-            RCO2Installer.exe
+            *.exe
             RCO3Installer/bin
