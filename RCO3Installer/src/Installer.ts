@@ -4,7 +4,7 @@ import { exec } from 'child_process';
 import proc from 'process';
 
 /** Install/Uninstall Actions */
-export const enum InstallAction {
+export enum InstallAction {
   Install,
   Uninstall,
   Quit,
