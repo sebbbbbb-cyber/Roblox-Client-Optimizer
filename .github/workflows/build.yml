@@ -36,8 +36,6 @@ jobs:
       - name: Make Artifact Dir
         run: |
           mkdir artifact
-          mv RCO.exe artifact/RCO.exe
-          mv RCO2Installer.exe artifact/RCO-Legacy-Installer.exe
           mv RCO3Installer/dist/ artifact/installer-js
           mv RCO3Installer/bin/ artifact/installer-bin
           cp artifact/installer-bin/rco3installer-win.exe artifact/rco2installer.exe # upgrade from v2 to v3 installer
@@ -136,11 +134,11 @@ jobs:
       - name: Temp - Rename RCO-Legacy-Installer.exe to RCO2Installer.exe
         run: |
           find
-          mv RCO2Installer.exe RCONextgen-Installer.exe
-          mv RCO-Legacy-Installer.exe RCO2Installer.exe
+          mv rco2installer.exe rconextgen-installer.exe
+          mv rco-legacy-installer.exe RCO2Installer.exe
       - name: Create Important Hashes
         run: |
-          sha512sum RCO.exe > RCO-version.sha512
+          sha512sum rco.exe > rco-version.sha512
           sha512sum RCO2Installer.exe > RCO2Installer.exe.sha512
           find . -type f -print0 | xargs -0 sha512sum | sha512sum > deployment.sha512
       - name: Upload artifact
