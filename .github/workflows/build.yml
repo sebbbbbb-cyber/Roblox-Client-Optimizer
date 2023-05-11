@@ -138,3 +138,7 @@ jobs:
         with:
           name: page
           path: .
+  merge-builds:
+    needs: merge-builds
+    # if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/test-deploy.yml
