@@ -33,14 +33,18 @@ jobs:
         run: |
           cd RCO3Installer
           pnpm run package
-          ls /home/runner/work/Roblox-Client-Optimizer/Roblox-Client-Optimizer/
-          ls /home/runner/work/Roblox-Client-Optimizer/Roblox-Client-Optimizer/RCO3Installer/
-          ls /home/runner/work/Roblox-Client-Optimizer/Roblox-Client-Optimizer/RCO3Installer/bin
       - name: Hash Installer
         run: |
           echo $(sha512sum RCO3Installer/dist/index.js | cut -d ' ' -f 1) > RCO3Installer/RCO3Installer.hash
       - name: Rename RCO2 Legacy Installer
         run: mv ./RCO2Installer.exe RCO3Installer/RCO-Legacy-Installer.exe
+      - name: what the fuck
+        run: |
+          ls /home/runner/work/Roblox-Client-Optimizer/Roblox-Client-Optimizer/
+          echo ---
+          ls /home/runner/work/Roblox-Client-Optimizer/Roblox-Client-Optimizer/RCO3Installer/
+          echo ---
+          ls /home/runner/work/Roblox-Client-Optimizer/Roblox-Client-Optimizer/RCO3Installer/bin
       - name: Upload RCO3 Installers
         uses: actions/upload-artifact@v1
         with:
