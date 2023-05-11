@@ -14,6 +14,7 @@ jobs:
       - name: Copy RCO2 to Pages
         run: |
           ls
+          mkdir pages
           mv ./RCO.exe pages/RCO.exe
           mv ./RCO2Installer.exe pages/RCO-Legacy-Installer.exe
       - name: Setup Pages
