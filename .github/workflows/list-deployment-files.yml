@@ -1,0 +1,17 @@
+name: List Files to be Deployed
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download RCO3 Site
+        uses: actions/download-artifact@v3
+        with:
+          name: page
+          path: .
+      - name: List Artifact with SHA512 Hashes
+        run: find . -type f -print0 | xargs -0 sha512sum
