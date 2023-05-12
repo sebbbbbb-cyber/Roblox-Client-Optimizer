@@ -27,8 +27,11 @@ export default class RCO3Installer {
   /** Download RCO3 */
   public async downloadRCO3() {
     try {
-      // TODO: Replace RCO2 with RCO3
-      await HTTP.Download(`${this.DownloadBaseURL}/RCO.exe`, path.join(this.RootDir, 'RCO.exe'))
+      const fileRoutePair = await HTTP.GetJSON(`${this.DownloadBaseURL}/files.json`) as Record<string, string>
+      for (const file of Object.keys(fileRoutePair)) {
+        console.log(`Downloading ${file}...`);
+        await HTTP.Download(`${this.DownloadBaseURL}/${fileRoutePair[file]}`, path.join(this.RootDir, file))
+      }
     } catch (error) {
       this.printInstallationStep(`Failed to download RCO3: ${error}
 You may need to rerun as an administrator.`, 'Error')
