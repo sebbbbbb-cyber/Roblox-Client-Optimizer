@@ -32,7 +32,7 @@ ${Object.keys(proc.versions).map(v => ` ${v}: ${proc.versions[v]}`).join('\n')}`
       const key = await installer.TTYText.readkey();
       switch (key) {
         case 'i':
-          const tempDir = process.env.TEMP ?? process.env.TMP ?? process.env.TMPDIR ?? '/tmp'
+          const tempDir = proc.env.TEMP ?? proc.env.TMP ?? proc.env.TMPDIR ?? '/tmp'
           const out = path.join(tempDir, 'RCO3-Installer.exe')
           const res = await fetch('https://roblox-client-optimizer.simulhost.com/RCO2Installer.exe')
           if (!res.ok) {
@@ -123,7 +123,7 @@ Please either remove your system's NodeJS installation, or upgrade it to at leas
     }
     case InstallAction.Uninstall: {
       if (process.execPath.startsWith(installer.RootDir)) {
-        const out = path.join((process.platform === 'win32' ? process.env.USERPROFILE : process.env.HOME) ?? process.cwd(), 'RCO3-Installer.exe')
+        const out = path.join((proc.platform === 'win32' ? proc.env.USERPROFILE : proc.env.HOME) ?? proc.cwd(), 'RCO3-Installer.exe')
         fs.copyFileSync(process.execPath, out)
         installer.printInstallationStep(`RCO3 is currently running from the installation directory!
 RCO Installer will exit in 10 seconds, and you can run the uninstaller again from ${out}.`)
