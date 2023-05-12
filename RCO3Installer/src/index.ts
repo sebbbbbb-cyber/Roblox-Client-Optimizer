@@ -6,11 +6,10 @@ import proc from 'process';
 import { createHash } from 'crypto';
 import { execSync, spawn, spawnSync } from "child_process";
 
-if (!fs.existsSync(path.join(__dirname, '../package.json'))) throw new Error('Cannot find package.json!')
-
 export const installer = new RCO3Installer();
 
 if (proc.argv.includes('-v') || proc.argv.includes('--version')) {
+  if (!fs.existsSync(path.join(__dirname, '../package.json'))) throw new Error('Cannot find package.json!')
   const pkg = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json'), 'utf-8'))
   console.log(`RCO3Installer v${pkg.version ?? 'unknown'}
 Dependencies:
