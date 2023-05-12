@@ -5,8 +5,8 @@ dependencies:
     specifier: ^1.4.4
     version: 1.4.4
   '@rco3/nodeinstallutil':
-    specifier: ^1.0.5
-    version: 1.0.5
+    specifier: ^1.0.6
+    version: 1.0.6
   '@rco3/ttyutil':
     specifier: ^1.0.2
     version: 1.0.2
@@ -1004,8 +1004,8 @@ packages:
       nullthrows: 1.1.1
     dev: true
 
-  /@rco3/nodeinstallutil@1.0.5:
-    resolution: {integrity: sha512-ygpuGkDzXOkTl1uvaRU61OlecDjXGnW9LNjaypqxkrroGbWtuImspWte0eDw591cCGfrs6nHVhhT262ahwWY/Q==}
+  /@rco3/nodeinstallutil@1.0.6:
+    resolution: {integrity: sha512-TAt8BVyhqF+sH13OY1qUZrhp8K4fK7pEOaOIDUnPrDJlgBDqqgCR+h6R2ES4Oqng0SIACEEzEAOUjdCqgcDq+g==}
     dependencies:
       7zip-min: 1.4.4
       '@rco3/ttyutil': 1.0.2
@@ -1044,8 +1044,8 @@ packages:
     resolution: {integrity: sha512-ysT8mhdixWK6Hw3i1V2AeRqZ5WfXg1G43mqoYlM2nc6388Fq5jcXyr5mRsqViLx/GJYdoL0bfXD8nmF+Zn/Iow==}
     dev: true
 
-  /@tsconfig/node16@1.0.3:
-    resolution: {integrity: sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==}
+  /@tsconfig/node16@1.0.4:
+    resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: true
 
   /@types/7zip-min@1.3.1:
@@ -2445,7 +2445,7 @@ packages:
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
-      '@tsconfig/node16': 1.0.3
+      '@tsconfig/node16': 1.0.4
       '@types/node': 20.1.3
       acorn: 8.8.2
       acorn-walk: 8.2.0

@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "7zip-min": "^1.4.4",
-    "@rco3/nodeinstallutil": "^1.0.5",
+    "@rco3/nodeinstallutil": "^1.0.6",
     "@rco3/ttyutil": "^1.0.2",
     "fs-extra": "^11.1.1",
     "semver": "^7.5.0",
