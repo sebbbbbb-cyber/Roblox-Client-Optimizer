@@ -26,8 +26,15 @@ export default class RCO3Installer {
   public TTYText = new TTYTextConstructor()
   /** Download RCO3 */
   public async downloadRCO3() {
-    // TODO: Replace RCO2 with RCO3
-    await HTTP.Download(`${this.DownloadBaseURL}/RCO.exe`, path.join(this.RootDir, 'RCO.exe'))
+    try {
+      // TODO: Replace RCO2 with RCO3
+      await HTTP.Download(`${this.DownloadBaseURL}/RCO.exe`, path.join(this.RootDir, 'RCO.exe'))
+    } catch (error) {
+      this.printInstallationStep(`Failed to download RCO3: ${error}
+You may need to rerun as an administrator.`, 'Error')
+      await new Promise(r => setTimeout(r, 1000))
+      throw error;
+    }
   }
   /** Launch RCO3 */
   public async launchRCO3() {
