@@ -5,8 +5,8 @@ dependencies:
     specifier: ^1.4.4
     version: 1.4.4
   '@rco3/nodeinstallutil':
-    specifier: ^1.0.6
-    version: 1.0.6
+    specifier: ^1.0.8
+    version: 1.0.8
   '@rco3/ttyutil':
     specifier: ^1.0.2
     version: 1.0.2
@@ -1004,8 +1004,8 @@ packages:
       nullthrows: 1.1.1
     dev: true
 
-  /@rco3/nodeinstallutil@1.0.6:
-    resolution: {integrity: sha512-TAt8BVyhqF+sH13OY1qUZrhp8K4fK7pEOaOIDUnPrDJlgBDqqgCR+h6R2ES4Oqng0SIACEEzEAOUjdCqgcDq+g==}
+  /@rco3/nodeinstallutil@1.0.8:
+    resolution: {integrity: sha512-DZaibbboeoZUuS3MhMvOUqqX724iiowV6pYhb5J6opvPX1I8BbFrXWRiF/P7iiBACdWz3l7zC5qjiDqRhsjH3A==}
     dependencies:
       7zip-min: 1.4.4
       '@rco3/ttyutil': 1.0.2
