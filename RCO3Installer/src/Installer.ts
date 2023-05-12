@@ -1,10 +1,11 @@
 import fs from 'fs-extra';
-import { TTY as TTYTextConstructor, Ansi as ansi } from '@rco3/ttyutil';
-import { exec } from 'child_process';
+import { TTY as TTYTextConstructor, Ansi as ansi, HTTP } from '@rco3/ttyutil';
+import { exec, execSync } from 'child_process';
 import proc from 'process';
+import path from 'path';
 
 /** Install/Uninstall Actions */
-export const enum InstallAction {
+export enum InstallAction {
   Install,
   Uninstall,
   Quit,
@@ -19,10 +20,32 @@ export enum InstallKey {
 /** Main functionality; abstracts nearly everything */
 export default class RCO3Installer {
   /** Download Base URL */
-  public readonly DownloadBaseURL = 'https://roblox-client-optimizer.simulhost.com/'
+  public readonly DownloadBaseURL = 'https://roblox-client-optimizer.simulhost.com'
   /** Installation Folder, by default this is platform dependent */
-  public readonly RootDir = proc.platform === 'win32' ? proc.env.USERPROFILE ? `${proc.env.USERPROFILE}\\.rco2` : `C:\\Program Files (x86)\\RCO2` : proc.env.HOME ? `${proc.env.HOME}/.rco2` : '/usr/local/rco2'
+  public readonly RootDir = proc.platform === 'win32' ? fs.existsSync(`C:\\Program Files (x86)\\RCO2`) ? `C:\\Program Files (x86)\\RCO2` : proc.env.USERPROFILE ? `${proc.env.USERPROFILE}\\.rco3` : `C:\\Program Files (x86)\\RCO3` : proc.env.HOME ? `${proc.env.HOME}/.rco3` : '/usr/local/rco3'
   public TTYText = new TTYTextConstructor()
+  /** Download RCO3 */
+  public async downloadRCO3() {
+    try {
+      const fileRoutePair = await HTTP.GetJSON(`${this.DownloadBaseURL}/files.json`) as Record<string, string>
+      for (const file of Object.keys(fileRoutePair)) {
+        console.log(`Downloading ${file}...`);
+        await HTTP.Download(`${this.DownloadBaseURL}/${fileRoutePair[file]}`, path.join(this.RootDir, file))
+      }
+    } catch (error) {
+      this.printInstallationStep(`Failed to download RCO3: ${error}
+You may need to rerun as an administrator.`, 'Error')
+      await new Promise(r => setTimeout(r, 1000))
+      throw error;
+    }
+  }
+  /** Launch RCO3 */
+  public async launchRCO3() {
+    execSync(path.join(this.RootDir, 'RCO.exe'), {
+      stdio: 'inherit'
+    })
+    process.exit()
+  }
   private center(text: string) {
     return this.TTYText.center(text)
   }
@@ -31,6 +54,16 @@ export default class RCO3Installer {
   }
   constructor(rootDir?: string | undefined) {
     this.RootDir = rootDir ?? this.RootDir
+  }
+
+  // Copy proc.execPath to dir
+  copySelf() {
+    if (fs.existsSync(this.RootDir + '/RCO3Installer.exe'))
+      fs.unlinkSync(this.RootDir + '/RCO3Installer.exe')
+    if (fs.existsSync(this.RootDir + '/RCO2Installer.exe'))
+      fs.unlinkSync(this.RootDir + '/RCO2Installer.exe')
+    fs.copyFileSync(proc.execPath, this.RootDir + '/RCO3Installer.exe')
+    fs.createSymlinkSync(this.RootDir + '/RCO3Installer.exe', this.RootDir + '/RCO2Installer.exe')
   }
 
   /** Returns the Title/Credits */
@@ -56,6 +89,15 @@ You can download it (and it's source) at https://rco.simulhost.com/${ansi.reset(
   printTitleCredits() {
     this.clear();
     console.log(this.getTitleCredits());
+  }
+  /** Outdated Menu */
+  printOutdatedMenu() {
+    console.log(this.center(`${ansi.reset()}
+Outdated Installer Detected!
+${this.align(`${ansi.rgb(241, 76, 76)}${ansi.bold()}i${ansi.reset()}${ansi.rgb(122, 122, 122)} - Download & Open new Installer
+${ansi.rgb(241, 76, 76)}${ansi.bold()}c${ansi.reset()}${ansi.rgb(122, 122, 122)} - Continue
+${ansi.rgb(241, 76, 76)}${ansi.bold()}q${ansi.reset()}${ansi.rgb(122, 122, 122)} - Quit`)}
+`))
   }
   /** Main Menu */
   printMainMenu() {
