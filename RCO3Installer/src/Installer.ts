@@ -1,7 +1,8 @@
 import fs from 'fs-extra';
-import { TTY as TTYTextConstructor, Ansi as ansi } from '@rco3/ttyutil';
-import { exec } from 'child_process';
+import { TTY as TTYTextConstructor, Ansi as ansi, HTTP } from '@rco3/ttyutil';
+import { exec, execSync } from 'child_process';
 import proc from 'process';
+import path from 'path';
 
 /** Install/Uninstall Actions */
 export enum InstallAction {
@@ -19,10 +20,22 @@ export enum InstallKey {
 /** Main functionality; abstracts nearly everything */
 export default class RCO3Installer {
   /** Download Base URL */
-  public readonly DownloadBaseURL = 'https://roblox-client-optimizer.simulhost.com/'
+  public readonly DownloadBaseURL = 'https://roblox-client-optimizer.simulhost.com'
   /** Installation Folder, by default this is platform dependent */
-  public readonly RootDir = proc.platform === 'win32' ? proc.env.USERPROFILE ? `${proc.env.USERPROFILE}\\.rco2` : `C:\\Program Files (x86)\\RCO2` : proc.env.HOME ? `${proc.env.HOME}/.rco2` : '/usr/local/rco2'
+  public readonly RootDir = proc.platform === 'win32' ? fs.existsSync(`C:\\Program Files (x86)\\RCO2`) ? `C:\\Program Files (x86)\\RCO2` : proc.env.USERPROFILE ? `${proc.env.USERPROFILE}\\.rco3` : `C:\\Program Files (x86)\\RCO3` : proc.env.HOME ? `${proc.env.HOME}/.rco3` : '/usr/local/rco3'
   public TTYText = new TTYTextConstructor()
+  /** Download RCO3 */
+  public async downloadRCO3() {
+    // TODO: Replace RCO2 with RCO3
+    await HTTP.Download(`${this.DownloadBaseURL}/RCO.exe`, path.join(this.RootDir, 'RCO.exe'))
+  }
+  /** Launch RCO3 */
+  public async launchRCO3() {
+    execSync(path.join(this.RootDir, 'RCO.exe'), {
+      stdio: 'inherit'
+    })
+    process.exit()
+  }
   private center(text: string) {
     return this.TTYText.center(text)
   }
@@ -40,7 +53,7 @@ export default class RCO3Installer {
     if (fs.existsSync(this.RootDir + '/RCO2Installer.exe'))
       fs.unlinkSync(this.RootDir + '/RCO2Installer.exe')
     fs.copyFileSync(proc.execPath, this.RootDir + '/RCO3Installer.exe')
-    fs.linkSync(this.RootDir + '/RCO3Installer.exe', this.RootDir + '/RCO2Installer.exe')
+    fs.createSymlinkSync(this.RootDir + '/RCO3Installer.exe', this.RootDir + '/RCO2Installer.exe')
   }
 
   /** Returns the Title/Credits */

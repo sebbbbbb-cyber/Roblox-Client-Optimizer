@@ -79,7 +79,7 @@ ${Object.keys(proc.versions).map(v => ` ${v}: ${proc.versions[v]}`).join('\n')}`
 Please either remove your system's NodeJS installation, or upgrade it to at least ${proc.versions.node}`, 'Error');
         return;
       } else if (sysver === VersionCheck.NotInstalled) {
-        installer.printInstallationStep(`Attempting to install NodeJS`)
+        installer.printInstallationStep(`Node not installed! Attempting to install NodeJS`)
         await NodeInstaller.install()
         const phpr = new PathHelper()
         const node = phpr.search('node', proc.platform === 'win32')
@@ -91,7 +91,7 @@ Please either remove your system's NodeJS installation, or upgrade it to at leas
       installer.printInstallationStep('Ensuring RCO3 Directory Exists');
       installer.ensureDir()
       installer.printInstallationStep('Downloading RCO3');
-      // await installer.downloadRCO3() // todo
+      await installer.downloadRCO3() // todo
       if (proc.platform === 'win32') {
         installer.printInstallationStep('Adding RCO3 to Registry');
         await installer.addToStartupRegistry()
@@ -107,7 +107,7 @@ Please either remove your system's NodeJS installation, or upgrade it to at leas
         switch (LaunchAction) {
           case 'l':
             installer.printInstallationStep('Launching RCO3', 'Launching');
-            // await installer.launchRCO3() // todo
+            await installer.launchRCO3()
             shouldQuit = true;
             break;
           case 'q':
