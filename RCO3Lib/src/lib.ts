@@ -10,6 +10,6 @@ export class RCO3 {
   static Flags = RCO3Flags;
   /** Oof SFX */
   static Oof = Oof;
-  /** Roblox Instance - Just create one & pass it around */
+  /** Roblox Instance - Just create one & pass it around - Contains all known Roblox installations */
   static Roblox = Roblox;
 }

@@ -1,6 +1,7 @@
 import { HTTP } from "@rco3/ttyutil";
 import { Roblox } from "./Roblox";
 import path from "path";
+import { copyFileSync } from "fs-extra";
 
 /** Handles oofs */
 export class Oof {
@@ -21,7 +22,14 @@ export class Oof {
   /**
    * Download the oof to a Roblox Installation
    */
-  static Install(roblox: Roblox): Promise<void> {
-    return Oof.downloadOof(roblox.Oof)
+  static async Install(roblox: Roblox): Promise<void> {
+    let firstOof: string | undefined = undefined;
+    for (const oofPath of roblox.Oof) {
+      if (!firstOof) {
+        firstOof = oofPath
+        await Oof.downloadOof(oofPath)
+      }
+      else copyFileSync(firstOof, oofPath)
+    }
   }
 }
