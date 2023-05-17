@@ -1,6 +1,6 @@
 # RCO3 Node CLI
 
-A NodeJS CLI for [RCO3Lib](../RCO3Lib/).
+A NodeJS CLI for [LibRCO3](../LibRCO3/).
 
 > **Note**
 >

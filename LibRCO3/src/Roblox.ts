@@ -3,9 +3,14 @@ import path from "path";
 import process from "process";
 import { Oof } from "./Oof";
 
+const unique = <T>(value: T, index: number, self: T[]): boolean => self.indexOf(value) === index
+
 /** Handles finding Roblox & whatnot */
 export class Roblox {
-  /** Roblox Path Getters */
+  /**
+   * Roblox Path Getters
+   * @internal
+   */
   static RobloxPathGetters: Partial<Record<typeof process.platform, () => (string[])>> = {
     darwin: () => [process.env.ROBLOX, '/Applications/Roblox.app'].filter(v => v && exists(v)) as string[],
     win32: () => {
@@ -35,8 +40,8 @@ export class Roblox {
       throw new Error(`Cannot find Roblox! Please symlink ${path.resolve(process.env.ROBLOX ?? '/Roblox', 'Versions')} to your Roblox's Versions Folder or set the ROBLOX env variable to the directory containing your Roblox's Versions directory!`)
     }
   }
-  /** Gets the Roblox Path for the current autodetected platform */
-  static GetRobloxPath = this.RobloxPathGetters[process.platform]
+  /** Gets the Roblox Paths for the current autodetected platform */
+  static GetRobloxPaths = this.RobloxPathGetters[process.platform]
   /**
    * Gets the Roblox Version from the path
    * @param {string} p The path to get the version from
@@ -84,12 +89,15 @@ export class Roblox {
   /** The paths to Roblox('s Versions Folder) */
   #robloxPaths: string[] = [];
   /** The paths to Roblox('s Versions Folder) */
-  get robloxPaths() {
-    return this.#robloxPaths.filter(v => v && exists(v))
+  get robloxPaths(): string[] {
+    return this.#robloxPaths.filter(v => v && exists(v)).filter(unique)
   }
   /** The paths to Roblox('s Versions Folder) */
-  set robloxPaths(v) {
-    this.#robloxPaths = v
+  set robloxPaths(v: string[] | string) {
+    if (typeof v === 'string')
+      this.#robloxPaths = [v]
+    else
+      this.#robloxPaths = v
   }
   /** Run something on each path */
   each<T>(f: (robloxPath: string, index: number, robloxPaths: string[]) => T): T[] {
@@ -120,13 +128,13 @@ export class Roblox {
   }
   /** Finds all Roblox Version Paths */
   discoverRobloxPaths() {
-    const rbx = (Roblox.GetRobloxPath ?? (() => { throw new Error('Must specify Roblox Path or be on supported platform!') }))()
+    const rbx = (Roblox.GetRobloxPaths ?? (() => { throw new Error('Must specify Roblox Path or be on supported platform!') }))()
     const newPaths = rbx.flatMap(dir => Roblox.GetRobloxVersionDirFromPath(dir))
     const oldPaths = this.robloxPaths;
     this.robloxPaths = [
       ...newPaths,
       ...oldPaths
-    ].filter((value, index, self) => self.indexOf(value) === index && exists(value))
+    ].filter((value, index, self) => unique(value, index, self) && exists(value))
     return newPaths
   }
   /**
@@ -138,12 +146,16 @@ export class Roblox {
     if (!robloxPaths) {
       robloxPaths = this.discoverRobloxPaths()
       setInterval(() => {
-
+        const newPaths = this.discoverRobloxPaths()
+        if ([...robloxPaths ?? [], ...newPaths].filter(unique).length !== robloxPaths?.length ?? -1) {
+          this.robloxPaths = newPaths.filter(unique)
+        }
       }, 2000)
     }
     this.robloxPaths = robloxPaths
   }
   /**
+   * Calls {@link Roblox}.{@link Roblox.init init(paths)} with {@link robloxPaths}
    * @param {string[]|string} robloxPaths The path to Roblox's Versions Folder
    */
   constructor(robloxPaths?: string[] | string) {

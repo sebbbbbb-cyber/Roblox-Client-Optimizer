@@ -55,6 +55,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/L8X/Roblox-Client-Optimizer.git",
-    "directory": "RCO3Lib"
+    "directory": "LibRCO3"
   }
 }

@@ -1,3 +1,4 @@
+/** Default Symbol */
 const defaultValue = Symbol('defaultableDefaultValue');
 export class Defaultable<T> {
   /**

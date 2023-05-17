@@ -4,9 +4,11 @@
   - [Usage Examples](#usage-examples)
     - [Minimal Usage Example](#minimal-usage-example)
     - [Overwrites, Awaits, `import`s](#overwrites-awaits-imports)
-  - [Documentation](#documentation)
+
 
 # RCO3 JS Library
+
+[Docs](https://roblox-client-optimizer.simulhost.com/lib-docs/classes/lib.RCO3.html) | [NPM](https://www.npmjs.com/package/@rco3/lib) | [Source](https://github.com/L8X/Roblox-Client-Optimizer/tree/main/LibRCO3)
 
 A NodeJS Library for RCO3.
 
@@ -43,7 +45,3 @@ const oof = new RCO3.Oof();
   console.log('Done!');
 })();
 ```
-
-## Documentation
-
-TBA
