@@ -1,6 +1,6 @@
 {
   "name": "@rco3/lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RCO3 NodeJS Library",
   "main": "dist/index.js",
   "module": "dist/module.js",
