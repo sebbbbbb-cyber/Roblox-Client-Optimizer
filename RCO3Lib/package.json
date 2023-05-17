@@ -1,6 +1,6 @@
 {
   "name": "@rco3/lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "RCO3 NodeJS Library",
   "main": "dist/index.js",
   "module": "dist/module.js",
@@ -51,5 +51,10 @@
   "bin": "dist/index.js",
   "engines": {
     "node": ">= 16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/L8X/Roblox-Client-Optimizer.git",
+    "directory": "RCO3Lib"
   }
 }
