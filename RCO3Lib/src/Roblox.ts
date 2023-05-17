@@ -68,7 +68,7 @@ Installations: ${possible.join(', ')}`)
    * {@link GetRobloxVersionFromPath} but returns the absolute dir path
    */
   static GetRobloxVersionDirFromPath(p: string) {
-    return path.resolve(p, this.GetRobloxVersionFromPath(p))
+    return path.resolve(p, process.platform === 'darwin' ? '.' : 'Versions', this.GetRobloxVersionFromPath(p))
   }
   /** Gets Client Settings Path from a version folder */
   static getClientSettings(versionDir: string) {
@@ -85,7 +85,7 @@ Installations: ${possible.join(', ')}`)
       return path.resolve(versionDir, process.env.ROBLOXCAS)
   }
   /** The path to Roblox('s Versions Folder) */
-  robloxPath: string;
+  robloxPath: string = '';
   /** Return value of {@link Roblox.getClientSettings GCS} for this Roblox Instance */
   get ClientAppSettings() {
     return Roblox.getClientSettings(this.robloxPath)
@@ -102,7 +102,17 @@ Installations: ${possible.join(', ')}`)
   /**
    * @param robloxPath The path to Roblox's Versions Folder
    */
+  init(robloxPath?: string) {
+    if (!robloxPath) {
+      const rbx = (Roblox.GetRobloxPath ?? (() => { throw new Error('Must specify Roblox Path or be on supported platform!') }))()
+      robloxPath = Roblox.GetRobloxVersionDirFromPath(rbx)
+    }
+    this.robloxPath = robloxPath
+  }
+  /**
+   * @param robloxPath The path to Roblox's Versions Folder
+   */
   constructor(robloxPath?: string) {
-    this.robloxPath = robloxPath ?? Roblox.GetRobloxVersionFromPath((Roblox.GetRobloxPath ?? (() => { throw new Error('Must specify Roblox Path or be on supported platform!') }))())
+    this.init(robloxPath)
   }
 }
