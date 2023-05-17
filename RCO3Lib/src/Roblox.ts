@@ -64,6 +64,12 @@ Installations: ${possible.join(', ')}`)
       throw new Error('No RobloxPlayerBeta.exe found in Versions directory')
     return version
   }
+  /**
+   * {@link GetRobloxVersionFromPath} but returns the absolute dir path
+   */
+  static GetRobloxVersionDirFromPath(p: string) {
+    return path.resolve(p, this.GetRobloxVersionFromPath(p))
+  }
   /** Gets Client Settings Path from a version folder */
   static getClientSettings(versionDir: string) {
     switch (process.platform) {
