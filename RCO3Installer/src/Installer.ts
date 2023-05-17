@@ -44,7 +44,7 @@ You may need to rerun as an administrator.`, 'Error')
     execSync(path.join(this.RootDir, 'RCO.exe'), {
       stdio: 'inherit'
     })
-    process.exit()
+    proc.exit()
   }
   private center(text: string) {
     return this.TTYText.center(text)
@@ -80,7 +80,7 @@ You can download it (and it's source) at https://rco.simulhost.com/${ansi.reset(
   /** Clear Console */
   private clear() {
     try {
-      console.log('\n'.repeat(process.stdout.rows - 2));
+      console.log('\n'.repeat(proc.stdout.rows - 2));
     } catch (e) {
       console.clear()
     }
