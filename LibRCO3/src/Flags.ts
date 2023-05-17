@@ -47,6 +47,7 @@ export class RCO3Flags {
   onWrite(callback: (flags: typeof this.flags) => void) {
     this._postWriteListeners = [...this._postWriteListeners, callback]
   }
+  #interval?: NodeJS.Timeout;
   /** Initializes the flag list, and sets an interval to consistently fetch it */
   async init(roblox?: Roblox) {
     if (roblox)
@@ -54,12 +55,23 @@ export class RCO3Flags {
         roblox.setFlags(flags)
       )
     await this.updateFlagsList()
-    setInterval(this.updateFlagsList.bind(this), 1000 * 60 * 60).unref()
+    this.#interval = setInterval(this.updateFlagsList.bind(this), 1000 * 60 * 60).unref()
+  }
+  /** Uninitializes the flag list, required for uninstalling */
+  uninit() {
+    if (this.#interval) {
+      clearInterval(this.#interval)
+      this.#interval = undefined
+    }
   }
   /** One-Time Flag List Install */
   async Install(roblox: Roblox = new Roblox()) {
     await this.updateFlagsList()
     roblox.setFlags(this.flags)
+  }
+  /** One-Time Flag List Removal */
+  async Uninstall(roblox: Roblox = new Roblox()) {
+    roblox.delFlags()
   }
   /**
    * Writes the flags to disk

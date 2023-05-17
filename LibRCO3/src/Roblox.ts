@@ -126,6 +126,14 @@ export class Roblox {
       fs.writeFileSync(cas, JSON.stringify(flags))
     })
   }
+  /** Deletes all flag objects */
+  delFlags() {
+    this.setFlags({})
+    this.ClientAppSettings.forEach(cas => {
+      if (exists(cas))
+        fs.unlinkSync(cas)
+    })
+  }
   /** Finds all Roblox Version Paths */
   discoverRobloxPaths() {
     const rbx = (Roblox.GetRobloxPaths ?? (() => { throw new Error('Must specify Roblox Path or be on supported platform!') }))()
