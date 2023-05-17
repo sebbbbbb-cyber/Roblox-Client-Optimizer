@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "commonjs",
-    "outDir": "./intermediate-dist",
+    "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
@@ -15,5 +15,6 @@
   "exclude": [
     "dist/**/*",
     "intermediate-dist/**/*",
+    "minimal-example.ts",
   ]
 }

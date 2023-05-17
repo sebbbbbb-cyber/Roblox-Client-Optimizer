@@ -82,7 +82,15 @@ export class Roblox {
       return path.resolve(versionDir, process.env.ROBLOXCAS)
   }
   /** The paths to Roblox('s Versions Folder) */
-  robloxPaths: string[] = [];
+  #robloxPaths: string[] = [];
+  /** The paths to Roblox('s Versions Folder) */
+  get robloxPaths() {
+    return this.#robloxPaths.filter(v => v && exists(v))
+  }
+  /** The paths to Roblox('s Versions Folder) */
+  set robloxPaths(v) {
+    this.#robloxPaths = v
+  }
   /** Run something on each path */
   each<T>(f: (robloxPath: string, index: number, robloxPaths: string[]) => T): T[] {
     return this.robloxPaths.map(f)
@@ -110,20 +118,37 @@ export class Roblox {
       fs.writeFileSync(cas, JSON.stringify(flags))
     })
   }
+  /** Finds all Roblox Version Paths */
+  discoverRobloxPaths() {
+    const rbx = (Roblox.GetRobloxPath ?? (() => { throw new Error('Must specify Roblox Path or be on supported platform!') }))()
+    const newPaths = rbx.flatMap(dir => Roblox.GetRobloxVersionDirFromPath(dir))
+    const oldPaths = this.robloxPaths;
+    this.robloxPaths = [
+      ...newPaths,
+      ...oldPaths
+    ].filter((value, index, self) => self.indexOf(value) === index && exists(value))
+    return newPaths
+  }
   /**
-   * @param {string[]} robloxPaths The paths to Roblox's Versions Folder
+   * @param {string[]|string} robloxPaths The path to Roblox's Versions Folder
    */
-  init(robloxPaths?: string[]) {
+  init(robloxPaths?: string[] | string) {
+    if (typeof robloxPaths === 'string')
+      robloxPaths = [robloxPaths]
     if (!robloxPaths) {
-      const rbx = (Roblox.GetRobloxPath ?? (() => { throw new Error('Must specify Roblox Path or be on supported platform!') }))()
-      robloxPaths = rbx.flatMap(dir => Roblox.GetRobloxVersionDirFromPath(dir))
+      robloxPaths = this.discoverRobloxPaths()
+      setInterval(() => {
+
+      }, 2000)
     }
     this.robloxPaths = robloxPaths
   }
   /**
-   * @param {string[]} robloxPaths The path to Roblox's Versions Folder
+   * @param {string[]|string} robloxPaths The path to Roblox's Versions Folder
    */
-  constructor(robloxPaths?: string[]) {
+  constructor(robloxPaths?: string[] | string) {
+    if (typeof robloxPaths === 'string')
+      robloxPaths = [robloxPaths]
     this.init(robloxPaths)
   }
 }

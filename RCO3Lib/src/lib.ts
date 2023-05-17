@@ -3,6 +3,7 @@ import RCO3Flags from "./Flags";
 import { Oof } from './Oof'
 import { Roblox } from "./Roblox";
 
+/** The main class exposed directly to library-users */
 export class RCO3 {
   /** Defaultable */
   static Defaultable = Defaultable;

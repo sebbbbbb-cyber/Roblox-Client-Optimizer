@@ -57,7 +57,7 @@ export class RCO3Flags {
     setInterval(this.updateFlagsList.bind(this), 1000 * 60 * 60).unref()
   }
   /** One-Time Flag List Install */
-  async Install(roblox: Roblox) {
+  async Install(roblox: Roblox = new Roblox()) {
     await this.updateFlagsList()
     roblox.setFlags(this.flags)
   }

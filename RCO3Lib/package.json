@@ -10,6 +10,7 @@
     "build": "pnpm build:parcel",
     "build:tsc": "tsc --project tsconfig.json --outDir intermediate-dist --rootDir src",
     "build:parcel": "parcel build --detailed-report 30 src/lib.ts",
+    "build:docs": "typedoc src/*",
     "prepublish": "pnpm build"
   },
   "keywords": [],
@@ -25,6 +26,7 @@
     "pkg": "^5.8.1",
     "resedit-cli": "^2.0.0",
     "ts-node": "^10.9.1",
+    "typedoc": "^0.24.7",
     "typescript": "^5.0.4"
   },
   "dependencies": {
