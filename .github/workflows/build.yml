@@ -110,6 +110,10 @@ jobs:
         run: |
           cd LibRCO3
           pnpm build
+      - name: Build Docs
+        run: |
+          cd LibRCO3
+          pnpm build:docs
       - name: Upload RCO3 Library
         uses: actions/upload-artifact@v3
         with:
