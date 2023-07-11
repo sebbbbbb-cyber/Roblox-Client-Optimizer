@@ -1,27 +1,5 @@
-<div align="center">
-	<a href="https://github.com/L8X/Roblox-Client-Optimizer">
-		<img height=200 src="https://user-images.githubusercontent.com/100449899/233845084-569622a4-e8d3-4ab4-9ebc-7e03d0f01d0c.png"/>
-	</a>
-	<h1>Roblox Client Optimizer</h1>
-	<p>Roblox Client Optimizer tweaks flags to optimize your Roblox client.</p>
-	<p>
-		<a href="https://github.com/L8X/Roblox-Client-Optimizer/releases">
-			<img src="https://img.shields.io/github/v/release/L8X/Roblox-Client-Optimizer?label=Version&logo=GitHub&color=green" alt="Version"/>
-		</a>
-		<a href="https://github.com/L8X/Roblox-Client-Optimizer">
-			<img src="https://img.shields.io/github/forks/L8X/Roblox-Client-Optimizer?label=Forks&logo=GitHub" alt="Forks"/>
-		</a>
-		<a href="https://github.com/L8X/Roblox-Client-Optimizer">
-			<img src="https://img.shields.io/github/stars/L8X/Roblox-Client-Optimizer?label=Stars&logo=GitHub&color=yellow" alt="Stars"/>
-		</a>
-		<a href="https://github.com/L8X/Roblox-Client-Optimizer/blob/main/LICENSE">
-			<img src="https://img.shields.io/github/license/L8X/Roblox-Client-Optimizer?label=License&logo=GitHub" alt="Forks"/>
-		</a>
-	</p>
-</div>
 
-## About
-
+(THIS IS LEGACY RCO)
 Roblox Client Optimizer tweaks flags to optimize your Roblox client. Click [here](https://github.com/L8X/Roblox-Client-Optimizer/releases) to download our latest version.
 
 ## Community
